@@ -12,9 +12,10 @@ to use this dotfile(to remind me if I somehow forgot)
 ```sh
 cd $HOME
 sh -c "$(curl -fsLS https://chezmoi.io/get)"
-chezmoi init --apply https://github.com/dhupee/dotfiles.git # stop here if you dont want to install stuff
+chezmoi init https://github.com/dhupee/dotfiles.git # stop here if you dont want to install stuff
 cd $HOME/.scripts/
 sudo bash install.sh 
+chezmoi -v apply
 ```
 
 ## Editing
