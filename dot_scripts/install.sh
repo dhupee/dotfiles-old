@@ -53,4 +53,4 @@ sudo rpm -i wps-office-11.1.0.11664.XA-1.x86_64.rpm
 
 # go back to home and print done
 cd $HOME
-echo "Installation Done! Enjoy!"
+echo "Installation Done! Please restart to enable changes on the zsh"
