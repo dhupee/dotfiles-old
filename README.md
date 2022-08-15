@@ -7,7 +7,7 @@ this dotfiles used [chezmoi](https://www.chezmoi.io/) as their manager
 
 ## Installation
 
-to use this dotfile(to remind me if I somehow forgot)
+to use this dotfile(to remind me if I somehow forgot), in terminal paste shell script below
 
 ```sh
 cd $HOME
