@@ -9,6 +9,12 @@ sudo dnf install git-all
 # install python 3.9
 sudo dnf install python3.9
 
+# install zsh and ohmyzsh
+sudo dnf install zsh
+chsh -s $(which zsh)
+sh -c \ 
+    "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # install brave-browser
 sudo dnf install dnf-plugins-core
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
@@ -34,8 +40,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # install spotify and discord
 sudo flatpak install flathub com.spotify.Client com.discordapp.Discord
 
-
-# install rpm files, better to leave this in the end
+#-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
 cd Downloads/
 
