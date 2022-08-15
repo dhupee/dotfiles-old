@@ -27,7 +27,7 @@ chezmoi cd
 code .
 ```
 
-then you can code like usual then commit it to the repo and then on therminal apply the change
+then you can code like usual then commit it to the repo and then on terminal apply the change
 
 ```sh
 cd $HOME
