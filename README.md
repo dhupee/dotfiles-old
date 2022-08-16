@@ -20,9 +20,17 @@ sudo bash install.sh
 chezmoi -v apply
 ```
 
+## Adding New Dotfiles
+
+if you want to add new dotfile, do this in terminal
+
+```sh
+chezmoi add <dotfile directory>
+```
+
 ## Editing
 
-since i use VScode as my editor what I do to edit the dotfiles easily is like this, first open terminal
+since i use VScode as my text editor/IDE so what I do to edit the dotfiles easily is like this, first open terminal
 
 ```sh
 chezmoi cd
