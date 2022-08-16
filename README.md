@@ -5,6 +5,8 @@ repository containing my config files.
 this is not a fancy stuff just my stuff used mostly.
 this dotfiles used [chezmoi](https://www.chezmoi.io/) as their manager
 
+I use [Fedora](https://getfedora.org), btw
+
 ## Installation
 
 to use this dotfile(to remind me if I somehow forgot), in terminal paste shell script below
