@@ -15,7 +15,7 @@ to use this dotfile(to remind me if I somehow forgot), in terminal paste shell s
 cd $HOME
 sh -c "$(curl -fsLS https://chezmoi.io/get)"
 chezmoi init https://github.com/dhupee/dotfiles.git # stop here if you dont want to install stuff
-cd $HOME/.scripts/
+cd $HOME/.local/share/chezmoi/dot_scripts/
 sudo bash install.sh 
 chezmoi -v apply
 ```
