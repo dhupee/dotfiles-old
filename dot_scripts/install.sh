@@ -64,7 +64,7 @@ cd $HOME/Appimages
 
 # download superslicer
 wget https://github.com/supermerill/SuperSlicer/releases/download/2.4.58.4/SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
-
+chmod a+x SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
 
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
