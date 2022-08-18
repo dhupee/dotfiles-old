@@ -10,6 +10,11 @@ sudo dnf install git-all
 # install python 3.9
 sudo dnf install python3.9
 
+# install github cli
+sudo dnf config-manager \ 
+    --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh
+
 # install zsh and ohmyzsh
 sudo dnf install zsh
 chsh -s $(which zsh)
@@ -41,6 +46,9 @@ sudo dnf install code
 sudo dnf install \
     https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
 
+
+#-----------------------------INSTALL FLATPAK------------------------
+
 # install flatpak then enable flathub remote
 sudo dnf install -y flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -48,13 +56,30 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # install spotify and discord
 sudo flatpak install flathub com.spotify.Client com.discordapp.Discord
 
+#-----------------------------INSTALL APPIMAGES------------------------
+
+# make directory $HOME/Appimages
+sudo mkdir -p $HOME/Appimages
+cd $HOME/Appimages
+
+# download superslicer
+wget https://github.com/supermerill/SuperSlicer/releases/download/2.4.58.4/SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
+
+
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
-cd Downloads/
+cd $HOME/Downloads/
 
 # download WPS office
 wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps-office-11.1.0.11664.XA-1.x86_64.rpm
 sudo rpm -i wps-office-11.1.0.11664.XA-1.x86_64.rpm
+
+#-----------------------------INSTALL FEW GIT REPOS--------------------
+sudo mkdir -p $HOME/Tools
+cd $HOME/Tools
+
+# clone superslicer config
+gh repo clone dhupee/Ender3V2_SuperSlicer_Config
 
 # go back to home and print done
 cd $HOME
