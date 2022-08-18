@@ -54,7 +54,10 @@ sudo dnf install -y flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install spotify and discord
-sudo flatpak install flathub com.spotify.Client com.discordapp.Discord
+sudo flatpak install flathub \
+    com.spotify.Client \ 
+    com.discordapp.Discord \ 
+    com.usebottles.bottles
 
 #-----------------------------INSTALL APPIMAGES------------------------
 
