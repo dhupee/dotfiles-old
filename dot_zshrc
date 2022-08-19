@@ -120,6 +120,9 @@ source $ZSH/oh-my-zsh.sh
 alias save-gnome-sett="zsh .scripts/save-gnome-setting.sh"
 alias load-gnome-sett="zsh .scripts/load-gnome-setting.sh"
 alias upgrade-all="sudo dnf upgrade && flatpak update"
+alias python3.9-mkenv="python3.9 -m venv venv"
+alias python3.10-mkenv="python3.10 -m venv venv"
+alias venv-run="vrun"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
