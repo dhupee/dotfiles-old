@@ -1,0 +1,99 @@
+Arch: win64
+Creation_Date: '2022-08-18 10:16:21.201502'
+Custom_Path: false
+DLL_Overrides: {}
+DXVK: dxvk-1.10.3
+Environment: Gaming
+Environment_Variables:
+    DXVK_ASYNC: '1'
+External_Programs:
+    b8f2f0c8-7354-4f83-a83c-ab1b3f0bda13:
+        executable: osu!.exe
+        id: b8f2f0c8-7354-4f83-a83c-ab1b3f0bda13
+        name: osu!
+        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/Osu/drive_c/Program
+            Files (x86)/osu!/osu!.exe
+Installed_Dependencies:
+- d3dx9
+- msls31
+- arial32
+- times32
+- courie32
+- d3dcompiler_43
+- d3dcompiler_47
+- andale32
+- arialb32
+- comic32
+- georgi32
+- impact32
+- tahoma32
+- trebuc32
+- verdan32
+- webdin32
+- allfonts
+- dotnet40
+- cjkfonts
+- dotnet48
+- dotnetcore3
+- d3dx11
+- gdiplus
+Language: sys
+LatencyFleX: latencyflex-v0.1.0
+Latest_Executables: []
+NVAPI: dxvk-nvapi-v0.5.4
+Name: Osu
+Parameters:
+    custom_dpi: 96
+    discrete_gpu: true
+    dxvk: true
+    dxvk_nvapi: false
+    fixme_logs: false
+    fsr: false
+    fsr_level: 2
+    fullscreen_capture: false
+    gamemode: false
+    gamescope: false
+    gamescope_borderless: false
+    gamescope_fps: 0
+    gamescope_fps_no_focus: 0
+    gamescope_fullscreen: true
+    gamescope_game_height: 0
+    gamescope_game_width: 0
+    gamescope_scaling: false
+    gamescope_window_height: 0
+    gamescope_window_width: 0
+    latencyflex: false
+    mangohud: false
+    mouse_warp: true
+    obsvkc: false
+    pulseaudio_latency: true
+    renderer: gl
+    sandbox: false
+    sync: esync
+    take_focus: false
+    use_be_runtime: true
+    use_eac_runtime: true
+    use_runtime: false
+    use_steam_runtime: false
+    versioning_automatic: false
+    versioning_compression: false
+    versioning_exclusion_patterns: false
+    virtual_desktop: false
+    virtual_desktop_res: 1280x720
+    vkbasalt: false
+    vkd3d: false
+    vmtouch: false
+    vmtouch_cache_cwd: false
+Path: Osu
+Runner: soda-7.0-3
+Sandbox:
+    share_net: true
+    share_sound: true
+State: 0
+Uninstallers: {}
+Update_Date: '2022-08-18 16:36:55.650458'
+VKD3D: vkd3d-proton-2.6-1-5b73139
+Versioning: false
+Versioning_Exclusion_Patterns: []
+Windows: win10
+WorkingDir: ''
