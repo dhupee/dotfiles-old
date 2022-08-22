@@ -81,12 +81,16 @@ plugins=(
     git
     gh
     sudo
+    copypath
+    copyfile
     python
+    history
     flutter
     emoji
     docker
     dnf
     zsh-syntax-highlighting
+    zsh-autosuggestions
     zsh-autocomplete
 )
 

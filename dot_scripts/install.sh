@@ -1,22 +1,22 @@
+#!/usr/bin/env bash
 # my mostly used software
 # WARNING: ONLY USE THIS SCRIPT FOR FEDORA
 
 # set the directory to home
 cd $HOME
 
-# install git
-sudo dnf install git-all
-
-# install python 3.9
-sudo dnf install python3.9
+# install stuff from dnf
+sudo dnf install git-all\
+                python3.9\
+                gnome-tweaks\
+                zsh
 
 # install github cli
 sudo dnf config-manager \
     --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install gh
 
-# install zsh and ohmyzsh
-sudo dnf install zsh
+# install ohmyzsh
 chsh -s $(which zsh)
 sh -c \
     "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -24,6 +24,7 @@ sh -c \
 # install ohmyzsh plugins
 git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-fast-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # install ohmyzsh themes
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
@@ -38,7 +39,6 @@ sudo dnf install brave-browser
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c \
     'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
 dnf check-update
 sudo dnf install code
 
@@ -67,7 +67,7 @@ cd $HOME/Appimages
 
 # download superslicer
 wget https://github.com/supermerill/SuperSlicer/releases/download/2.4.58.4/SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
-chmod a+x SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
+chmod a+x *.AppImage
 
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
@@ -75,15 +75,22 @@ cd $HOME/Downloads/
 
 # download WPS office
 wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps-office-11.1.0.11664.XA-1.x86_64.rpm
-sudo rpm -i wps-office-11.1.0.11664.XA-1.x86_64.rpm
+
+# install any rpm file I've downloaded
+sudo rpm -i *.rpm
 
 #-----------------------------INSTALL FEW GIT REPOS--------------------
-sudo mkdir -p $HOME/Tools
+if [ ! -d $HOME/Tools ]; then
+    echo "No directory, making it"
+    mkdir $HOME/Tools
+else
+    echo "Directory already exist"
+fi
 cd $HOME/Tools
 
 # clone superslicer config
-gh repo clone dhupee/Ender3V2_SuperSlicer_Config
+git clone https://github.com/dhupee/Ender3V2_SuperSlicer_Config
 
 # go back to home and print done
 cd $HOME
-echo "Installation Done! Please restart to enable changes on the zsh"
+echo "Installation Done! Please restart/login again to enable changes on the zsh"

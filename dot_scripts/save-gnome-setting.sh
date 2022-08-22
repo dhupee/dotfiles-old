@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # saving my gnome setting then send them to chezmoi
 
 cd $HOME
