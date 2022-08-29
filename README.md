@@ -5,16 +5,17 @@ repository containing my config files.
 this is not a fancy stuff just my stuff used mostly.
 this dotfiles used [chezmoi](https://www.chezmoi.io/) as their manager
 
-I use [Fedora](https://getfedora.org), btw
+I use [Fedora](https://getfedora.org) with Gnome DE, btw
 
 ## Installation
 
-to use this dotfile(to remind me if I somehow forgot), in terminal paste shell script below
+to use this dotfile(to remind me if I somehow forgot), connect your github first with [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) to make you dont have to login every commit
+then in terminal paste shell script below
 
 ```sh
 cd $HOME
 sh -c "$(curl -fsLS https://chezmoi.io/get)"
-chezmoi init https://github.com/dhupee/dotfiles.git # stop here if you dont want to install stuff
+chezmoi init git@github.com:dhupee/dotfiles.git
 cd $HOME/.local/share/chezmoi/dot_scripts/
 sudo bash install.sh 
 chezmoi -v apply
