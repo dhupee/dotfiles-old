@@ -16,8 +16,8 @@ then in terminal paste shell script below
 cd $HOME
 sh -c "$(curl -fsLS https://chezmoi.io/get)"
 chezmoi init git@github.com:dhupee/dotfiles.git
-cd $HOME/.local/share/chezmoi/dot_scripts/
-sudo bash install.sh 
+chezmoi cd
+sudo bash dot_scripts/install.sh
 chezmoi -v apply
 ```
 
@@ -44,3 +44,7 @@ then you can code like usual then commit it to the repo and then on terminal app
 cd $HOME
 chezmoi -v apply
 ```
+
+## To-Add List
+
+[] making gnome backup and restore(need VM for this, dont want to ruin my tweaks)

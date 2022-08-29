@@ -37,3 +37,9 @@ for f in "${file_array[@]}";do
         echo ""
     fi
 done
+
+# # pushing to github
+# chezmoi cd
+# git add .
+# git commit -m "auto update"
+# git push

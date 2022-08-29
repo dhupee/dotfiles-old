@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
+
 # my mostly used software
 # WARNING: ONLY USE THIS SCRIPT FOR FEDORA
 
@@ -8,6 +9,7 @@ cd $HOME
 # install stuff from dnf
 sudo dnf install git-all\
                 python3.9\
+                python3.7\
                 gnome-tweaks\
                 zsh
 
