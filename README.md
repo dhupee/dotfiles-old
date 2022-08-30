@@ -49,4 +49,4 @@ chezmoi -v apply
 
 - [ ] making gnome backup and restore(need VM for this, dont want to ruin my tweaks)
 - [ ] automate my Bottles setting update
-- [ ] adding few files from .config/ folder, such as htop hehe
+- [X] adding few files from .config/ folder, such as htop hehe (but also automated it)
