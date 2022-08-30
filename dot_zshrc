@@ -123,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias save-gnome-sett="zsh .scripts/save-gnome-setting.sh"
 alias load-gnome-sett="zsh .scripts/load-gnome-setting.sh"
+alias dotfiles-save="zsh .scripts/chezmoi-save.sh"
 alias upgrade-all="sudo dnf upgrade && flatpak update"
 alias python3.9-mkenv="python3.9 -m venv venv"
 alias python3.10-mkenv="python3.10 -m venv venv"
