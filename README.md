@@ -47,4 +47,4 @@ chezmoi -v apply
 
 ## To-Add List
 
-[] making gnome backup and restore(need VM for this, dont want to ruin my tweaks)
+- [ ] making gnome backup and restore(need VM for this, dont want to ruin my tweaks)
