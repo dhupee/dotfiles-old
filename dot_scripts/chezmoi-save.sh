@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# status: not done yet
+# status: operational
 
 dir_array=(
     "$HOME/.backup_bottles/"
     "$HOME/.scripts/"
-    "$HOME/.config/htop/"
+    "$HOME/.config/btop/"
 )
 
 file_array=(

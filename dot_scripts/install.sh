@@ -8,7 +8,7 @@ cd $HOME
 sudo dnf install git-all\
                 python3.9\
                 gnome-tweaks\
-                htop\
+                btop\
 		cmatrix\
                 zsh
 
