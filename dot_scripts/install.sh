@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 # my mostly used software
 # WARNING: ONLY USE THIS SCRIPT FOR FEDORA
 
@@ -9,8 +7,9 @@ cd $HOME
 # install stuff from dnf
 sudo dnf install git-all\
                 python3.9\
-                python3.7\
                 gnome-tweaks\
+                htop\
+		cmatrix\
                 zsh
 
 # install github cli
@@ -26,7 +25,6 @@ sh -c \
 # install ohmyzsh plugins
 git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-fast-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # install ohmyzsh themes
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
@@ -69,7 +67,7 @@ cd $HOME/Appimages
 
 # download superslicer
 wget https://github.com/supermerill/SuperSlicer/releases/download/2.4.58.4/SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
-chmod a+x *.AppImage
+chmod a+x SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
 
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
@@ -95,4 +93,4 @@ git clone https://github.com/dhupee/Ender3V2_SuperSlicer_Config
 
 # go back to home and print done
 cd $HOME
-echo "Installation Done! Please restart/login again to enable changes on the zsh"
+echo "Installation Done! Please restart to enable changes on the zsh"
