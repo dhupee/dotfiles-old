@@ -12,6 +12,9 @@ sudo dnf install git-all\
 		cmatrix\
                 zsh
 
+# install stuff from yum(last resort, tbh)
+sudo yum install cloudflare-warp
+
 # install github cli
 sudo dnf config-manager \
     --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
