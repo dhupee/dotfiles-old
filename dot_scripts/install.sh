@@ -12,8 +12,10 @@ sudo dnf install git-all\
 		cmatrix\
                 zsh
 
-# install stuff from yum(last resort, tbh)
-sudo yum install cloudflare-warp
+# install cloudflare-warp
+sudo rpm -ivh https://pkg.cloudflareclient.com/cloudflare-release-el8.rpm
+sudo sed -i 's/$releasever/8/g' /etc/yum.repos.d/cloudflare.repo
+sudo dnf install cloudflare-warp
 
 # install github cli
 sudo dnf config-manager \
