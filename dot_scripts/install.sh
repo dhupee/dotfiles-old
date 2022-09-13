@@ -50,6 +50,9 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf check-update
 sudo dnf install code
 
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 #-----------------------------INSTALL FLATPAK------------------------
 
 # install flatpak then enable flathub remote
