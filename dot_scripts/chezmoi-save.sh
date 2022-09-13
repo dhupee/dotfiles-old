@@ -13,6 +13,7 @@ file_array=(
     "$HOME/.gitconfig"
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
+    "/etc/dnf/dnf.conf/"
 )
 
 #----------------------SAVING FILES AND DIRS----------------------
