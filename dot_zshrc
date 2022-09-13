@@ -8,6 +8,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Export Flutter bin
+export PATH="$PATH:$HOME/Tools/flutter/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -81,10 +84,7 @@ plugins=(
     git
     gh
     sudo
-    copypath
-    copyfile
     python
-    history
     flutter
     emoji
     docker

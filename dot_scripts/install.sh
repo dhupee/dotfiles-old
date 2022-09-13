@@ -50,9 +50,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf check-update
 sudo dnf install code
 
-# install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
 #-----------------------------INSTALL FLATPAK------------------------
 
 # install flatpak then enable flathub remote
@@ -82,6 +79,12 @@ cd $HOME/Downloads/
 # download WPS office
 wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps-office-11.1.0.11664.XA-1.x86_64.rpm
 
+# download docker desktop
+sudo dnf config-manager \\
+    --add-repo \\
+    https://download.docker.com/linux/fedora/docker-ce.repo
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.11.0-x86_64.rpm
+
 # install any rpm file I've downloaded
 sudo rpm -i *.rpm
 
@@ -96,6 +99,11 @@ cd $HOME/Tools
 
 # clone superslicer config
 git clone https://github.com/dhupee/Ender3V2_SuperSlicer_Config
+
+# install flutter from their repo
+git clone https://github.com/flutter/flutter.git -b stable
+export PATH="$PATH:`pwd`/flutter/bin"
+flutter precache
 
 # go back to home and print done
 cd $HOME
