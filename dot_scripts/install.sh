@@ -4,6 +4,10 @@
 # set the directory to home
 cd $HOME
 
+# enable RPM fusion
+sudo dnf install \
+    https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
+
 # install stuff from dnf
 sudo dnf install git-all\
                 python3.9\
@@ -42,15 +46,9 @@ sudo dnf install brave-browser
 
 # install vscode
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c \
     'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
 sudo dnf install code
-
-# enable RPM fusion
-sudo dnf install \
-    https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
-
 
 #-----------------------------INSTALL FLATPAK------------------------
 
