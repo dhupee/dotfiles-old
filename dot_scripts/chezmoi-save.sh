@@ -5,7 +5,7 @@
 dir_array=(
     "$HOME/.backup_bottles/"
     "$HOME/.scripts/"
-    "$HOME/.config/btop/"
+    "$HOME/.config/htop/"
 )
 
 file_array=(
