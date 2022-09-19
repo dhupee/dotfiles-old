@@ -13,6 +13,7 @@ file_array=(
     "$HOME/.gitconfig"
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
+		"$HOME/.nanorc"
     "/etc/dnf/dnf.conf"
 )
 
@@ -20,7 +21,6 @@ file_array=(
 
 for d in "${dir_array[@]}";do
     if [ -d $d ];then
-                
         # echo "$d exists"
         echo "adding $d"
     else
