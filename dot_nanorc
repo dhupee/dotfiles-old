@@ -1,3 +1,4 @@
+# Thx RangerMauve, I'll use this
 # Remove some existing commands
 unbind ^\ all
 unbind ^o all
@@ -28,6 +29,7 @@ set linenumbers
 set constantshow
 set tabsize 2
 set autoindent
+set tabstospaces
 set mouse
 set whitespace "»⋅"
 set wordchars "_"
