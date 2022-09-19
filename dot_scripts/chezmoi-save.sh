@@ -13,7 +13,7 @@ file_array=(
     "$HOME/.gitconfig"
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
-		"$HOME/.nanorc"
+    "$HOME/.nanorc"
     "/etc/dnf/dnf.conf"
 )
 
