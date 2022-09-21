@@ -6,6 +6,7 @@ dir_array=(
     "$HOME/.backup_bottles/"
     "$HOME/.scripts/"
     "$HOME/.config/htop/"
+    "$HOME/.gnome-backups/"
 )
 
 file_array=(

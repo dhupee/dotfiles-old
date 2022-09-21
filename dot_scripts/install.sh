@@ -12,9 +12,12 @@ sudo dnf install \
 sudo dnf install git-all\
                 python3.9\
                 gnome-tweaks\
-                btop\
-		cmatrix\
+                htop\
+                cmatrix\
                 zsh
+
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # install cloudflare-warp
 sudo rpm -ivh https://pkg.cloudflareclient.com/cloudflare-release-el8.rpm
