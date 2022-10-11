@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
 # status: operational
+# TODO: add function for /etc/dnf/dnf.conf
+
 
 dir_array=(
     "$HOME/.backup_bottles/"
     "$HOME/.scripts/"
     "$HOME/.config/htop/"
     "$HOME/.gnome-backups/"
+    "$HOME/.local/share/backgrounds/"
+
 )
 
 file_array=(
@@ -15,7 +19,6 @@ file_array=(
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
     "$HOME/.nanorc"
-    "/etc/dnf/dnf.conf"
 )
 
 #----------------------SAVING FILES AND DIRS----------------------
@@ -28,9 +31,9 @@ for d in "${dir_array[@]}";do
         echo "$d is not exists"
         read -p "Would you like to make one? (y/n)?" choice
         case "$choice" in 
-        y|Y ) echo "yes, creating directory $d" && echo "boo!";;
+        y|Y ) echo "yes, creating directory $d" && mkdir $d;;
         n|N ) echo "skipping";;
-        * ) echo "invalid";;
+        * ) echo "choice is invalid";;
         esac
 
     fi

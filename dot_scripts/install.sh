@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # my mostly used software
 # WARNING: ONLY USE THIS SCRIPT FOR FEDORA
 
@@ -9,11 +11,15 @@ sudo dnf install \
     https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
 
 # install stuff from dnf
-sudo dnf install git-all\
-                python3.9\
-                gnome-tweaks\
-                htop\
-                cmatrix\
+sudo dnf install git-all \
+                python3.9 \
+                gnome-tweaks \
+                htop \
+                cmatrix \
+                crontab \
+                vlc \
+                qbittorrent \
+                steam \
                 zsh
 
 # install nvm
@@ -36,6 +42,7 @@ sh -c \
 
 # install ohmyzsh plugins
 git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-fast-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 
 # install ohmyzsh themes
@@ -52,6 +59,13 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
     'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
 sudo dnf install code
+
+# install miniconda
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+~/miniconda3/bin/conda init zsh
 
 #-----------------------------INSTALL FLATPAK------------------------
 
@@ -77,7 +91,8 @@ chmod a+x SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
 
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
-cd $HOME/Downloads/
+cd $HOME
+cd /tmp
 
 # download WPS office
 wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps-office-11.1.0.11664.XA-1.x86_64.rpm
@@ -90,6 +105,8 @@ wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.11.0-x86_64.rp
 
 # install any rpm file I've downloaded
 sudo rpm -i *.rpm
+
+cd $HOME
 
 #-----------------------------INSTALL FEW GIT REPOS--------------------
 if [ ! -d $HOME/Tools ]; then
