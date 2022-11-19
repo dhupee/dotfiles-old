@@ -134,8 +134,14 @@ alias venv-deactivate="conda deactivate"
 
 # function (a.k.a advanced alias)
 venv-create(){
+    conda create -p ./venv/ python=$1
+}
+
+venv-create-reqs(){
     conda create -p ./venv/ python=$1 --file $2
 }
+
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -15,6 +15,7 @@ sudo dnf install git-all \
                 python3.9 \
                 gnome-tweaks \
                 htop \
+                lutris \
                 cmatrix \
                 crontab \
                 vlc \
@@ -78,7 +79,7 @@ sudo flatpak install flathub \
     com.spotify.Client \
     com.discordapp.Discord \
     com.usebottles.bottles
-
+    
 #-----------------------------INSTALL APPIMAGES------------------------
 
 # make directory $HOME/Appimages

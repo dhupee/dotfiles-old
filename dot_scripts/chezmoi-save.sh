@@ -10,7 +10,6 @@ dir_array=(
     "$HOME/.config/htop/"
     "$HOME/.gnome-backups/"
     "$HOME/.local/share/backgrounds/"
-
 )
 
 file_array=(
