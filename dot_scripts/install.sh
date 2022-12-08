@@ -26,15 +26,16 @@ sudo dnf install git-all \
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
+# install pyenv & its prerequisites
+curl https://pyenv.run | bash
+sudo dnf groupinstall "Development Tools" -y
+sudo dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils -y
+
 # install cloudflare-warp
 sudo rpm -ivh https://pkg.cloudflareclient.com/cloudflare-release-el8.rpm
 sudo sed -i 's/$releasever/8/g' /etc/yum.repos.d/cloudflare.repo
 sudo dnf install cloudflare-warp
 
-# install github cli
-sudo dnf config-manager \
-    --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh
 
 # install ohmyzsh
 chsh -s $(which zsh)
@@ -117,14 +118,6 @@ else
     echo "Directory already exist"
 fi
 cd $HOME/Tools
-
-# clone superslicer config
-git clone https://github.com/dhupee/Ender3V2_SuperSlicer_Config
-
-# install flutter from their repo
-git clone https://github.com/flutter/flutter.git -b stable
-export PATH="$PATH:`pwd`/flutter/bin"
-flutter precache
 
 # go back to home and print done
 cd $HOME

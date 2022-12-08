@@ -25,3 +25,4 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"

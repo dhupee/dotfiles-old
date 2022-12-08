@@ -8,8 +8,10 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Export Flutter bin
-export PATH="$PATH:$HOME/Tools/flutter/bin"
+# Setup environment for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Use brave as Chrome executable instead
 export CHROME_EXECUTABLE="/opt/brave.com/brave/brave-browser"
@@ -124,43 +126,9 @@ source $ZSH/oh-my-zsh.sh
 alias dotfiles-save="zsh .scripts/chezmoi-save.sh"
 alias upgrade-all="sudo dnf upgrade && flatpak update"
 
-# idk if i still need this
-alias python3.7-mkenv="python3.7 -m venv venv"
-alias python3.9-mkenv="python3.9 -m venv venv"
-alias python3.10-mkenv="python3.10 -m venv venv"
-
-alias venv-activate="conda activate ./venv"
-alias venv-deactivate="conda deactivate"
-
-# function (a.k.a advanced alias)
-venv-create(){
-    conda create -p ./venv/ python=$1
-}
-
-venv-create-reqs(){
-    conda create -p ./venv/ python=$1 --file $2
-}
-
-
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/dhupee/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/dhupee/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/dhupee/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/dhupee/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
