@@ -12,7 +12,6 @@ sudo dnf install \
 
 # install stuff from dnf
 sudo dnf install git-all \
-                python3.9 \
                 gnome-tweaks \
                 htop \
                 lutris \
@@ -35,7 +34,6 @@ sudo dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel
 sudo rpm -ivh https://pkg.cloudflareclient.com/cloudflare-release-el8.rpm
 sudo sed -i 's/$releasever/8/g' /etc/yum.repos.d/cloudflare.repo
 sudo dnf install cloudflare-warp
-
 
 # install ohmyzsh
 chsh -s $(which zsh)
@@ -62,13 +60,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf check-update
 sudo dnf install code
 
-# install miniconda
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-~/miniconda3/bin/conda init zsh
-
 #-----------------------------INSTALL FLATPAK------------------------
 
 # install flatpak then enable flathub remote
@@ -79,7 +70,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 sudo flatpak install flathub \
     com.spotify.Client \
     com.discordapp.Discord \
-    com.usebottles.bottles
+    com.usebottles.bottles \
+    sh.ppy.osu
     
 #-----------------------------INSTALL APPIMAGES------------------------
 
@@ -87,10 +79,9 @@ sudo flatpak install flathub \
 sudo mkdir -p $HOME/Appimages
 cd $HOME/Appimages
 
-# download superslicer
-wget https://github.com/supermerill/SuperSlicer/releases/download/2.4.58.4/SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
-chmod a+x SuperSlicer-ubuntu_18.04-2.4.58.4.AppImage
-
+# download Cura
+wget https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-linux-modern.AppImage
+chmod a+x Ultimaker-Cura-5.2.1-linux-modern.AppImage
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
 cd $HOME
@@ -103,10 +94,10 @@ wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps
 sudo dnf config-manager \\
     --add-repo \\
     https://download.docker.com/linux/fedora/docker-ce.repo
-wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.11.0-x86_64.rpm
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.15.0-x86_64.rpm
 
 # install any rpm file I've downloaded
-sudo rpm -i *.rpm
+sudo dnf install ./*.rpm
 
 cd $HOME
 

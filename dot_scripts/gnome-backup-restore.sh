@@ -1,6 +1,7 @@
 #!bin/bash
 
 # need ARG setting for restore
+# ? maybe just use python instead eh??
 
 # backup gnome-shell
 dconf dump /org/gnome/shell/ > .gnome-backup/gnome-shell
