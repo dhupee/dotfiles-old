@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # my mostly used software
 # WARNING: ONLY USE THIS SCRIPT FOR FEDORA
@@ -11,9 +11,10 @@ sudo dnf install \
     https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
 
 # install stuff from dnf
-sudo dnf install git-all \
+sudo dnf install -y git-all \
                 gnome-tweaks \
                 htop \
+                podman \
                 lutris \
                 cmatrix \
                 crontab \
@@ -73,15 +74,27 @@ sudo flatpak install flathub \
     com.usebottles.bottles \
     sh.ppy.osu
     
-#-----------------------------INSTALL APPIMAGES------------------------
+#---------------INSTALL APPIMAGES AND BINARIES------------------------
 
 # make directory $HOME/Appimages
 sudo mkdir -p $HOME/Appimages
 cd $HOME/Appimages
 
+# TODO: create for loop if I need more than 1 Appimages
 # download Cura
 wget https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-linux-modern.AppImage
 chmod a+x Ultimaker-Cura-5.2.1-linux-modern.AppImage
+
+if [ ! -d $HOME/Bin ]; then
+    echo "No directory, making it"
+    mkdir $HOME/Bin
+else
+    echo "Directory already exist"
+fi
+cd $HOME/Bin
+
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+
 #-----------------------------INSTALL RPM FILES------------------------
 # also dont forget to update it
 cd $HOME
@@ -89,12 +102,6 @@ cd /tmp
 
 # download WPS office
 wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps-office-11.1.0.11664.XA-1.x86_64.rpm
-
-# download docker desktop
-sudo dnf config-manager \\
-    --add-repo \\
-    https://download.docker.com/linux/fedora/docker-ce.repo
-wget https://desktop.docker.com/linux/main/amd64/docker-desktop-4.15.0-x86_64.rpm
 
 # install any rpm file I've downloaded
 sudo dnf install ./*.rpm
