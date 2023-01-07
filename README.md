@@ -47,6 +47,6 @@ chezmoi -v apply
 
 ## To-Add List
 
-- [ ] making gnome backup and restore(need VM for this, dont want to ruin my tweaks)
-- [ ] automate my Bottles setting update
-- [X] adding few files from .config/ folder, such as htop hehe (but also automated it)
+- [ ] making gnome backup and restore (need VM for this, dont want to ruin my tweaks)
+- [ ] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
+- [ ] automation script for copy gitignore content to dockerignore
