@@ -51,3 +51,4 @@ chezmoi -v apply
 - [ ] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
 - [ ] automation script for copy gitignore content to dockerignore
 - [ ] script for init on live usb
+- [ ] branch for parrot OS
