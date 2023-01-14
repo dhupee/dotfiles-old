@@ -7,8 +7,7 @@
 cd $HOME
 
 # enable RPM fusion
-sudo dnf install \
-    https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
 
 # install stuff from dnf
 sudo dnf install -y git-all \
@@ -77,7 +76,7 @@ sudo flatpak install flathub \
 #---------------INSTALL APPIMAGES AND BINARIES------------------------
 
 # make directory $HOME/Appimages
-sudo mkdir -p $HOME/Appimages
+mkdir -p $HOME/Appimages
 cd $HOME/Appimages
 
 # TODO: create for loop if I need more than 1 Appimages
