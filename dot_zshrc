@@ -88,7 +88,7 @@ ENABLE_CORRECTION="true"
 plugins=(
     sudo
     docker
-    zsh-syntax-highlighting
+    zsh-fast-syntax-highlighting
     zsh-autosuggestions
     zsh-autocomplete
 )
@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="ls -a"
 alias dotfiles-save="zsh .scripts/chezmoi-save.sh"
 alias upgrade-all="sudo dnf upgrade && flatpak update"
 
