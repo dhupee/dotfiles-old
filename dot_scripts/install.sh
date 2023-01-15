@@ -23,7 +23,7 @@ sudo dnf install -y git-all \
                 zsh
 
 # install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 # install pyenv & its prerequisites
 curl https://pyenv.run | bash
@@ -84,13 +84,13 @@ cd $HOME/Appimages
 wget https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-linux-modern.AppImage
 chmod a+x Ultimaker-Cura-5.2.1-linux-modern.AppImage
 
-if [ ! -d $HOME/Bin ]; then
+if [ ! -d $HOME/bin ]; then
     echo "No directory, making it"
-    mkdir $HOME/Bin
+    mkdir $HOME/bin
 else
     echo "Directory already exist"
 fi
-cd $HOME/Bin
+cd $HOME/bin
 
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
 
