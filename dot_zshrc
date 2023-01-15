@@ -123,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls="ls -a"
 alias dotfiles-save="zsh .scripts/chezmoi-save.sh"
 alias upgrade-all="sudo dnf upgrade && flatpak update"
+alias cloudflared="$HOME/bin/cloudflared-linux-amd64"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
