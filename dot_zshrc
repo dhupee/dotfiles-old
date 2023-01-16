@@ -88,7 +88,7 @@ ENABLE_CORRECTION="true"
 plugins=(
     sudo
     docker
-    zsh-fast-syntax-highlighting
+    zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-autocomplete
 )
@@ -120,10 +120,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="ls -a"
+alias ls="ls -a --color='auto'"
 alias dotfiles-save="zsh .scripts/chezmoi-save.sh"
 alias upgrade-all="sudo dnf upgrade && flatpak update"
 alias cloudflared="$HOME/bin/cloudflared-linux-amd64"
+alias symlink="ln -s"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

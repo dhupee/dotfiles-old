@@ -7,12 +7,15 @@
 cd $HOME
 
 # enable RPM fusion
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
+sudo dnf install -y "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
+sudo dnf install -y "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
 # install stuff from dnf
 sudo dnf install -y git-all \
                 gnome-tweaks \
+                gnome-extensions-app \
                 htop \
+                cmake \
                 podman \
                 lutris \
                 cmatrix \
@@ -21,6 +24,9 @@ sudo dnf install -y git-all \
                 qbittorrent \
                 steam \
                 zsh
+
+# install git-lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
 
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
@@ -37,11 +43,10 @@ sudo dnf install cloudflare-warp
 
 # install ohmyzsh
 chsh -s $(which zsh)
-sh -c \
-    "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install ohmyzsh plugins
-git clone https://github.com/zdharma/fast-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-fast-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 
@@ -56,7 +61,7 @@ sudo dnf install brave-browser
 
 # install vscode
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-    'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
 sudo dnf install code
 
@@ -67,12 +72,13 @@ sudo dnf install -y flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # install spotify and discord
-sudo flatpak install flathub \
+sudo flatpak install -y flathub \
     com.spotify.Client \
     com.discordapp.Discord \
     com.usebottles.bottles \
-    sh.ppy.osu
-    
+    sh.ppy.osu \
+    com.heroicgameslauncher.hgl
+
 #---------------INSTALL APPIMAGES AND BINARIES------------------------
 
 # make directory $HOME/Appimages
