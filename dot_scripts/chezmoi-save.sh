@@ -19,6 +19,7 @@ file_array=(
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
     "$HOME/.nanorc"
+    "$HOME/.aliases.txt"
 )
 
 #----------------------SAVING FILES AND DIRS----------------------

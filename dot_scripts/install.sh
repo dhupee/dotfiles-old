@@ -16,6 +16,7 @@ sudo dnf install -y git-all \
                 gnome-extensions-app \
                 htop \
                 cmake \
+                obs-studio \
                 podman \
                 lutris \
                 cmatrix \
