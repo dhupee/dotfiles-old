@@ -8,7 +8,7 @@ dir_array=(
     "$HOME/.backup_bottles/"
     "$HOME/.scripts/"
     "$HOME/.config/htop/"
-    "$HOME/.gnome-backups/"
+    "$HOME/.gnome_backups/"
     "$HOME/.local/share/backgrounds/"
     "$HOME/.fonts/"
 )
