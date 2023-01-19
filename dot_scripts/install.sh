@@ -11,29 +11,38 @@ sudo dnf install -y "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-
 sudo dnf install -y "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
 # install stuff from dnf
-sudo dnf install -y git-all \
-                gnome-tweaks \
-                gnome-extensions-app \
-                htop \
-                cmake \
-                obs-studio \
-                podman \
-                lutris \
-                cmatrix \
-                crontab \
-                vlc \
-                qbittorrent \
-                steam \
-                zsh
+packages=(
+    "git-all"
+    "gnome-tweaks"
+    "gnome-extensions-app"
+    "htop"
+    "cmake"
+    "obs-studio"
+    "podman"
+    "lutris"
+    "cmatrix"
+    "crontab"
+    "vlc"
+    "qbittorrent"
+    "steam"
+    "zsh"
+)
+
+# Iterate through the array
+for package in "${packages[@]}"
+do
+    # Install each package
+    sudo dnf install -y $package
+done
 
 # install git-lfs
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash &&
 
 # install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash &&
 
 # install pyenv & its prerequisites
-curl https://pyenv.run | bash
+curl https://pyenv.run | bash &&
 sudo dnf groupinstall "Development Tools" -y
 sudo dnf install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils -y
 

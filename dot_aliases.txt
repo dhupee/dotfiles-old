@@ -1,3 +1,6 @@
+# clear
+alias c="clear"
+
 # ls
 alias ls="ls -a --color='auto'"
 
