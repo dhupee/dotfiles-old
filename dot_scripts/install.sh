@@ -11,7 +11,7 @@ sudo dnf install -y "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-
 sudo dnf install -y "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
 # install stuff from dnf
-packages=(
+dnf_packages=(
     "git-all"
     "gnome-tweaks"
     "gnome-extensions-app"
@@ -29,7 +29,7 @@ packages=(
 )
 
 # Iterate through the array
-for package in "${packages[@]}"
+for package in "${dnf_packages[@]}"
 do
     # Install each package
     sudo dnf install -y $package
@@ -100,13 +100,13 @@ cd $HOME/Appimages
 wget https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-linux-modern.AppImage
 chmod a+x Ultimaker-Cura-5.2.1-linux-modern.AppImage
 
-if [ ! -d $HOME/bin ]; then
+if [ ! -d $HOME/.bin ]; then
     echo "No directory, making it"
-    mkdir $HOME/bin
+    mkdir $HOME/.bin
 else
     echo "Directory already exist"
 fi
-cd $HOME/bin
+cd $HOME/.bin
 
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
 

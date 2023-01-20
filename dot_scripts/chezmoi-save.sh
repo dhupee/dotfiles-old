@@ -8,6 +8,7 @@ dir_array=(
     "$HOME/.backup_bottles/"
     "$HOME/.scripts/"
     "$HOME/.config/htop/"
+    "$HOME/.config/neofetch/"
     "$HOME/.gnome_backups/"
     "$HOME/.local/share/backgrounds/"
     "$HOME/.fonts/"
@@ -57,5 +58,5 @@ done
 # pushing to github
 cd $HOME/.local/share/chezmoi
 git add .
-git commit -m "auto update"
+git commit -m "automated update by dhupee"
 git push

@@ -3,7 +3,7 @@
 repository containing my config files.
 
 this is not a fancy stuff just my stuff used mostly.
-this dotfiles used [chezmoi](https://www.chezmoi.io/) as their manager
+this dotfiles used [Chezmoi](https://www.chezmoi.io/) as their manager
 
 I use [Fedora](https://getfedora.org) with Gnome DE, btw
 
@@ -14,7 +14,7 @@ then in terminal paste shell script below
 
 ```sh
 cd $HOME
-sh -c "$(curl -fsLS https://chezmoi.io/get)"
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.bin
 chezmoi init git@github.com:dhupee/dotfiles.git
 chezmoi cd
 sudo bash dot_scripts/install.sh
