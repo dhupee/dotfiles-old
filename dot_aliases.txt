@@ -4,6 +4,9 @@ alias c="clear"
 # ls
 alias ls="ls -a --color='auto'"
 
+# nvim
+alias vim="nvim"
+
 # save my dotfiles
 alias dotsave="zsh .scripts/chezmoi-save.sh"
 
