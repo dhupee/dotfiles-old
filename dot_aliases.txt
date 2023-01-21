@@ -5,13 +5,13 @@ alias c="clear"
 alias ls="ls -a --color='auto'"
 
 # save my dotfiles
-alias dotfiles-save="zsh .scripts/chezmoi-save.sh"
+alias dotsave="zsh .scripts/chezmoi-save.sh"
 
 # upgrade all stuff in dnf and flatpak
 alias upgrade-all="sudo dnf upgrade && flatpak update"
 
 # cloudflare cli
-alias cloudflared="$HOME/bin/cloudflared-linux-amd64"
+alias cloudflared="$HOME/.bin/cloudflared-linux-amd64"
 
 # symlink
 alias symlink="ln -s"
@@ -19,3 +19,7 @@ alias symlink="ln -s"
 # install and uninstall from dnf
 alias install="sudo dnf install"
 alias uninstall="sudo dnf remove"
+
+# run osu with dedicated graphics by default
+alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
+

@@ -12,6 +12,7 @@ dir_array=(
     "$HOME/.gnome_backups/"
     "$HOME/.local/share/backgrounds/"
     "$HOME/.fonts/"
+    "$HOME/.config/nvim/"
 )
 
 file_array=(
