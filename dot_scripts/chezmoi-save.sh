@@ -10,7 +10,7 @@ dir_array=(
     "$HOME/.config/htop/"
     "$HOME/.config/neofetch/"
     "$HOME/.gnome_backups/"
-    "$HOME/.local/share/backgrounds/"
+    "$HOME/.local/share/wallpapers/"
     "$HOME/.fonts/"
     "$HOME/.config/nvim/"
 )
