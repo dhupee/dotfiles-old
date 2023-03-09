@@ -20,8 +20,8 @@ alias cloudflared="$HOME/.bin/cloudflared-linux-amd64"
 alias symlink="ln -s"
 
 # install and uninstall from dnf
-alias install="sudo dnf install"
-alias uninstall="sudo dnf remove"
+alias inst-pac="sudo pacman -S"
+alias uninst-pac="sudo pacman -S"
 
 # run osu with dedicated graphics by default
 alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
