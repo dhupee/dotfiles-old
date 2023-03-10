@@ -5,7 +5,7 @@ repository containing my config files.
 this is not a fancy stuff just my stuff used mostly.
 this dotfiles used [Chezmoi](https://www.chezmoi.io/) as it's manager.
 
-I use [Fedora](https://getfedora.org) with Gnome DE, btw.
+Since I use [EndeavourOS](https://endeavouros.com/) with KDE I can say that "I use Arch, btw".
 
 ## Installation
 
@@ -30,6 +30,8 @@ if you want to add new dotfile, do this in terminal.
 chezmoi add <dotfile directory>
 ```
 
+or you can add your file/folder directory in the `dot_scripts/chezmoi-save.sh` to automate it.
+
 ## Editing
 
 since i use VScode as my text editor/IDE so what I do to edit the dotfiles easily is like this, first open terminal.
@@ -48,9 +50,9 @@ chezmoi -v apply
 
 ## To-Add List
 
-- [ ] making gnome backup and restore (need VM for this, dont want to ruin my tweaks)
+- [ ] making ~~gnome~~ KDE backup and restore (need VM for this, dont want to ruin my config)
 - [ ] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
 - [ ] saving osu's songs/skins/data and other big files to google drive/dropbox
 - [ ] automation script for copy gitignore content to dockerignore
 - [ ] script for init on live usb
-- [ ] branch for parrot OS
+- [ ] branch for parrot OS/BlackArch
