@@ -13,6 +13,12 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
+# Enabling Fcitx5 for japanese input
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
