@@ -130,7 +130,9 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # source line for aliases
-source ~/.aliases.txt
+if [ -e ~/.aliases.txt ]; then
+  source ~/.aliases.txt
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
