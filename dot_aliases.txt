@@ -8,7 +8,7 @@ alias ls="ls -a --color='auto'"
 alias vim="nvim"
 
 # save my dotfiles
-alias dotsave="zsh .scripts/chezmoi-save.sh"
+alias dotsave="sh .scripts/chezmoi-save.sh"
 
 # upgrade all stuff in dnf and flatpak
 alias upgrade-all="sudo dnf upgrade && flatpak update"
