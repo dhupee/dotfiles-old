@@ -8,3 +8,9 @@
 	email = 32934122+dhupee@users.noreply.github.com
 [gui]
 	recentrepo = /home/dhupee/.local/share/chezmoi
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

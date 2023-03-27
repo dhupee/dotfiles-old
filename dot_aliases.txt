@@ -26,3 +26,5 @@ alias uninst-pac="sudo pacman -S"
 # run osu with dedicated graphics by default
 alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
 
+# Podman is Docker, fight me
+alias docker=podman
