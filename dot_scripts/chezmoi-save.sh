@@ -11,7 +11,7 @@ dir_array=(
     "$HOME/.config/neofetch/"
     "$HOME/.local/share/wallpapers/"
     "$HOME/.fonts/"
-    "$HOME/.config/nvim/"
+	"$HOME/.config/micro/"
 )
 
 file_array=(
