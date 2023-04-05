@@ -1,1 +1,6 @@
-{}
+{
+    "colorscheme": "simple",
+    "ftoptions": false,
+    "lsp.formatOnSave": false,
+    "lsp.server": "python=pylsp,go=gopls,typescript=deno lsp={\"importMap\": \"./import_map.json\"}"
+}
