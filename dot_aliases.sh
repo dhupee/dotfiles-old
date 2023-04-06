@@ -28,3 +28,6 @@ alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
 
 # Podman is Docker, fight me
 alias docker=podman
+
+# Remove orphan packages
+alias orphanrm="sh .scripts/remove-orphans.sh"
