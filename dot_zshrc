@@ -28,9 +28,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# rustup and cargo completion tool
-fpath+=~/.zfunc
-
 # Use brave as Chrome executable instead
 export CHROME_EXECUTABLE="/opt/brave.com/brave/brave-browser"
 
@@ -168,8 +165,6 @@ _gobrew()
 
 complete -F _gobrew gobrew
 
-# Sourcing Rustup
+# Sourcing Rustup and it's completion tool
 export PATH="$HOME/.cargo/bin:$PATH"
-if [ -e ~/.rustup_completions.sh ]; then
-  source ~/.rustup_completions.sh
-fi
+fpath+=~/.zfunc
