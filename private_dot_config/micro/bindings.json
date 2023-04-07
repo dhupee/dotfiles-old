@@ -37,6 +37,7 @@
     "CtrlSpace": "Autocomplete",
     "CtrlUnderscore": "lua:comment.comment",
     "CtrlUp": "ScrollUp",
+    "F1": "command:cheat",
     "F3": "FindNext",
     "OldBackspace": "DeleteWordLeft",
     "ShiftDelete": "CutLine",

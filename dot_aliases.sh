@@ -1,6 +1,12 @@
 # clear
 alias c="clear"
 
+# fuzzy search
+alias f="fzf"
+
+# start bluetooth
+alias bt-start="systemctl start bluetooth"
+
 # ls
 alias ls="ls -a --color='auto'"
 

@@ -28,6 +28,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# rustup and cargo completion tool
+fpath+=~/.zfunc
+
 # Use brave as Chrome executable instead
 export CHROME_EXECUTABLE="/opt/brave.com/brave/brave-browser"
 
@@ -145,5 +148,28 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ``
 
-# Sourcing Go Version Manager
-[[ -s "/home/dhupee/.gvm/scripts/gvm" ]] && source "/home/dhupee/.gvm/scripts/gvm"
+# Sourcing Gobrew for Go versioning
+export PATH="$HOME/.gobrew/current/bin:$HOME/.gobrew/bin:$PATH"
+export GOROOT="$HOME/.gobrew/current/go"
+_gobrew()
+{
+    COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+    case "$COMP_CWORD" in
+        1)
+            COMMANDS="ls ls-remote use install uninstall prune version help"
+            ;;
+        2)
+            COMMANDS=`gobrew ls |sed '/*/d'| sed '/current/d' |awk NF`
+            ;;
+    esac
+    COMPREPLY=(`compgen -W "$COMMANDS" -- "${COMP_WORDS[COMP_CWORD]}"`)
+    return 0
+}
+
+complete -F _gobrew gobrew
+
+# Sourcing Rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+if [ -e ~/.rustup_completions.sh ]; then
+  source ~/.rustup_completions.sh
+fi
