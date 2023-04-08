@@ -106,7 +106,10 @@ plugins=(
     copypath
     docker
     nvm
+    npm
     pyenv
+    python
+    golang
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-autocomplete
