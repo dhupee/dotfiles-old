@@ -14,7 +14,7 @@ alias ls="ls -a --color='auto'"
 alias vim="nvim"
 
 # save my dotfiles
-alias dotsave="bash .scripts/chezmoi-save.sh"
+alias dotsave="sh .scripts/chezmoi-save.sh"
 
 # upgrade all stuff in dnf and flatpak
 alias upgrade-all="sudo dnf upgrade && flatpak update"
@@ -36,4 +36,4 @@ alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
 alias docker=podman
 
 # Remove orphan packages
-alias orphanrm="bash .scripts/remove-orphans.sh"
+alias orphanrm="sh .scripts/remove-orphans.sh"

@@ -167,7 +167,3 @@ _gobrew()
 }
 
 complete -F _gobrew gobrew
-
-# Sourcing Rustup and it's completion tool
-export PATH="$HOME/.cargo/bin:$PATH"
-fpath+=~/.zfunc
