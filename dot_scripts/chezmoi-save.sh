@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # status: operational
 # TODO: add function for /etc/dnf/dnf.conf
