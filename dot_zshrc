@@ -109,6 +109,7 @@ plugins=(
     npm
     pyenv
     python
+    rust
     golang
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -169,3 +170,7 @@ _gobrew()
     return 0
 }
 complete -F _gobrew gobrew
+
+# Sourcing Rustup and its complementary tools
+source "$HOME/.cargo/env"
+fpath+=~/.zfunc
