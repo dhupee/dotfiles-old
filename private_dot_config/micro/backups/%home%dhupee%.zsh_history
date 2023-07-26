@@ -1,0 +1,1961 @@
+q: 1678349365:0;chezmoi apply
+: 1678349579:0;c
+: 1678349591:0;cat .aliases
+: 1678349594:0;ls
+: 1678349597:0;ll
+: 1678349599:0;ls -a
+: 1678349615:0;git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+: 1678349635:0;git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+: 1678349646:0;exec zsh
+: 1678349659:0;git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+: 1678349666:0;exec zsh
+: 1678349713:0;curl https://pyenv.run | bash
+: 1678349743:0;pyenv
+: 1678349746:0;clear
+: 1678349750:0;pyenv
+: 1678349757:0;pyenv install
+: 1678349762:0;exec zsh
+: 1678349773:0;c
+: 1678349798:0;pyenv install 3.9
+: 1678349983:0;pyenv virtualenv 3.9.16
+: 1678350002:0;pyenv virtualenv-init --help
+: 1678350007:0;c
+: 1678350041:0;curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash &&\
+
+: 1678350045:0;curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
+: 1678350070:0;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+: 1678350460:0;yay -S visual-studio-code-bin
+: 1678351531:0;neofetch
+: 1678351546:0;c
+: 1678351967:0;dotsave
+: 1678352036:0;ssh-keygen -t ed25519 -C "narutohaj00@gmail.com"
+: 1678352066:0;eval "$(ssh-agent -s)"
+: 1678352072:0;ssh-add ~/.ssh/id_ed25519
+: 1678352101:0;cat ~/.ssh/id_ed25519.pub
+: 1678352187:0;dotsave
+: 1678352226:0;exec zsh
+: 1678352228:0;dotsave
+: 1678352289:0;chezmoi cd
+: 1678352293:0;..
+: 1678352307:0;chezmoi
+: 1678352312:0;cd chezmoi
+: 1678352313:0;ls
+: 1678352317:0;..
+: 1678352323:0;rmdir chezmoi
+: 1678352329:0;rm -rf chezmoi
+: 1678352332:0;cd
+: 1678352362:0;chezmoi init git@github.com:dhupee/dotfiles.git
+: 1678352398:0;inst-pac git-lfs
+: 1678352409:0;chezmoi init git@github.com:dhupee/dotfiles.git
+: 1678352415:0;dotsave
+: 1678354607:0;nano .scripts/chezmoi-save.sh
+: 1678354634:0;chezmoi cd
+: 1678354649:0;rm -rf private_dot_local/private_share/backgrounds
+: 1678354654:0;ls
+: 1678354661:0;cd private_dot_local
+: 1678354663:0;ls
+: 1678354671:0;cd private_share
+: 1678354672:0;ls
+: 1678357646:0;cd
+: 1678357650:0;dotsave
+: 1678360367:0;htop
+: 1678423341:0;pacman -Syu
+: 1678423344:0;sudo pacman -Syu
+: 1678423663:0;reboot
+: 1678429443:0;crontab
+: 1678429445:0;c
+: 1678431195:0;ls
+: 1678431201:0;cd
+: 1678431202:0;ll
+: 1678431225:0;c
+: 1678431231:0;cat .zshrc
+: 1678431390:0;c
+: 1678431392:0;cat .zshrc
+: 1678431407:0;nano .aliases.txt
+: 1678431923:0;pacman -h
+: 1678433280:0;c
+: 1678433282:0;neofetch
+: 1678433641:0;c
+: 1678436653:0;nano cohort.txt
+: 1678441119:0;htop
+: 1678441158:0;c
+: 1678451758:0;chezmoi cd
+: 1678451772:0;nano .gitattributes
+: 1678451789:0;cd
+: 1678451796:0;dotsave
+: 1678451983:0;chezmoi cd
+: 1678451988:0;git put
+: 1678451991:0;git push
+: 1678452464:0;ssh-keygen -t ed25519 -C "narutohaj00@gmail.com"
+: 1678452492:0;eval "$(ssh-agent -s)"
+: 1678452506:0;ssh-add ~/.ssh/id_ed25519
+: 1678452574:0;cat ~/.ssh/id_ed25519.pub
+: 1678452635:0;git push
+: 1678452742:0;git pull
+: 1678452749:0;git fetch
+: 1678452773:0;git-lfs
+: 1678452785:0;git-lfs pull
+: 1678452876:0;git-lfs fetch
+: 1678452938:0;pacman -S libreoffice
+: 1678452941:0;sudo pacman -S libreoffice
+: 1678453121:0;git-lfs fetch
+: 1678453141:0;git-lfs pull
+: 1678453154:0;git lfs 
+: 1678453159:0;git lfs get
+: 1678453164:0;git lfs pull
+: 1678453177:0;chezmoi apply
+: 1678453350:0;chezmoi cd
+: 1678453355:0;nano .gitattributes
+: 1678453455:0;dotsave
+: 1678453457:0;cd
+: 1678453461:0;dotsave
+: 1678454044:0;git lfs install
+: 1678454049:0;dotsave
+: 1678454120:0;c
+: 1678454617:0;pacman -S steam
+: 1678454620:0;sudo pacman -S steam
+: 1678455569:0;pacman -S heroic
+: 1678455572:0;sudo pacman -S heroic
+: 1678455591:0;sudo pacman -S lutris
+: 1678455852:0;yay -S heroic-games-launcher-bin
+: 1678456920:0;pacman -Syu
+: 1678456922:0;sudo pacman -Syu
+: 1678457362:0;yay
+: 1678458403:0;exec zsh
+: 1678458557:0;pacman -S vlc
+: 1678458559:0;sudo pacman -S vlc
+: 1678458604:0;echo "daffa install kebutuhan daffa, sama daffa ganteng banget"
+: 1678458664:0;c
+: 1678458740:0;pacman -S obs-studio qbittorrent
+: 1678458743:0;sudo pacman -S obs-studio qbittorrent
+: 1678459001:0;pacman -S discord
+: 1678459003:0;sudo pacman -S discord
+: 1678459140:0;yay -S osu-lazer-bin
+: 1678459572:0;neofetch
+: 1678459579:0;c
+: 1678459582:0;neofetch
+: 1678459809:0;echo "Linux Mint"
+: 1678460112:0;htop
+: 1678466258:0;dotsave
+: 1678466304:0;chezmoi cd
+: 1678466308:0;git push
+: 1678466405:0;cd
+: 1678466410:0;nano .scripts/chezmoi-save.sh
+: 1678466435:0;chezmoi cd
+: 1678466463:0;git remote set-url origin git@github.com:dhupee/dotfiles.git 
+: 1678466467:0;git push
+: 1678466576:0;ssh-add ~/.ssh/id_ed25519
+: 1678466581:0;cd
+: 1678466587:0;ssh-add ~/.ssh/id_ed25519
+: 1678466627:0;ssh-agent /bin/sh
+: 1678466691:0;eval "$(ssh-agent -s)"
+: 1678466699:0;ssh-add ~/.ssh/id_ed25519
+: 1678466708:0;chezmoi cd
+: 1678466712:0;git push
+: 1678466792:0;eval
+: 1678466796:0;eval -h
+: 1678466800:0;man eval
+: 1678466815:0;tldr
+: 1678466826:0;tldr git
+: 1678466862:0;cd
+: 1678466867:0;nano .zshrc
+: 1678467440:0;code .zshrc
+: 1678467981:0;export
+: 1678467985:0;exec zsh
+: 1678469395:0;c
+: 1678469590:0;chezmoi cd
+: 1678469596:0;code .
+: 1678470151:0;cd
+: 1678470153:0;dotsave
+: 1678470218:0;chezmoi apply
+: 1678470238:0;cat .zshrc
+: 1678470245:0;c
+: 1678471211:0;neofetch
+: 1678471747:0;.nvm
+: 1678471750:0;ls
+: 1678471763:0;cd
+: 1678471770:0;.pyenv
+: 1678472231:0;cd
+: 1678472233:0;c
+: 1678475746:0;pacman -S kcm-fcitx
+: 1678475749:0;sudo pacman -S kcm-fcitx
+: 1678476075:0;fcitx5-configtool
+: 1678476124:0;yay -S fcitx5-mozc
+: 1678476183:0;sudo pacman -R kcm-fcitx
+: 1678476190:0;yay -S fcitx5-mozc
+: 1678476208:0;yay -S fcitx-mozc
+: 1678477343:0;pacman -R fcitx fcitx-mozc fcitx-qt5
+: 1678477345:0;sudo pacman -R fcitx fcitx-mozc fcitx-qt5
+: 1678477888:0;pacman -S fcitx5-mozc
+: 1678477895:0;sudo pacman -S fcitx5-mozc
+: 1678477926:0;exec zsh
+: 1678522649:0;sudo systemctl restart display-manager
+: 1678522944:0;fcitx5-configtool
+: 1678523109:0;sudo pacman -S fcitx5-mozc
+: 1678523616:0;sudo pacman -R fcitx5 fcitx5-mozc
+: 1678523719:0;sudo pacman -S kcm-fcitx
+: 1678524487:0;pacman -R fcitx fcitx-qt5 kcm-fcitx
+: 1678524490:0;sudo pacman -R fcitx fcitx-qt5 kcm-fcitx
+: 1678524515:0;c
+: 1678524733:0;sudo pacman -S fcitx5-im
+: 1678524752:0;sudo pacman -S fcitx5-im fcitx5-configtool 
+: 1678524783:0;fcitx5-configtool
+: 1678524867:0;sudo pacman -S fcitx5-mozc
+: 1678524884:0;fcitx5-configtool
+: 1678525240:0;sudo pacman -S noto-fonts-emoji
+: 1678525855:0;cat .zsh_history
+: 1678525897:0;nano .zshrc
+: 1678525923:0;exec zsh
+: 1678525970:0;nano .zshrc
+: 1678526016:0;exec zsh
+: 1678526282:0;touch .scripts/install-arch.sh
+: 1678526292:0;nano .scripts/install-arch.sh
+: 1678526613:0;dotsave
+: 1678526640:0;eval "$(ssh-agent -s)"
+: 1678526642:0;dotsave
+: 1678526674:0;ssh-add ~/.ssh/id_ed25519
+: 1678526680:0;dotsave
+: 1678529262:0;test
+: 1678529265:0;test -h
+: 1678529270:0;test cohort.txt
+: 1678529279:0;test -z
+: 1678529285:0;test --help
+: 1678529289:0;man test
+: 1678529336:0;tldr test
+: 1678529347:0;c
+: 1678531700:0;sudo pacman -Syu
+: 1678532396:0;c
+: 1678532400:0;htop
+: 1678534487:0;yay
+: 1678548158:0;c
+: 1678548161:0;neofetch
+: 1678549710:0;c
+: 1678549719:0;nano Projects/Afirma-stuff/README.md
+: 1678552191:0;sudo systemctl start bluetooth
+: 1678599662:0;hto[
+: 1678599666:0;htop
+: 1678599735:0;c
+: 1678599783:0;neofetch
+: 1678602333:0;pacman -S latte-dock
+: 1678602335:0;sudo pacman -S latte-dock
+: 1678603748:0;sudo pacman -R latte-dock
+: 1678603762:0;c
+: 1678603764:0;htop
+: 1678613647:0;c
+: 1678613648:0;neofetch
+: 1678618035:0;htop
+: 1678648217:0;nano .zshrc
+: 1678648269:0;export
+: 1678648270:0;c
+: 1678648273:0;exec zsh
+: 1678648298:0;c
+: 1678648304:0;nano .zshrc
+: 1678648338:0;exec zsh
+: 1678648340:0;c
+: 1678648345:0;exec zsh
+: 1678648350:0;dotsave
+: 1678648370:0;ssh-add ~/.ssh/id_ed25519
+: 1678648386:0;chezmoi cd
+: 1678648390:0;git push
+: 1678648490:0;...
+: 1678648494:0;..
+: 1678648554:0;c
+: 1678648561:0;nano .aliases.txt
+: 1678648585:0;c
+: 1678648588:0;cat .nanorc
+: 1678648711:0;c
+: 1678648749:0;cat .zsh_history | grep --ignore-case "pacman" | grep --ignore-case "yay"
+: 1678648757:0;cat .zsh_history | grep --ignore-case "pacman"
+: 1678648766:0;c
+: 1678648776:0;cat .zsh_history | grep --ignore-case "pacman" "yay"
+: 1678648788:0;cat .zsh_history | grep --ignore-case "pacman yay"
+: 1678648802:0;cat .zsh_history | grep --ignore-case "pacman"
+: 1678648816:0;cat .zsh_history | grep --ignore-case "yay"
+: 1678648840:0;c
+: 1678648843:0;htop
+: 1678648855:0;c
+: 1678649249:0;pacman -Syu
+: 1678649252:0;sudo pacman -Syu
+: 1678649421:0;neofetch
+: 1678649685:0;c
+: 1678677274:0;neofetch
+: 1678678415:0;yay -S timeshift-autosnap
+: 1678678635:0;yay -R timeshift timeshift-autosnap
+: 1678678700:0;pacman -Qdtq
+: 1678678721:0;pacman -Rs$(pacman -Qdtq)
+: 1678678729:0;pacman -Rs $(pacman -Qdtq)
+: 1678678732:0;sudo pacman -Rs $(pacman -Qdtq)
+: 1678683776:0;sudo pacman -S linux-headers v4l2loopback-dkms
+: 1678684124:0;obs -h
+: 1678684135:0;obs --scene -h
+: 1678684206:0;c
+: 1678684989:0;obs -h
+: 1678685006:0;obs --scene
+: 1678685016:0;c
+: 1678685076:0;dotsave
+: 1678685099:0;ssh-add ~/.ssh/id_ed25519
+: 1678685107:0;chezmoi cd
+: 1678685113:0;git push
+: 1678685138:0;cd
+: 1678686430:0;htop
+: 1678711099:0;sudo systemctl start bluetooth
+: 1678723578:0;pacman -Qu
+: 1678723582:0;sudo pacman -Qu
+: 1678723600:0;checkupdates
+: 1678724217:0;yay -Qu
+: 1678724221:0;c
+: 1678724223:0;checkupdates
+: 1678725371:0;c
+: 1678725379:0;.scripts
+: 1678725387:0;nano remove-orphans.sh
+: 1678725422:0;cd
+: 1678725427:0;nano .aliases.txt
+: 1678725445:0;zsh .scripts/remove-orphans.sh
+: 1678725461:0;.scripts
+: 1678725480:0;nano clean-packages.sh
+: 1678725512:0;mv clean-packages.sh clean-old.packages.sh
+: 1678725514:0;ls
+: 1678725517:0;cd
+: 1678725518:0;c
+: 1678725529:0;.scripts
+: 1678725554:0;rm clean-old.packages.sh 
+: 1678725644:0;cd
+: 1678725646:0;yay -Qu | wc -l
+: 1678725655:0;yay -Qu
+: 1678725722:0;.scripts
+: 1678725732:0;nano check-pacman-updates.sh
+: 1678725741:0;zsh check-pacman-updates.sh
+: 1678725763:0;cd
+: 1678725772:0;zsh .scripts/check-pacman-updates.sh
+: 1678726025:0;.scripts
+: 1678726028:0;nano check-pacman-updates.sh
+: 1678726056:0;cd
+: 1678726058:0;zsh .scripts/check-pacman-updates.sh
+: 1678726074:0;pacman -Qu
+: 1678726081:0;pacman -Qu | wc -l
+: 1678726090:0;checkupdates
+: 1678726159:0;.scripts
+: 1678726162:0;nano check-pacman-updates.sh
+: 1678726208:0;zsh check-pacman-updates.sh
+: 1678726215:0;nano check-pacman-updates.sh
+: 1678726223:0;zsh check-pacman-updates.sh
+: 1678726245:0;nano check-pacman-updates.sh
+: 1678726405:0;zsh check-pacman-updates.sh
+: 1678726449:0;sh check-pacman-updates.sh
+: 1678726458:0;cd
+: 1678726474:0;nano .aliases.txt
+: 1678726503:0;dotsave
+: 1678726572:0;chezmoi cd
+: 1678726579:0;c
+: 1678726581:0;chezmoi cd
+: 1678726586:0;exec zsh
+: 1678726590:0;chezmoi cd
+: 1678726598:0;cd .local/share/chezmoi
+: 1678726602:0;git push
+: 1678726617:0;ssh-add ~/.ssh/id_ed25519
+: 1678726623:0;git push
+: 1678726909:0;pacman -Syu
+: 1678726911:0;sudo pacman -Syu
+: 1678726989:0;cd
+: 1678727704:0;reflector --protocol https --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist \ yay -Syu
+: 1678727745:0;reflector --protocol https --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist \n yay -Syu
+: 1678727757:0;reflector --protocol https --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist | yay -Syu
+: 1678728129:0;reflector --protocol https --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist
+: 1678728281:0;yay -Syu
+: 1678728944:0;sudo reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+: 1678729010:0;sudo pacman -Syyu
+: 1678729050:0;eos-rankmirrors --verbose
+: 1678729093:0;sudo pacman -Syyu
+: 1678730920:0;checkupdates
+: 1678731005:0;neofetch
+: 1678731026:0;/var/cache/pacman/pkg/
+: 1678731027:0;ls
+: 1678731054:0;ll
+: 1678731064:0;cd
+: 1678776166:0;neofetch
+: 1678776173:0;c
+: 1678776186:0;ls
+: 1678776239:0;cd Projects/fall-watch-thesis
+: 1678776261:0;code .
+: 1678776641:0;tree .
+: 1678776659:0;ls
+: 1678776672:0;c
+: 1678786955:0;cd
+: 1678786979:0;pacman -
+: 1678787089:0;yay -Ql
+: 1678787103:0;yay -Ql | grep --ignore-case "heroic"
+: 1678787133:0;c
+: 1678808226:0;sh .scripts/remove-orphans.sh
+: 1678808257:0;sh .scripts/check-pacman-updates.sh
+: 1678811710:0;cd Projects/
+: 1678811715:0;git clone git@github.com:dhupee/fun-stuff.git
+: 1678811724:0;ssh-add ~/.ssh/id_ed25519
+: 1678811730:0;git clone git@github.com:dhupee/fun-stuff.git
+: 1678811741:0;cd fun-stuff
+: 1678811752:0;dolphin ..
+: 1678819123:0;pbcopy
+: 1678819363:0;pwd
+: 1678819373:0;pwd | xclip
+: 1678819374:0;cd
+: 1678819439:0;nano .zshrc
+: 1678819455:0;exec zsh
+: 1678819475:0;cd Projects/fun-stuff
+: 1678819481:0;copypath
+: 1678819498:0;pacman -S xclip
+: 1678819500:0;sudo pacman -S xclip
+: 1678819545:0;copypath
+: 1678819549:0;exec zsh
+: 1678819556:0;copypath
+: 1678819743:0;nano .zshrc
+: 1678819747:0;cd
+: 1678819749:0;nano .zshrc
+: 1678819757:0;exec zsh
+: 1678856398:0;htop
+: 1678867309:0;Projects
+: 1678867342:0;mkdir mentor-mini-capstone-2023
+: 1678867357:0;git clone git@github.com:Mentor-Mini-Capstone-2023/.github.git
+: 1678867365:0;ssh-add ~/.ssh/id_ed25519
+: 1678867372:0;git clone git@github.com:Mentor-Mini-Capstone-2023/.github.git
+: 1678867381:0;ls
+: 1678867394:0;mentor-mini-capstone-2023
+: 1678867396:0;ls
+: 1678867398:0;..
+: 1678867402:0;c
+: 1678867403:0;ls
+: 1678867420:0;mv .github mentor-mini-capstone-2023/.github
+: 1678867424:0;ls
+: 1678867427:0;mentor-mini-capstone-2023
+: 1678867428:0;ls
+: 1678867430:0;c
+: 1678867445:0;ls
+: 1678867448:0;cd .github
+: 1678867450:0;ls
+: 1678867466:0;mkdir profile
+: 1678867479:0;mv README.md profile/README.md
+: 1678867487:0;cd profile
+: 1678867494:0;..
+: 1678867496:0;ls
+: 1678867507:0;getColorCode
+: 1678867510:0;code .
+: 1678899322:0;htop
+: 1678899358:0;c
+: 1678899651:0;cd
+: 1678899655:0;exec zsh
+: 1678899662:0;upgrade
+: 1678900165:0;neofetch
+: 1678900175:0;c
+: 1678900224:0;htop
+: 1678900559:0;nano .zshrc
+: 1678900571:0;exec zsh
+: 1678900755:0;sudo pacman-key --refresh-keys
+: 1678902767:0;reboot
+: 1678910885:0;systemctl start bluetooth
+: 1678948524:0;cd Projects/mentor-mini-capstone-2023
+: 1678948532:0;cd .github
+: 1678948540:0;git fetch
+: 1678948551:0;ssh-add ~/.ssh/id_ed25519
+: 1678948559:0;git fetch
+: 1678948569:0;git pull
+: 1678948589:0;git diff
+: 1678948601:0;git diff 773c49c a6b38e9
+: 1678948614:0;c
+: 1678958001:0;htop
+: 1678958014:0;c
+: 1678964235:0;pacman -Qu
+: 1678984520:0;htop
+: 1679021818:0;cd
+: 1679021826:0;sudo pacman -Syu
+: 1679138698:0;pacman -Syu
+: 1679138700:0;sudo pacman -Syu
+: 1679240535:0;c
+: 1679240538:0;htop
+: 1679243954:0;neofetch
+: 1679277141:0;htop
+: 1679322928:0;c
+: 1679322930:0;bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+: 1679322943:0;exec zsh
+: 1679322945:0;c
+: 1679322966:0;gvm
+: 1679322970:0;bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+: 1679323004:0;zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+: 1679323010:0;gvm
+: 1679323020:0;nano .bashrc
+: 1679323040:0;zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+: 1679323062:0;rm -rf $HOME/.gvm
+: 1679323065:0;zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+: 1679323070:0;exec zsh
+: 1679323073:0;gvm
+: 1679323079:0;clear
+: 1679323084:0;cat .zshrc
+: 1679323090:0;nano .zshrc
+: 1679323116:0;dotsave
+: 1679323129:0;ssh-add ~/.ssh/id_ed25519
+: 1679323134:0;c
+: 1679323137:0;chezmoi cd
+: 1679323140:0;git push
+: 1679323156:0;cd
+: 1679323162:0;c
+: 1679323169:0;neofetch
+: 1679323178:0;mkdir Projects
+: 1679323183:0;cd Projects
+: 1679323185:0;ls
+: 1679323192:0;cd mentor-mini-capstone-2023
+: 1679323196:0;c
+: 1679323198:0;ls
+: 1679323205:0;gvm -h
+: 1679323207:0;gvm
+: 1679323217:0;gvm install 
+: 1679323220:0;gvm install  -h
+: 1679323247:0;gvm install go1.18
+: 1679323370:0;gvm install go1.4
+: 1679323450:0;gvm install -B go1.4
+: 1679323465:0;gvm install go1.4 -B
+: 1679323517:0;gvm use go1.4\
+export GOROOT_BOOTSTRAP=$GOROOT\
+gvm install go1.18
+: 1679323528:0;cat .zshrc
+: 1679323540:0;c
+: 1679323696:0;gvm use go1.18
+: 1679323700:0;go -v
+: 1679323707:0;go --version
+: 1679323711:0;c
+: 1679323714:0;go version
+: 1679323716:0;c
+: 1679323722:0;exec zsh
+: 1679323726:0;go version
+: 1679323729:0;c
+: 1679323741:0;ls
+: 1679323765:0;mkdir cron-trigger-scrapper
+: 1679323787:0;code .
+: 1679323808:0;cd cron-trigger-scrapper
+: 1679323810:0;code .
+: 1679323839:0;go mod init
+: 1679323853:0;go version
+: 1679323855:0;c
+: 1679323866:0;go mod init cron-trigger-scapper
+: 1679323913:0;touch main.go
+: 1679324102:0;go run main.go
+: 1679324113:0;go build main.go
+: 1679324118:0;./main
+: 1679324122:0;rm main
+: 1679324127:0;c
+: 1679324207:0;go get github.com/go-co-op/gocron
+: 1679324492:0;go run main.go
+: 1679325547:0;pacman -S podman
+: 1679325550:0;sudo pacman -S podman
+: 1679325634:0;nano .aliases.txt
+: 1679325664:0;exec zsh
+: 1679325690:0;docker
+: 1679325700:0;c
+: 1679326752:0;go ~/.local/share/chezmoi/private_dot_local/private_share
+: 1679326754:0;c
+: 1679326757:0;go version
+: 1679326766:0;go install github.com/joho/godotenv/cmd/godotenv@latest
+: 1679326785:0;go get github.com/joho/godotenv/cmd/godotenv@latest
+: 1679326933:0;go run main.go
+: 1679327795:0;go build main.go
+: 1679327799:0;./main
+: 1679327886:0;go run main.go
+: 1679328095:0;git init
+: 1679328221:0;git remote add origin git@github.com:Mentor-Mini-Capstone-2023/cron-trigger-scrapper.git\
+git branch -M main\
+git push -u origin main
+: 1679328235:0;git remote add origin git@github.com:Mentor-Mini-Capstone-2023/cron-trigger-scrapper.git
+: 1679328243:0;git branch -M main
+: 1679328260:0;git commit -m "init project"
+: 1679328266:0;git add .
+: 1679328271:0;git commit -m "init project"
+: 1679328274:0;git push
+: 1679328287:0;git push --set-upstream origin main
+: 1679328296:0;ssh-add ~/.ssh/id_ed25519
+: 1679328302:0;git push --set-upstream origin main
+: 1679328509:0;go run main.go
+: 1679329582:0;exec zsh
+: 1679329583:0;c
+: 1679331668:0;sudo pacman -Syu
+: 1679380411:0;c
+: 1679380413:0;htop
+: 1679386883:0;ping https://test-api.dhupee.xyz/
+: 1679386898:0;ping test-api.dhupee.xyz
+: 1679590128:0;c
+: 1679590129:0;..
+: 1679590132:0;ls
+: 1679590137:0;cd dh-project-idea
+: 1679590143:0;git fetch
+: 1679590150:0;ssh-add ~/.ssh/id_ed25519
+: 1679590161:0;git fetch
+: 1679590173:0;git pull
+: 1679590180:0;c
+: 1679590184:0;nano README.md
+: 1679590195:0;code .
+: 1679593826:0;systemctl start bluetooth
+: 1679602016:0;c
+: 1679757595:0;pyenv -h
+: 1679757660:0;pyenv virtualenv
+: 1679757667:0;pyenv virtualenv 3.9.16 
+: 1679757673:0;pyenv virtualenv 3.9.16  --help
+: 1679757767:0;python
+: 1679757777:0;python -h
+: 1679758105:0;pyenv install 3.10 3.11
+: 1679766255:0;node -v
+: 1679766258:0;nvm
+: 1679766279:0;nvm install 16
+: 1679766297:0;node -v
+: 1679766312:0;nvm current
+: 1679766317:0;nvm current use
+: 1679766320:0;nvm current use -h
+: 1679768790:0;nano README.md
+: 1679768826:0;git commit -m "add image scrapper idea"
+: 1679768830:0;ssh-add ~/.ssh/id_ed25519
+: 1679768845:0;git push
+: 1679768856:0;git commit -m "add image scrapper idea"
+: 1679768860:0;git add .
+: 1679768862:0;git commit -m "add image scrapper idea"
+: 1679768864:0;git push
+: 1679768868:0;c
+: 1679768881:0;pacman -S github-cli
+: 1679768884:0;sudo pacman -S github-cli
+: 1679768928:0;pacman -S github-cli
+: 1679768930:0;sudo pacman -S github-cli
+: 1679768938:0;c
+: 1679772168:0;sudo pacman -Syu
+: 1679772963:0;reboot
+: 1679773465:0;yay -Syu
+: 1679814085:0;yay -S github-cli
+: 1679814115:0;gh
+: 1679814196:0;exec zsh
+: 1679814210:0;gh auth login
+: 1679814354:0;c
+: 1679817072:0;cd Projects/dh-project-idea
+: 1679817076:0;nano README.md
+: 1679817137:0;git add README.md
+: 1679817154:0;git commit -m "add speech to text idea"
+: 1679817156:0;git push
+: 1679817176:0;gh ssh-key
+: 1679817206:0;gh ssh-key add ~/.ssh/id_ed25519
+: 1679817213:0;gh ssh-key add ~/.ssh/id_ed25519.pub
+: 1679817221:0;ssh-add ~/.ssh/id_ed25519
+: 1679817228:0;git push
+: 1679817232:0;c
+: 1679822166:0;nano list
+: 1679853971:0;sudo pacman -Syu
+: 1679855423:0;c
+: 1679855425:0;neofetch
+: 1679935753:0;cd
+: 1679935777:0;pyenv virtualenv-init 
+: 1679935793:0;pyenv virtualenv --help
+: 1679935814:0;pyenv virtualenvs --help
+: 1679935838:0;pyenv virtualenv 3.11.2 thesis-server
+: 1679935867:0;pyenv virtualenvs
+: 1679935886:0;pyenv activate 
+: 1679952104:0;PROMPT
+: 1679952109:0;Projects
+: 1679952110:0;c
+: 1679952142:0;ls
+: 1679952218:0;mkdir server-recorder-thesis
+: 1679952233:0;cd server-recorder-thesis
+: 1679952239:0;touch main.py
+: 1679952248:0;git init
+: 1679952269:0;touch README.md
+: 1679952272:0;nano README.md
+: 1679952309:0;nano main.py
+: 1679952393:0;git add .
+: 1679952409:0;git commit -m "init project"
+: 1679952414:0;git remote add origin https://github.com/dhupee/server-recorder-thesis.git\
+git branch -M main\
+git push -u origin main
+: 1679952429:0;ls
+: 1679952431:0;cd
+: 1679952432:0;ls
+: 1679952435:0;ll
+: 1679952579:0;cat .gitconfig
+: 1679952598:0;dotsave
+: 1679952619:0;chezmoi cd
+: 1679952660:0;git remote add origin https://github.com/dhupee/dotfiles.git
+: 1679952676:0;git remote set-url origin https://github.com/dhupee/dotfiles.git
+: 1679952685:0;git push
+: 1679952695:0;cd
+: 1679952700:0;c
+: 1679952707:0;ll
+: 1679952837:0;cat .fonts.conf
+: 1679952871:0;rm cohort.txt
+: 1679953487:0;c
+: 1679953490:0;cat .gitconfig
+: 1679953673:0;cd .local/share
+: 1679953675:0;ls
+: 1679953689:0;..
+: 1679953708:0;cd .config
+: 1679953709:0;ls
+: 1679953720:0;cd gh
+: 1679953726:0;ls
+: 1679953732:0;cat config.yml
+: 1679953753:0;cat hosts.yml
+: 1679953865:0;..
+: 1679953869:0;cd mozc
+: 1679953870:0;ls
+: 1679953877:0;..
+: 1679953879:0;c
+: 1679953882:0;ll
+: 1679953903:0;cd obs-studio
+: 1679953904:0;ls
+: 1679953910:0;..
+: 1679953911:0;c
+: 1679953913:0;ll
+: 1679953938:0;cat konsolerc
+: 1679953954:0;c
+: 1679953955:0;ll
+: 1679954089:0;cd
+: 1679954092:0;ll
+: 1679954094:0;c
+: 1679954095:0;ll
+: 1679954517:0;cd
+: 1679954522:0;c
+: 1679979271:0;pyenv install --list
+: 1679979280:0;c
+: 1679979288:0;pyenv installed 
+: 1679979314:0;pyenv versions
+: 1679979600:0;pyenv install -list
+: 1680016967:0;pacman -S kamoso
+: 1680016970:0;sudo pacman -S kamoso
+: 1680020133:0;cd Projects
+: 1680020140:0;cd server-recorder-thesis
+: 1680020143:0;c
+: 1680020144:0;ls
+: 1680020159:0;mv main.py http-server.py
+: 1680020164:0;ls
+: 1680021221:0;mv http-server.py main.py
+: 1680031525:0;code .
+: 1680031737:0;pyenv activate 3.11.2/envs/thesis-server
+: 1680031799:0;pip install fastapi
+: 1680031813:0;pip install "uvicorn[standard]"
+: 1680031877:0;pyenv shell thesis-server
+: 1680031878:0;/home/dhupee/.pyenv/versions/3.11.2/envs/thesis-server/bin/python /home/dhupee/Projects/server-recorder-thesis/main.py
+: 1680031909:0;uvicorn main:app --reload
+: 1680032209:0;pip freeze > requirements.txt
+: 1680032310:0;touch makefile
+: 1680032460:0;make install
+: 1680032766:0;make start
+: 1680066751:0;c
+: 1680066781:0;pacman -Q texlive-most
+: 1680067284:0;pacman -Syu texlive-most
+: 1680067287:0;sudo pacman -Syu texlive-most
+: 1680108406:0;systemctl start bluetooth
+: 1680110505:0;c
+: 1680167065:0;yay -S youtube-dl
+: 1680167108:0;cd ~/Downloads
+: 1680167126:0;exec zsh
+: 1680167132:0;c
+: 1680167148:0;youtube-dl https://www.youtube.com/watch\?v\=Wq4SekUHFBo
+: 1680167177:0;youtube-dl "https://www.youtube.com/watch\?v\=Wq4SekUHFBo"
+: 1680167193:0;youtube-dl https://youtu.be/Wq4SekUHFBo
+: 1680167197:0;ls
+: 1680167252:0;yay -R youtube-dl
+: 1680167282:0;yay -S yt-dlp
+: 1680167292:0;extract_version
+: 1680167298:0;exec zsh
+: 1680167300:0;c
+: 1680167304:0;yt-dlp
+: 1680167317:0;yt-dlp https://youtu.be/Wq4SekUHFBo
+: 1680167335:0;ls
+: 1680191256:0;nano
+: 1680195344:0;cd ~/Projects
+: 1680195347:0;ls
+: 1680195353:0;dh-project-idea
+: 1680195357:0;nano README.md
+: 1680195504:0;git add .
+: 1680195518:0;git commit -m "add dad joke bot idea"
+: 1680195521:0;git push
+: 1680195554:0;git remote set-url origin https://github.com/dhupee/dh-project-idea.git
+: 1680195566:0;git remote show origin
+: 1680195573:0;git push
+: 1680195587:0;c
+: 1680371812:0;yay -Syu
+: 1680420383:0;c
+: 1680420384:0;LC_ALL=C pacman -V|sed -r 's#[0-9]+#b3f#g'|md5sum|cut -c1-6
+: 1680436734:0;cd
+: 1680436738:0;cd Downloads
+: 1680436743:0;wget https://minhaskamal.github.io/DownGit/\#/home\?url\=https://github.com/dhupee/dotfiles/tree/master/private_dot_config/nvim
+: 1680436748:0;ls
+: 1680436760:0;rm index.html
+: 1680487883:0;cd ~/Projects/dh-project-idea
+: 1680487888:0;nano README.md
+: 1680487954:0;git add README.md
+: 1680487969:0;git commit -m "add better kuukuklok idea"
+: 1680487973:0;git push
+: 1680492977:0;cd
+: 1680492986:0;cat .gitconfig
+: 1680539152:0;pacman -S nvim
+: 1680539155:0;sudo pacman -S nvim
+: 1680539179:0;sudo pacman -S neovim
+: 1680539209:0;nvim -v
+: 1680539216:0;nvim
+: 1680539351:0;git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim\
+nvim
+: 1680539419:0;rm rf .config/nvim
+: 1680539427:0;rm -rf .config/nvim
+: 1680539429:0;git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim\
+nvim
+: 1680539463:0;nvim
+: 1680539534:0;yay -S ttf-jetbrains-mono-nerd
+: 1680539548:0;nvim
+: 1680539728:0;quit
+: 1680539849:0;dotsave
+: 1680539896:0;c
+: 1680540148:0;nvim
+: 1680540158:0;quit
+: 1680540160:0;exit
+: 1680540305:0;nvim
+: 1680540340:0;c
+: 1680540431:0;nvim
+: 1680540568:0;cd .config/nvim
+: 1680540572:0;nvim .
+: 1680540861:0;ll
+: 1680540865:0;cd lua
+: 1680540866:0;ls
+: 1680540870:0;cd plugins
+: 1680540872:0;ll
+: 1680540878:0;...
+: 1680540881:0;cd
+: 1680540882:0;c
+: 1680540891:0;cd .config/nvim
+: 1680540911:0;nvim .
+: 1680541969:0;git diff .
+: 1680541980:0;nvim
+: 1680541985:0;nvim .
+: 1680542692:0;Projects/server-recorder-thesis
+: 1680542696:0;code .
+: 1680542972:0;pyenv activate 3.11.2/envs/thesis-server
+: 1680542980:0;pip install pandas
+: 1680543057:0;pip freeze > requirements.txt
+: 1680591896:0;make start
+: 1680593242:0;rmdir testing
+: 1680593444:0;make start
+: 1680593470:0;make fre
+: 1680593476:0;make freeze
+: 1680593843:0;gvm install
+: 1680593848:0;gvm install -list
+: 1680593871:0;cd
+: 1680593878:0;nano .zshrc
+: 1680627366:0;sh curl_test.sh
+: 1680627521:0;make start
+: 1680627663:0;curl -X 'POST' \\
+  'http://0.0.0.0:5000/sensors/' \\
+  -H 'accept: application/json' \\
+  -H 'Content-Type: application/json' \\
+  -d '{\
+  "Time": 0,\
+  "AccX": 0,\
+  "AccY": 0,\
+  "AccZ": 0,\
+  "GyroX": 0,\
+  "GyroY": 0,\
+  "GyroZ": 0\
+}'
+: 1680627937:0;curl -X 'POST' \\
+  'http://0.0.0.0:5000/\
+\
+\
+q\
+quit\
+curl -X 'POST' \\
+  'http://0.0.0.0:5000/sensors/' \\
+  -H 'accept: application/json' \\
+  -H 'Content-Type: application/json' \\
+  -d '{\
+  "Time": 0,\
+  "AccX": 0,\
+  "AccY": 0,\
+  "AccZ": 0,\
+  "GyroX": 0,\
+  "GyroY": 0,\
+  "GyroZ": 0\
+}'\
+q
+: 1680627961:0;curl -X 'POST' \\
+  'http://0.0.0.0:5000/\
+\
+\
+q\
+quit\
+curl -X 'GET' \\
+  'http://0.0.0.0:5000/
+: 1680627974:0;curl -X 'POST' \\
+  'http://0.0.0.0:500/\
+
+: 1680627998:0;curl -X 'GET' \\
+  http://0.0.0.0:5000/
+: 1680630186:0;pip install keyboard
+: 1680630197:0;make freeze
+: 1680633752:0;pyenv shell thesis-server
+: 1680633755:0;make start
+: 1680633990:0;pip uninstall keyboard
+: 1680634395:0;make start
+: 1680634408:0;make
+: 1680634894:0;echo $RANDOM
+: 1680635073:0;make start
+: 1680642719:0;pyenv shell thesis-server
+: 1680642719:0;/home/dhupee/.pyenv/versions/3.11.2/envs/thesis-server/bin/python /home/dhupee/Projects/server-recorder-thesis/listtodf.py
+: 1680643152:0;make start
+: 1680643860:0;curl -X 'POST' \\
+    'http://0.0.0.0:5000/sensors/' \\
+    -H 'accept: application/json' \\
+    -H 'Content-Type: application/json' \\
+    -d '{\
+    "Time": ($RANDOM),\
+    "AccX": 0,\
+    "AccY": 0,\
+    "AccZ": 0,\
+    "GyroX": 0,\
+    "GyroY": 0,\
+    "GyroZ": 0\
+    }'\
+}
+: 1680643879:0;curl -X 'POST' \\
+    'http://0.0.0.0:5000/sensors/' \\
+    -H 'accept: application/json' \\
+    -H 'Content-Type: application/json' \\
+    -d '{\
+    "Time": $RANDOM,\
+    "AccX": 0,\
+    "AccY": 0,\
+    "AccZ": 0,\
+    "GyroX": 0,\
+    "GyroY": 0,\
+    "GyroZ": 0\
+    }'\
+}
+: 1680643898:0;curl -X 'POST' \\
+    'http://0.0.0.0:5000/sensors/' \\
+    -H 'accept: application/json' \\
+    -H 'Content-Type: application/json' \\
+    -d '{\
+    "Time": $RANDOM,\
+    "AccX": 0,\
+    "AccY": 0,\
+    "AccZ": 0,\
+    "GyroX": 0,\
+    "GyroY": 0,\
+    "GyroZ": 0\
+}'
+: 1680643924:0;sh curl_test.sh
+: 1680643942:0;make stop
+: 1680643958:0;sh curl_test.sh
+: 1680643971:0;make stop
+: 1680644025:0;sh curl_test.sh
+: 1680644184:0;echo "number: $RANDOM"
+: 1680644197:0;echo 'number: $RANDOM'
+: 1680644219:0;sh curl_test.sh
+: 1680644415:0;make stop
+: 1680670060:0;make start
+: 1680670075:0;sh curl_test.sh
+: 1680670167:0;make stop
+: 1680670211:0;make test
+: 1680670250:0;make stop
+: 1680670287:0;sh curl_test.sh
+: 1680670308:0;make stop
+: 1680670421:0;make test
+: 1680670468:0;make stop
+: 1680670511:0;make
+: 1680670516:0;make test
+: 1680670559:0;make stop
+: 1680670595:0;make start
+: 1680670601:0;make test
+: 1680670629:0;make stop
+: 1680670668:0;make test
+: 1680670682:0;make stop
+: 1680670725:0;make test
+: 1680670742:0;make stop
+: 1680670930:0;make freeze
+: 1680686560:0;c
+: 1680686680:0;pyenv shell thesis-server
+: 1680686771:0;c
+: 1680686772:0;cd
+: 1680687241:0;c
+: 1680687326:0;sudo pacman -S git github-cli
+: 1680687385:0;c
+: 1680687399:0;ll
+: 1680687439:0;cat .gitconfig
+: 1680687489:0;git
+: 1680687507:0;c
+: 1680687523:0;cd Projects
+: 1680687531:0;mkdir test-folder
+: 1680687547:0;ls
+: 1680687554:0;cd test-folder
+: 1680687555:0;ls
+: 1680687571:0;cd ..
+: 1680687576:0;!
+: 1680687582:0;c
+: 1680687585:0;cd test-folder
+: 1680687608:0;touch test.py
+: 1680687622:0;ls
+: 1680687636:0;nano test.py
+: 1680687681:0;python test.py
+: 1680687684:0;c
+: 1680687718:0;gh auth login
+: 1680687741:0;c
+: 1680687756:0;gh repo create
+: 1680687943:0;ls
+: 1680687985:0;c
+: 1680687991:0;git init
+: 1680688021:0;git remote add origin https://github.com/dhupee/test-folder.git
+: 1680688028:0;git fetch
+: 1680688032:0;ls
+: 1680688037:0;git pull
+: 1680688049:0;git pull origin
+: 1680688056:0;ls
+: 1680688069:0;git fetch origin
+: 1680688072:0;ls
+: 1680688073:0;ll
+: 1680688089:0;c
+: 1680688103:0;ls
+: 1680688122:0;git remote add origin https://github.com/dhupee/test-folder.git
+: 1680688135:0;git pull origin main
+: 1680688138:0;ls
+: 1680688191:0;git remote 
+: 1680688213:0;git branch
+: 1680688246:0;ls
+: 1680688247:0;c
+: 1680688256:0;ls
+: 1680688282:0;git add test.py
+: 1680688305:0;git commit -m "add test.py"
+: 1680688317:0;git push origin
+: 1680688325:0;git push origin master
+: 1680707051:0;cd
+: 1680707056:0;htop
+: 1680711933:0;c
+: 1680711953:0;cd .scripts
+: 1680711964:0;cat chezmoi-save.sh
+: 1680712363:0;chezmoi completion zsh
+: 1680712413:0;chezmoi completion zsh > .scripts/chezmoi-completion.sh
+: 1680712434:0;nano .zshrc
+: 1680712451:0;code .zshrc
+: 1680712484:0;rm .scripts/chezmoi-completion.sh
+: 1680712551:0;chezmoi doctor
+: 1680712660:0;c
+: 1680712664:0;nano .zshrc
+: 1680712842:0;gvm 
+: 1680712866:0;code .zshrc
+: 1680713233:0;pacman -S micro
+: 1680713235:0;sudo pacman -S micro
+: 1680713302:0;chezmoi cd
+: 1680713309:0;ls
+: 1680713319:0;private_dot_config
+: 1680713320:0;ls
+: 1680713329:0;rm -rf nvim
+: 1680713336:0;cd
+: 1680713348:0;micro
+: 1680713393:0;pacman -R neovim
+: 1680713396:0;sudo pacman -R neovim
+: 1680713831:0;c
+: 1680713878:0;nano .scripts/chezmoi-save.sh
+: 1680713889:0;micro .scripts/chezmoi-save.sh
+: 1680713917:0;cd .config/micro
+: 1680713919:0;ls
+: 1680714129:0;cd
+: 1680714136:0;micro .zshrc
+: 1680714179:0;micro .scripts/chezmoi-save.sh
+: 1680714300:0;dotsave
+: 1680714566:0;micro
+: 1680714758:0;micro -plugin install lsp\
+
+: 1680714844:0;micro -h
+: 1680714898:0;cd .config/micro
+: 1680714900:0;ls
+: 1680714904:0;cd
+: 1680714905:0;c
+: 1680715010:0;micro -plugin install comment\
+
+: 1680715016:0;micro -plugin install comment
+: 1680715034:0;micro
+: 1680715166:0;neofetch
+: 1680715243:0;micro
+: 1680716639:0;micro .config/micro/settings.json
+: 1680716724:0;dotsave
+: 1680716808:0;micro
+: 1680718050:0;micro Projects/dh-project-idea/README.md
+: 1680718082:0;cd Projects/dh-project-idea
+: 1680718086:0;git add README.md
+: 1680718101:0;git commit -m "add more idea on dad joke gpt"
+: 1680718110:0;git push
+: 1680731380:0;pyenv shell thesis-server
+: 1680732023:0;cd
+: 1680732037:0;micro .aliases.txt
+: 1680732048:0;cd
+: 1680732049:0;c
+: 1680732126:0;cd .scripts
+: 1680732128:0;code .
+: 1680732185:0;cd
+: 1680732200:0;mv .aliases.txt .aliases.sh
+: 1680732208:0;micro .zshrc
+: 1680732302:0;micro .scripts/chezmoi-save.sh
+: 1680732311:0;chezmoi cd
+: 1680732332:0;cd .local/share/chezmoi
+: 1680732334:0;ls
+: 1680732345:0;rm dot_aliases.txt
+: 1680732348:0;cd
+: 1680732351:0;dotsave
+: 1680732373:0;c
+: 1680732385:0;micro .aliases.sh
+: 1680732442:0;exec zsh
+: 1680732447:0;chezmoi cd
+: 1680732459:0;micro .zshrc
+: 1680732485:0;chezmoi cd
+: 1680732488:0;chezmoi
+: 1680732509:0;cd
+: 1680732512:0;chezmoi cd
+: 1680732515:0;c
+: 1680732519:0;orphanrm
+: 1680732552:0;cd
+: 1680775318:0;cd Projects/dh-project-idea/
+: 1680775320:0;c
+: 1680775322:0;micro README.md
+: 1680775675:0;fzf
+: 1680775685:0;f
+: 1680775698:0;micro --plugin install palettero
+: 1680775727:0;$ cd $HOME/.config/micro/plug/\
+$ git clone https://github.com/terokarvinen/palettero
+: 1680775735:0;cd $HOME/.config/micro/plug/
+: 1680775742:0;git clone https://github.com/terokarvinen/palettero
+: 1680775786:0;cd /home/dhupee/Projects/dh-project-idea
+: 1680775790:0;micro README.md
+: 1680775824:0;cd
+: 1680775836:0;cd .config/micro
+: 1680775838:0;ls
+: 1680775852:0;micro bindings.json
+: 1680775962:0;exec zsh
+: 1680775965:0;micro bindings.json
+: 1680776407:0;cd plug
+: 1680776415:0;git clone https://github.com/terokarvinen/micro-cheat
+: 1680776476:0;cd
+: 1680776480:0;dotsave
+: 1680776898:0;chezmoi cd
+: 1680780547:0;micro .aliases.sh
+: 1680780718:0;cd .config/micro
+: 1680780720:0;ll
+: 1680780730:0;micro settings.json
+: 1680780743:0;micro keymap.map
+: 1680780759:0;micro init.lua
+: 1680780766:0;micro bindings.json
+: 1680780834:0;micro xclip
+: 1680780840:0;micro bindings.json
+: 1680781012:0;tree 
+: 1680781022:0;sudo pacman -S tree
+: 1680781033:0;tree .
+: 1680781135:0;micro
+: 1680781236:0;quit
+: 1680781296:0;micro
+: 1680781683:0;cd
+: 1680781689:0;exec zsh
+: 1680781691:0;c
+: 1680781692:0;f
+: 1680781695:0;exec zsh
+: 1680781697:0;f
+: 1680781706:0;micro .aliases.sh
+: 1680781713:0;exec zsh
+: 1680781716:0;f
+: 1680781771:0;cd $f
+: 1680781811:0;cd $(fzf)
+: 1680781933:0;micro
+: 1680781978:0;c
+: 1680782505:0;micro
+: 1680795577:0;micro Projects/dh-project-idea/README.md
+: 1680795663:0;pacman -Syu
+: 1680795668:0;sudo pacman -Syu
+: 1680799562:0;reboot
+: 1680800097:0;yay -Syu
+: 1680802595:0;c
+: 1680802604:0;pacman -Syyu
+: 1680802607:0;sudo pacman -Syyu
+: 1680802630:0;c
+: 1680802749:0;htop
+: 1680802769:0;c
+: 1680815005:0;cd Projects
+: 1680815014:0;dh-project-idea
+: 1680815018:0;micro Projects/dh-project-idea/README.md
+: 1680815023:0;micro README.md
+: 1680815070:0;git diff README.md
+: 1680815076:0;c
+: 1680815398:0;micro README.md
+: 1680819992:0;cd
+: 1680819997:0;micro .aliases.sh
+: 1680820077:0;exec zsh
+: 1680820085:0;c
+: 1680820090:0;exec zsh
+: 1680820097:0;micro .aliases.sh
+: 1680820105:0;exec zsh
+: 1680820109:0;c
+: 1680820113:0;bt-start
+: 1680820479:0;go
+: 1680820489:0;c
+: 1680820492:0;cd
+: 1680820500:0;go run -h
+: 1680820511:0;go mod -h
+: 1680820520:0;gvm
+: 1680820527:0;gcc
+: 1680820545:0;fzf .zsh_history
+: 1680820553:0;fzf  -h
+: 1680820591:0;micro .zsh_history
+: 1680820631:0;c
+: 1680820648:0;cat .zsh_history | grep --ignore-case "go"
+: 1680820656:0;go -v
+: 1680820664:0;gvm use 
+: 1680820671:0;gvm use --list
+: 1680820689:0;gvm use 1.8
+: 1680820695:0;gvm use 1.6
+: 1680820699:0;gvm list
+: 1680820710:0;gvm use 1.18
+: 1680820712:0;go
+: 1680820730:0;c
+: 1680820839:0;micro .zshrc
+: 1680820870:0;micro .bash_profile
+: 1680820881:0;micro .bashrc
+: 1680820938:0;ll
+: 1680821035:0;which go
+: 1680821049:0;cd go
+: 1680821050:0;ls
+: 1680855162:0;cd
+: 1680855165:0;gvm implode
+: 1680855177:0;gvm
+: 1680855185:0;gvm implode
+: 1680855211:0;c
+: 1680855216:0;exec zsh
+: 1680855219:0;c
+: 1680855223:0;gvm
+: 1680855242:0;curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh
+: 1680855259:0;micro .zshrc
+: 1680855296:0;exec zsh
+: 1680855298:0;c
+: 1680855303:0;gobrew
+: 1680855350:0;curl https://raw.githubusercontent.com/kevincobain2000/gobrew/master/completions/bash/gobrew-completion >> ~/.zshrc
+: 1680855354:0;micro .zshrc
+: 1680855370:0;exec zsh
+: 1680855372:0;c
+: 1680855688:0;gobrew install 1.20
+: 1680855729:0;go -v
+: 1680855740:0;go --version
+: 1680855746:0;c
+: 1680855749:0;go version
+: 1680855750:0;c
+: 1680855761:0;gobrew 
+: 1680855805:0;gobrew list
+: 1680855840:0;gobrew install latest
+: 1680857426:0;c
+: 1680857428:0;neofetch
+: 1680885995:0;curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+: 1680886130:0;cat .zshrc
+: 1680886141:0;micro .bashrc
+: 1680886196:0;rustup
+: 1680886202:0;micro .zshrc
+: 1680886222:0;exec zsh
+: 1680886227:0;c
+: 1680886232:0;rustup
+: 1680886253:0;cargo
+: 1680886256:0;c
+: 1680886631:0;cargo
+: 1680886643:0;cargo install
+: 1680886679:0;rustc
+: 1680886684:0;rustc -v
+: 1680886689:0;rustc version
+: 1680886695:0;rustc --version
+: 1680886735:0;cargo
+: 1680886742:0;c
+: 1680888597:0;rustup completion zsh
+: 1680888602:0;rustup completions zsh
+: 1680888649:0;rustup completions zsh > .rustup_completion
+: 1680888653:0;micro .zshrc
+: 1680888691:0;mv .rustup_completion .rustup_completion .sh
+: 1680888695:0;mv .rustup_completion .rustup_completion.sh
+: 1680888701:0;micro .zshrc
+: 1680888752:0;mv .rustup_completion.sh .rustup_completions.sh	
+: 1680888754:0;exec zsh
+: 1680888767:0;micro .zshrc
+: 1680888790:0;exec zsh
+: 1680888810:0;micro .zshrc
+: 1680888962:0;rustup help completions
+: 1680889125:0;rm .rustup_completions.sh
+: 1680889154:0;mkdir .zfunc
+: 1680889167:0;rustup completions zsh cargo > ~/.zfunc/_cargo
+: 1680889171:0;rustup completions zsh .cargo > ~/.zfunc/_cargo
+: 1680889180:0;rustup completions zsh cargo > ~/.zfunc/_cargo
+: 1680889196:0;rustup completions zsh > ~/.zfunc/_rustup
+: 1680889200:0;micro .zshrc
+: 1680889232:0;exec zsh
+: 1680889258:0;micro .scripts/chezmoi-save.sh
+: 1680889287:0;dotsave
+: 1680889314:0;c
+: 1680889425:0;micro .zshrc
+: 1680889475:0;exec zsh
+: 1680889479:0;dotsave
+: 1680890121:0;cd
+: 1680890123:0;c
+: 1680890125:0;ll
+: 1680890135:0;cat .zshenv
+: 1680890186:0;cat .zsh_history | grep --ignore-case ".zshenv"
+: 1680890201:0;micro .scripts/chezmoi-save.sh
+: 1680898590:0;c
+: 1680898633:0;cargo check
+: 1680903660:0;echo $ARCH
+: 1680903671:0;neofetch
+: 1680903762:0;fzf .scripts
+: 1680903765:0;fzf .scripts/
+: 1680903774:0;fzf .scripts
+: 1680903781:0;fzf -h
+: 1680939752:0;rustup self uninstall
+: 1680939765:0;ll
+: 1680939785:0;rm -rf .zfunc/ .zshenv
+: 1680939787:0;ll
+: 1680939792:0;micro .scripts/chezmoi-save.sh
+: 1680939818:0;chezmoi cd
+: 1680939820:0;ll
+: 1680939849:0;rm -rf dot_zfunc/ 
+: 1680939866:0;cd
+: 1680939869:0;dotsave
+: 1680939890:0;chezmoi cd
+: 1680939895:0;c
+: 1680939900:0;chezmoi cd
+: 1680939905:0;exec zsh
+: 1680939911:0;chezmoi cd
+: 1680939926:0;cd .local/share/chezmoi
+: 1680939944:0;git gc
+: 1680940012:0;dolphin ..
+: 1680940079:0;cd
+: 1680940091:0;micro .aliases.sh
+: 1680940108:0;orphanrm
+: 1680940146:0;c
+: 1680940543:0;go 
+: 1680940605:0;micro .zshrc
+: 1680940623:0;exec zsh
+: 1680940625:0;c
+: 1680940645:0;micro .zshrc
+: 1680940773:0;exec zsh
+: 1680940775:0;c
+: 1680940812:0;dotsave
+: 1680940839:0;micro .zshrc
+: 1680940865:0;exec zsh
+: 1680940867:0;c
+: 1680978523:0;cat .zsh_history | grep --ignore-case "go\
+"
+: 1680978529:0;cat .zsh_history | grep --ignore-case "go"
+: 1681093638:0;c
+: 1681143815:0;neofetch
+: 1681152779:0;micro .aliases.sh
+: 1681152794:0;exec zsh
+: 1681152796:0;c
+: 1681152845:0;dotsave
+: 1681152892:0;gobrew ls
+: 1681152901:0;gobrew use 1.20.3
+: 1681152906:0;go version
+: 1681152908:0;c
+: 1681152916:0;gobrew install -h
+: 1681152930:0;gobrew version
+: 1681152938:0;omz update
+: 1681152946:0;c
+: 1681153114:0;bash -n .scripts/chezmoi-save.sh
+: 1681158977:0;micro .zshrc
+: 1681159261:0;exec zsh
+: 1681159268:0;micro .zshrc
+: 1681159283:0;exec zsh
+: 1681159285:0;c
+: 1681161959:0;cd Projects
+: 1681161967:0;gh repo clone dhupee/dhupee
+: 1681161980:0;cd dhupee
+: 1681210648:0;cd
+: 1681210654:0;cd Downloads
+: 1681210661:0;yt-dlp https://youtu.be/q00J98ye4e8
+: 1681220975:0;cd
+: 1681220979:0;c
+: 1681220990:0;yay -S anydesk-bin
+: 1681224773:0;podman
+: 1681224801:0;c
+: 1681227348:0;neofetch
+: 1681228704:0;micro .zshrc
+: 1681228745:0;cat .zsh_history | grep --ignore-case "git clone"
+: 1681228802:0;micro .zshrc
+: 1681228820:0;cat .zsh_history | grep --ignore-case "syntax"
+: 1681228855:0;micro .zshrc
+: 1681228977:0;exec zsh
+: 1681228983:0;\c
+: 1681228984:0;c
+: 1681228988:0;sudo pacman -S thefuck
+: 1681229001:0;c
+: 1681229020:0;act .zsh_history
+: 1681229040:0;exc zsh
+: 1681229054:0;fuck
+: 1681229072:0;micro .zshrc
+: 1681229098:0;exec zsh
+: 1681229101:0;c
+: 1681229108:0;act .zsh_history
+: 1681229116:0;fuck
+: 1681229121:0;cat .zsh_history
+: 1681229125:0;c
+: 1681229728:0;sudo pacman -S virtualbox
+: 1681229993:0;pacman -R virtualbox virtualbox-host-dkms
+: 1681229997:0;sudo pacman -R virtualbox virtualbox-host-dkms
+: 1681234764:0;pacman -S gnome-boxes
+: 1681234768:0;sudo pacman -S gnome-boxes
+: 1681234821:0;orphanrm
+: 1681234859:0;micro .scripts/remove-orphans.sh
+: 1681234931:0;pacman -Qdt
+: 1681234953:0;micro .scripts/remove-orphans.sh
+: 1681235015:0;pacman -Rs
+: 1681235018:0;sudo pacman -Rs
+: 1681235036:0;pacman -Rns $(pacman -Qdt)
+: 1681235038:0;sudo pacman -Rns $(pacman -Qdt)
+: 1681235063:0;pacman -Qdt
+: 1681235102:0;cd .scripts/
+: 1681235104:0;ls
+: 1681235109:0;code .
+: 1681235418:0;bash orphans-forloop.sh
+: 1681235613:0;pacman -Qdtq
+: 1681235632:0;bash remove-orphans.sh
+: 1681235860:0;micro .aliases.sh
+: 1681235863:0;cd
+: 1681235865:0;micro .aliases.sh
+: 1681235944:0;echo $BASH
+: 1681235952:0;which bash
+: 1681236179:0;pacman -S gnome-boxes
+: 1681236182:0;sudo pacman -S gnome-boxes
+: 1681236291:0;lscpu
+: 1681236458:0;c
+: 1681236461:0;gpasswd
+: 1681238407:0;sudo systemctl enable bluetooth.service
+: 1681250974:0;pacman -Qdtq
+: 1681250995:0;pacman -T
+: 1681251040:0;dotsave
+: 1681251082:0;ls .scripts
+: 1681251109:0;chezmoi cd
+: 1681251119:0;cd .local/share/chezmoi
+: 1681251126:0;ls dot_scripts
+: 1681251130:0;cd dot_scripts
+: 1681251132:0;ls
+: 1681251137:0;rm gnome-backup-restore.sh
+: 1681251147:0;cd
+: 1681251152:0;dotsave
+: 1681251248:0;cd .local/share/chezmoi
+: 1681251251:0;tree .
+: 1681251298:0;cd
+: 1681251303:0;chezmoi cd
+: 1681251325:0;chezmoi doctor
+: 1681251358:0;cd
+: 1681251360:0;c
+: 1681257517:0;paman -S
+: 1681257730:0;cat .scripts/install.sh
+: 1681290144:0;cd Downloads
+: 1681290151:0;yt-dlp https://youtu.be/WNaEKFcEE3c
+: 1681298244:0;cd
+: 1681298249:0;micro
+: 1681298820:0;echo "hello world"
+: 1681300163:0;bash
+: 1681300174:0;c
+: 1681300181:0;micro
+: 1681300476:0;echo "hello world"
+: 1681407500:0;c
+: 1681407660:0;cd Downloads
+: 1681407665:0;yt-dlp https://youtu.be/HjPgdhRsGIQ
+: 1681450853:0;cd
+: 1681450891:0;curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+: 1681451107:0;exec zsh
+: 1681451135:0;rustup completions zsh > ~/.zfunc/_rustup
+: 1681451154:0;micro .zshrc
+: 1681451190:0;exec zsh
+: 1681451196:0;rustup completions zsh > ~/.zfunc/_rustup
+: 1681451221:0;rustup completions zsh
+: 1681451235:0;mkdir .zfunc
+: 1681451237:0;rustup completions zsh > ~/.zfunc/_rustup
+: 1681451241:0;exec zsh
+: 1681451250:0;micro .zshrc
+: 1681451269:0;exec zsh
+: 1681451279:0;cargo 
+: 1681451317:0;micro .zshrc
+: 1681451359:0;exec zsh
+: 1681451369:0;rustc 
+: 1681451375:0;c
+: 1681451386:0;micro .scripts/chezmoi-save.sh
+: 1681451409:0;dotsave
+: 1681451449:0;c
+: 1681496901:0;rustup uninstall
+: 1681496913:0;rustup uninstall uninstall
+: 1681496918:0;rustup
+: 1681496948:0;rustup self uninstall
+: 1681496990:0;rm -rf .zshenv .zfunc
+: 1681496992:0;ls
+: 1681497006:0;chezmoi cd
+: 1681497023:0;cd .local/share/chezmoi
+: 1681497025:0;ls
+: 1681497043:0;rm -rf dot_zfunc
+: 1681497045:0;cd
+: 1681497051:0;micro .scripts/chezmoi-save.sh
+: 1681497070:0;micro .zshrc
+: 1681497092:0;gobrew ls
+: 1681497098:0;go version
+: 1681659052:0;sudo pacman -Syu
+: 1681659757:0;yay -Syu
+: 1681660707:0;reboot
+: 1681661782:0;systemctl status pipewire.service
+: 1681661788:0;pipewire
+: 1681661835:0;systemctl --user status wireplumber.service
+: 1681663252:0;_options snd-hda-intel model=auto
+: 1681663269:0;sudo ./alsa-info.sh 
+: 1681663318:0;systemctl --user status wireplumber.service
+: 1681663357:0;pipewire
+: 1681663372:0;sudo pacman -Syu
+: 1681663448:0;sudo micro /etc/modprobe.d/audiofix.conf
+: 1681663494:0;source /etc/modprobe.d/audiofix.conf
+: 1681663956:0;alsamixer
+: 1681664123:0;sudo alsactl store
+: 1681760782:0;yt-dlp https://www.youtube.com/watch\?v\=G7v3T5pDj-M\&pp\=ygURb3RvbmFyaSBubyB0ZW5zaGk%3D
+: 1681761006:0;rm 〃�ぃ�郺�の天使槃�〃�OP惸��僣��＃�OP主郁��歃�〃�ギャ��ャ��〃�オャ�イシャ��サャ�シ\ \[G7v3T5pDj-M\].webm
+: 1681881702:0;chezmoi apply
+: 1681881723:0;all
+: 1681881725:0;chezmoi apply
+: 1682002423:0;c
+: 1682453747:0;sudo pacman -Syyu
+: 1682454146:0;yay -Syyu
+: 1682596587:0;lsblk
+: 1682596659:0;dmesg
+: 1682596666:0;sudo dmesg
+: 1682597012:0;sudo pacman -S ntfs-3g
+: 1682597075:0;ntfs-3g
+: 1682597085:0;lsblk
+: 1682597113:0;lsusb
+: 1682597997:0;neofetch
+: 1682690450:0;c
+: 1682690453:0;neofetch
+: 1682690590:0;c
+: 1682690596:0;cat .zsh_history
+: 1683633329:0;c
+: 1683633359:0;cd Projects/fall-watch-thesis
+: 1683633362:0;..
+: 1683633364:0;ls
+: 1683633375:0;fall-watch-thesis
+: 1683633380:0;code .
+: 1683633653:0;cat ../server-recorder-thesis/curl_test.sh
+: 1684062017:0;c
+: 1684062056:0;cat ~/.zsh_history | grep -i "tty"
+: 1684062063:0;cat ~/.zsh_history | grep -i "chmod"
+: 1684062079:0;cat ~/.zsh_history | grep --ignore-case "chmod"
+: 1684062091:0;cat ~/.zsh_history
+: 1684086394:0;yay -S cura-bin
+: 1684088739:0;yay -R cura-bin
+: 1684089176:0;yay -S superslicer-bin
+: 1684089392:0;..
+: 1684089398:0;gh repo clone dhupee/Ender3V2_SuperSlicer_Config
+: 1684089449:0;rm -rf Ender3V2_SuperSlicer_Config
+: 1684089452:0;gh repo clone dhupee/Ender3V2_SuperSlicer_Config
+: 1684090294:0;cd Ender3V2_SuperSlicer_Config
+: 1684090303:0;git add SuperSlicer_config_bundle.ini
+: 1684090325:0;git commit -m "update for new features"
+: 1684090329:0;git push
+: 1684090467:0;yay -S prusa-slicer
+: 1684209201:0;..
+: 1684209206:0;cd prusaslicer-configs
+: 1684209209:0;..
+: 1684209219:0;mv prusaslicer-configs prusaslicer-configs-dh
+: 1684209223:0;cd prusaslicer-configs-dh
+: 1684209245:0;mkdir calibration-shapes-E3V2
+: 1684214309:0;cd /dev/sdc1/
+: 1684214466:0;mkfs.vfat /dev/sdc1
+: 1684214592:0;partitionmanager
+: 1684214647:0;pacman -S partitionmanager
+: 1684214654:0;sudo pacman -S partitionmanager
+: 1684214718:0;partitionmanager
+: 1684233104:0;c
+: 1684233116:0;gh repo create
+: 1684233198:0;ls
+: 1684233201:0;ll
+: 1684233211:0;cd prusaslicer-config-dh
+: 1684233214:0;ls
+: 1684233241:0;ll
+: 1684233264:0;git add .
+: 1684233285:0;git commit -m "add my configs and calibration shapes"
+: 1684233288:0;git push
+: 1684233299:0;git push origin master
+: 1684233344:0;git fetch
+: 1684233369:0;git branch main
+: 1684233395:0;git branch rm main
+: 1684233401:0;git branch ls
+: 1684233404:0;git branch
+: 1684233434:0;git branch --delete ls main
+: 1684233456:0;git branch --list
+: 1684233465:0;git branch --delete rm
+: 1684233479:0;git commit -m "deleting branches"
+: 1684233491:0;git push origin master
+: 1684256835:0;curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+: 1684256852:0;sudo service udev restart
+: 1684256862:0;sudo udevadm control --reload-rules\
+sudo udevadm trigger
+: 1684256894:0;sudo usermod -a -G uucp $USER\
+sudo usermod -a -G lock $USER
+: 1684301111:0;git add .
+: 1684301115:0;git diff
+: 1684301140:0;git commit -m "add my configs"
+: 1684301155:0;git push origin master
+: 1684301169:0;git pull
+: 1684301174:0;git push origin master
+: 1684301195:0;..
+: 1684301202:0;cd ..
+: 1684301211:0;rm -rf prusaslicer-config-dh
+: 1684301232:0;gh repo clone dhupee/prusaslicer-config-dh
+: 1684301239:0;prusaslicer-config-dh
+: 1684303596:0;cd
+: 1684303600:0;Downloads
+: 1684303605:0;yt-dlp https://youtu.be/dmIE0vNPOQ8
+: 1684327016:0;pacman -Syu
+: 1684327022:0;sudo pacman -Syu
+: 1684327547:0;yay -Syu
+: 1684331206:0;sudo chmod a+rw /dev/ttyACM0
+: 1684332441:0;..
+: 1684332446:0;server-recorder-thesis
+: 1684332455:0;make start
+: 1684332467:0;pyenv shell thesis-server
+: 1684332491:0;make start
+: 1684334129:0;cloudflared
+: 1684334202:0;pacman -S cloudflared
+: 1684334217:0;sudo pacman -S partitionmanager
+: 1684334229:0;sudo pacman -S cloudflared
+: 1684334299:0;micro .aliases.sh
+: 1684334311:0;exec zsh
+: 1684334314:0;c
+: 1684334324:0;cloudflared
+: 1684334346:0;cloudflared -h
+: 1684334436:0;cloudflared tunnel -url http://localhost:5000
+: 1684335318:0;cd ../server-recorder-thesis
+: 1684335339:0;make stop
+: 1684335445:0;make start
+: 1684335545:0;micro makefile
+: 1684335650:0;hostname -I
+: 1684335655:0;hostname
+: 1684335659:0;hostname -l
+: 1684335666:0;hostname --help
+: 1684335677:0;hostname -i
+: 1684335710:0;ipconfig
+: 1684335717:0;ifconfig
+: 1684335898:0;micro makefile
+: 1684335910:0;make start
+: 1684335996:0;ifconfig
+: 1684336382:0;uvicorn main:app --reload
+: 1684336438:0;cat makefile
+: 1684336505:0;make start
+: 1684336513:0;cloudflared tunnel -url http://localhost:8000
+: 1684337234:0;micro makefile
+: 1684344752:0;cd Projects/prusaslicer-config-dh
+: 1684344767:0;git diff PrusaSlicer_config_bundle.ini
+: 1684344820:0;git add .
+: 1684344824:0;git commit -m "add my configs"
+: 1684344828:0;git push
+: 1684415974:0;which python3
+: 1684415982:0;which python
+: 1684416010:0;which python3.10
+: 1684416014:0;which python
+: 1684416044:0;copypath $(which python)
+: 1684836539:0;c
+: 1684836549:0;git add .
+: 1684836553:0;git diff .
+: 1684836578:0;git commit -m "add 0.08 vasemode"
+: 1684836581:0;git push
+: 1684856136:0;sudo pacman -S kicad
+: 1684856576:0;sudo pacman -Syu --asdeps kicad-library kicad-library-3d
+: 1684857391:0;sudo yay -Syyu
+: 1684857426:0;yay -Syu
+: 1684860907:0;..
+: 1684860912:0;cd fall-watch-thesis
+: 1684860916:0;cd schematics
+: 1684860919:0;cat schematics.kicad_pcb
+: 1684860922:0;c
+: 1684860924:0;cat schematics.kicad_pro
+: 1684860926:0;cat
+: 1684860934:0;c
+: 1684860937:0;cat schematics.kicad_sch
+: 1684865569:0;..
+: 1684865575:0;cat src/main.cpp
+: 1684868715:0;cd Projects/server-recorder-thesis
+: 1684868722:0;git diff .
+: 1684868736:0;git add .
+: 1684868746:0;git commit -m "add tunneling make"
+: 1684868765:0;git push
+: 1684869044:0;../fall-watch-thesis
+: 1684925902:0;..
+: 1684925921:0;mkdir custom-kicad-footprint
+: 1684925925:0;cd custom-kicad-footprint
+: 1684925935:0;git clone https://github.com/rayvburn/KiCad.git
+: 1685811138:0;c
+: 1685811149:0;yay -S flatcam
+: 1685812769:0;..
+: 1685812833:0;git clone https://bitbucket.org/jpcgt/flatcam.git
+: 1685812889:0;flatcam
+: 1685812891:0;ls
+: 1685812896:0;flatcam
+: 1685812926:0;python flatcam
+: 1685812934:0;..
+: 1685812946:0;sudo rm -rf flatcam
+: 1685813157:0;cd ~/Downloads/FlatCAM-8.5
+: 1685813167:0;sh setup_ubuntu.sh
+: 1685813281:0;cd
+: 1685813290:0;yay -S flatcam-git
+: 1685815116:0;pacman -S inkscape
+: 1685815123:0;sudo pacman -S inkscape
+: 1685926193:0;c
+: 1685926196:0;pytest
+: 1685926336:0;python
+: 1685926350:0;which python
+: 1685926676:0;cd gcodetools-master
+: 1685926683:0;python create_inx.py
+: 1685933655:0;yay -S bottles
+: 1686052461:0;orphanrm
+: 1686052471:0;cd
+: 1686052482:0;micro .aliases.sh
+: 1686052515:0;orphanrm
+: 1686057012:0;make start
+: 1686057019:0;cd server
+: 1686057022:0;make start
+: 1686057035:0;pyenv shell thesis-server
+: 1686057040:0;make start
+: 1686057071:0;cd server
+: 1686057080:0;make tunnel
+: 1686057556:0;cd server
+: 1686057593:0;make stop
+: 1686057941:0;make start
+: 1686057958:0;cd server
+: 1686057969:0;make test
+: 1686057991:0;make stop
+: 1686058010:0;make test
+: 1686058034:0;make stop
+: 1686189577:0;docker run
+: 1686189583:0;docker run -h
+: 1686189601:0;docker run --help
+: 1686242543:0;make stop
+: 1686243009:0;make purge
+: 1686243131:0;make clear
+: 1686243144:0;make start
+: 1686243154:0;make clear
+: 1686243186:0;make stop
+: 1686243208:0;make start
+: 1686243218:0;make stop
+: 1686243238:0;make start
+: 1686243251:0;make tunnel
+: 1686243352:0;make stop
+: 1686243384:0;make test
+: 1686243395:0;make stop
+: 1686243700:0;make test
+: 1686244869:0;make clear
+: 1686247827:0;make tunnel
+: 1686247898:0;make test
+: 1686250238:0;openssl s_client -showcerts -connect https://apartment-brunei-roulette-percentage.trycloudflare.com:443 </dev/null\
+
+: 1686250263:0;openssl -h
+: 1686250292:0;openssl s_client -showcerts -connect "https://apartment-brunei-roulette-percentage.trycloudflare.com:443" </dev/null\
+
+: 1686250300:0;openssl s_client -showcerts -connect "https://apartment-brunei-roulette-percentage.trycloudflare.com" </dev/null\
+
+: 1686289565:0;cd server
+: 1686289572:0;make start
+: 1686289579:0;pyenv shell thesis-server
+: 1686289582:0;make start
+: 1686289593:0;ifconfig
+: 1686290568:0;iptables
+: 1686290581:0;sudo iptables -L
+: 1686290618:0;sudo iptables -A INPUT -p tcp --dport 8000 -j ACCEPT\
+
+: 1686290626:0;sudo iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+: 1686290630:0;sudo iptables -L
+: 1686290706:0;ifconfig
+: 1686336987:0;rm Projects/fall-watch-thesis/schematics/reference/MicroSD\ Card\ Interfacing\ to\ ESP32.jpg
+: 1686717002:0;cd Projects
+: 1686717005:0;gh repo clone dhupee/propo-dh
+: 1686732010:0;cd ..
+: 1686732022:0;mkdir ml-flask-test
+: 1686732026:0;cd ml-flask-test
+: 1686732063:0;pyenv virtualenv 3.11.2 ml-flask-test
+: 1686732084:0;pyenv shell 3.11.2/envs/ml-flask-test
+: 1686732091:0;code .
+: 1686732125:0;pyenv shell 3.11.2/envs/ml-flask-test
+: 1686732147:0;pip install flask tensorflow
+: 1686735480:0;code .
+: 1686735517:0;pyenv shell ml-flask-test
+: 1686735517:0;/home/dhupee/.pyenv/versions/3.11.2/envs/ml-flask-test/bin/python
+: 1686735537:0;pyenv shell ml-flask-test
+: 1686735539:0;/home/dhupee/.pyenv/versions/3.11.2/envs/ml-flask-test/bin/python /home/dhupee/Projects/ml-flask-test/main.py
+: 1686754190:0;cd ..
+: 1686754201:0;pyenv virtualenv-delete 3.11.2/envs/ml-flask-test
+: 1686754221:0;rm rf ml-flask-test
+: 1686754231:0;rm -rf ml-flask-test
+: 1686929764:0;cd ~/Downloads
+: 1686929771:0;yt-dlp https://youtu.be/XgAISXLfy7E
+: 1686936233:0;mkdir esp-http-client-example
+: 1686936241:0;cd esp-http-client-example
+: 1686936253:0;touch README.md
+: 1686936258:0;code .
+: 1686936754:0;pyenv virtualenv 3.11.2 esp-http-client-example
+: 1686936807:0;pyenv shell 3.11.2/envs/esp-http-client-example
+: 1686936822:0;cd server
+: 1686936829:0;pip install -r requirements.txt
+: 1686938352:0;python main.py
+: 1686938598:0;make start
+: 1686941546:0;cd
+: 1686941552:0;cd Projects
+: 1686941557:0;cd esp32-webserver-led
+: 1686941560:0;ls
+: 1686941565:0;code .
+: 1687161028:0;pipewire-pulse
+: 1687161038:0;pipewire --start
+: 1687161144:0;pipewire-pulse -h
+: 1687161149:0;pipewire-pulse -c
+: 1687161154:0;pipewire-pulse --c
+: 1687161160:0;pipewire-pulse --config
+: 1687161242:0;inxi
+: 1687161253:0;inxi -SMA
+: 1687161297:0;systemctl --user restart pipewire pipewire-pulse
+: 1687161522:0;cd
+: 1687161534:0;micro sound.sh
+: 1687161544:0;sudo sh sound.sh
+: 1687162357:0;whoami
+: 1687162499:0;inxi -SMA
+: 1687162566:0;echo "options snd-hda-intel model=clevo-p950" | sudo tee -a /etc/modprobe.d/alsa-base.conf
+: 1687163314:0;/sbin/lsmod | grep snd
+: 1687163362:0;aplay --list-devices
+: 1687163416:0;sudo dmesg | grep usb
+: 1687163464:0;pavucontrol
+: 1687163644:0;rm -rf .config/pulse
+: 1687163665:0;upgrade-all
+: 1687163697:0;micro .aliases.sh
+: 1687163726:0;sudo pacman -Syyu & yay -Syyu
+: 1687163803:0;sudo pacman -Syyu
+: 1687163814:0;sudo pacman -Syu
+: 1687164032:0;cat /proc/asound/card*/codec* | grep Codec
+: 1687164075:0;micro /etc/modprobe.d/alsa-base.conf
+: 1687164122:0;cat etc/modprobe.d/alsa-base.conf
+: 1687164128:0;cat /etc/modprobe.d/alsa-base.conf
+: 1687164137:0;sudo pacman -Syu
+: 1687164908:0;eos-rankmirrors
+: 1687164981:0;sudo pacman -Syu
+: 1687165098:0;sudo pacman -Sy archlinux-keyring\
+sudo pacman -Syu
+: 1687165197:0;sudo rm -rf /var/cache/pacman/pkg/
+: 1687165206:0;sudo pacman -Sy archlinux-keyring\
+sudo pacman -Syu
+: 1687165656:0;cd Downloads
+: 1687165661:0;cd ventoy-1.0.91
+: 1687165670:0;sh VentoyWeb.sh
+: 1687165683:0;sudo sh VentoyWeb.sh
+: 1687165800:0;eos-latest-arch-mirrorlist
+: 1687165813:0;eos-rankmirrors-from-hook
+: 1687165892:0;cat /etc/pacman.d/endeavouros-mirrorlist
+: 1687165952:0;sudo pacman -Sy endeavouros-keyring\
+sudo pacman -Syu
+: 1687166947:0;yay -Syu
+: 1687168107:0;reboot
+: 1687278028:0;sudo pacman -Syu && yay -Syu
+: 1687278213:0;pacman -Qs prusa
+: 1687313300:0;sudo pacman -Syu && yay -Syu
+: 1687313463:0;sudo pacman -Syu
+: 1687313590:0;yay -Syu
+: 1687313617:0;shutdown
+: 1687516874:0;pacman -Qu
+: 1687516902:0;sudo pacman -Qu
+: 1687595270:0;c
+: 1687595288:0;cd Projects/fall-watch-thesis
+: 1687595299:0;cat firmware-backup/src/main.cpp
+: 1687714238:0;pacman -Qu
+: 1688497113:0;code .
+: 1688756072:0;pacman -S arduino-cli
+: 1688756079:0;sudo pacman -S arduino-cli
+: 1688827001:0;arduino-cli
+: 1688827103:0;sudo pacman -R arduino-cli
+: 1688827187:0;yay -S arduino-ide-bin
+: 1688828524:0;arduino-ide -h
+: 1689335640:0;git add .
+: 1689335652:0;git commit -m "V1 done"
+: 1689335655:0;git push
+: 1689505535:0;omz update
+: 1689505573:0;sudo pacman -Syyu
+: 1689508068:0;yay -Syyu
+: 1689549208:0;reboot
+: 1689602779:0;..
+: 1689602784:0;cd esp32-webserver-led
+: 1689602788:0;ls
+: 1689602793:0;code .
+: 1689607009:0;..
+: 1689607015:0;cd fall-watch-thesis
+: 1689607027:0;cd firmware-backup
+: 1689607032:0;code .
+: 1689673107:0;ls
+: 1689673111:0;..
+: 1689673119:0;cd fall-watch-thesis
+: 1689673120:0;ls
+: 1689673140:0;touch .gitignore
+: 1689673145:0;micro .gitignore
+: 1689673160:0;mkdir dataset
+: 1689731471:0;ifconfig
+: 1689731491:0;netstat
+: 1689731561:0;ip r
+: 1689905827:0;ls
+: 1689905830:0;c
+: 1689905832:0;ll
+: 1689905839:0;cc
+: 1689905840:0;c
+: 1689905843:0;ll
+: 1689905984:0;git diff .
+: 1689906000:0;micro .gitignore
+: 1689921615:0;gcc --help
+: 1690021527:0;ifconfig
+: 1690021564:0;net
+: 1690021574:0;netstat
+: 1690021588:0;ip r
+: 1690032384:0;..
+: 1690032389:0;cd esp32-webserver-led
+: 1690032394:0;code .
+: 1690182870:0;..
+: 1690182877:0;cd Projects
+: 1690182879:0;ls
+: 1690182888:0;python 44328.py
+: 1690182905:0;micro 44328.py
+: 1690182948:0;python 44328.py
+: 1690183002:0;python 44328.py 202.65.119.214 8080 N
+: 1690183016:0;micro 44328.py
+: 1690183185:0;python 44328.py 202.65.119.214 8080 N
+: 1690184986:0;yay -S virtualbox-bin
+: 1690186181:0;yay -Qe
+: 1690186264:0;yay -Qd
+: 1690186291:0;yay -S virtualbox-ext-oracle
+: 1690186333:0;pacman -Qe
+: 1690186393:0;virtualbox
+: 1690218443:0;cd ../Downloads
+: 1690218450:0;wget https://cdn.discordapp.com/attachments/1112015127873597452/1132925028233646080/Screenshot_2023-07-24-13-38-51-559_com.google.android.gm-edit.jpg
+: 1690229476:0;htop
+: 1690231866:0;yay -S virtualbox-bin-guest-iso
+: 1690232142:0;sudo '/sbin/vboxconfig'
+: 1690232489:0;sudo pacman -S virt-manager
+: 1690232778:0;sudo systemctl start libvirtd
+: 1690232826:0;systemctl status libvirtd
+: 1690232971:0;sudo pacman -S qemu
+: 1690233373:0;sudo virsh net-start default
+: 1690233399:0;sudo adduser debugpoint libvirt
+: 1690233530:0;sudo micro /etc/firewalld/firewalld.conf
+: 1690233690:0;yay -R virtualbox-bin virtualbox-bin-guest-iso virtualbox-ext-oracle
+: 1690237216:0;sudo pacman -Syyu
+: 1690237244:0;yay -Syyu
+: 1690237679:0;sudo pacman -S sof-firmware
+: 1690237750:0;inxi -Aa
+: 1690237845:0;systemctl status --user pipewire.service
+: 1690237961:0;systemctl --user enable pipewire.socket pipewire-pulse.socket
+: 1690246191:0;cd ../Tools/ventoy-1.0.94
+: 1690246201:0;ll
+: 1690246220:0;zsh VentoyWeb.sh
+: 1690246228:0;sh VentoyWeb.sh
+: 1690246234:0;sudo sh VentoyWeb.sh
+: 1690246360:0;yay -Syyu
+: 1690285935:0;systemctl status --user pipewire.service
+: 1690286247:0;options snd-hda-intel model=auto
+: 1690286259:0;_options
+: 1690286270:0;cd
+: 1690286295:0;sudo micro /etc/modprobe.d/alsa-base.conf
+: 1690287040:0;orphanrm
+: 1690392891:0;pacman -Sg
+: 1690392920:0;pacman -Sg EndeavourOS
+: 1690392929:0;pacman -Sg utilities
+: 1690392937:0;c
+: 1690392964:0;goenv
+: 1690393031:0;gobrew
+: 1690393044:0;gobrew ls
+: 1690393156:0;code .scripts/
+: 1690396981:0;micro .zsh_history

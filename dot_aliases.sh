@@ -14,13 +14,13 @@ alias ls="ls -a --color='auto'"
 alias vim="nvim"
 
 # save my dotfiles
-alias dotsave="bash .scripts/chezmoi-save.sh"
+alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
 
 # upgrade all stuff in dnf and flatpak
 alias upgrade-all="sudo dnf upgrade && flatpak update"
 
 # cloudflare cli
-alias cloudflared="$HOME/.bin/cloudflared-linux-amd64"
+# alias cloudflared="$HOME/.bin/cloudflared-linux-amd64"
 
 # symlink
 alias symlink="ln -s"
@@ -36,4 +36,4 @@ alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
 alias docker=podman
 
 # Remove orphan packages
-alias orphanrm="bash .scripts/remove-orphans.sh"
+alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
