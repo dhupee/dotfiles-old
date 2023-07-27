@@ -31,8 +31,7 @@ install_programs_pacman() {
     # Install the programs from pacman
     sudo pacman -S --noconfirm "$@"
     if [ $? -ne 0 ]; then
-        echo "Failed to install some programs from pacman. Aborting."
-        exit 1
+        echo "Failed to install some programs from pacman. Skipping."
     fi
 }
 
@@ -40,8 +39,7 @@ install_programs_aur() {
     # Install the programs from AUR using yay
     yay -S --needed --noconfirm "$@"
     if [ $? -ne 0 ]; then
-        echo "Failed to install some programs from AUR. Aborting."
-        exit 1
+        echo "Failed to install some programs from AUR. Skipping."
     fi
 }
 
@@ -49,8 +47,7 @@ install_programs_aur() {
 if ! command -v yay &>/dev/null; then
     echo "Installing yay..."
     if ! sudo pacman -S --needed --noconfirm git base-devel; then
-        echo "Failed to install prerequisites for yay. Aborting."
-        exit 1
+        echo "Failed to install prerequisites for yay. Skipping."
     fi
 
     # Clone yay repository from AUR and install without sudo
@@ -64,8 +61,7 @@ wait
 # Update package database
 echo "Updating package database..."
 if ! sudo pacman -Sy; then
-    echo "Failed to update package database. Aborting."
-    exit 1
+    echo "Failed to update package database. Skipping.
 fi
 wait
 
@@ -96,8 +92,7 @@ echo "Installing Ohmyzsh..."
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
     echo "Ohmyzsh installed successfully."
 else
-    echo "Failed to install Ohmyzsh. Aborting."
-    exit 1
+    echo "Failed to install Ohmyzsh. Skipping.
 fi
 wait
 
@@ -106,8 +101,7 @@ echo "Installing Gobrew..."
 if curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh; then
     echo "Gobrew installed successfully."
 else
-    echo "Failed to install Gobrew. Aborting."
-    exit 1
+    echo "Failed to install Gobrew. Skipping.
 fi
 wait
 
@@ -126,8 +120,7 @@ echo "Installing nvm..."
 if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
     echo "nvm installed successfully."
 else
-    echo "Failed to install nvm. Aborting."
-    exit 1
+    echo "Failed to install nvm. Skipping."
 fi
 wait
 
@@ -136,8 +129,7 @@ echo "Installing pyenv..."
 if curl https://pyenv.run | bash; then
     echo "pyenv installed successfully."
 else
-    echo "Failed to install pyenv. Aborting."
-    exit 1
+    echo "Failed to install pyenv. Skipping.
 fi
 wait
 
