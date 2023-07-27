@@ -1,46 +1,53 @@
 #!/bin/bash
 
-# List of programs to install from pacman
-pacman_programs=(
-    # Add your desired programs from pacman here
-    # Example: "firefox"
-    # Example: "code"
-    # Example: "git"
-    chezmoi
+# List of essential programs to install from pacman
+essential_pacman_programs=(
     git
-    git-lfs
     zsh
+    chezmoi
+    git-lfs
     htop
+)
+
+# List of misc programs to install from pacman
+misc_pacman_programs=(
     cmatrix
     steam
 )
 
-# List of programs to install from AUR using yay
-aur_programs=(
-    # Add your desired programs from AUR here
-    # Example: "visual-studio-code-bin"
-    # Example: "spotify"
-    heroic-games-launcher-bin
-    osu-lazer-bin
+# List of essential programs to install from AUR using yay
+essential_aur_programs=(
     spotify
 )
 
+# List of misc programs to install from AUR using yay
+misc_aur_programs=(
+    osu-lazer-bin
+    heroic-games-launcher-bin
+)
+
 # Function to install programs from pacman and AUR
-install_programs() {
-    for program in "$@"; do
-        if ! pacman -Qi "$program" &>/dev/null; then
-            echo "Installing $program..."
-            if ! sudo pacman -S --noconfirm "$program"; then
-                echo "Failed to install $program from pacman. Aborting."
-                exit 1
-            fi
-        else
-            echo "$program is already installed from pacman. Skipping."
-        fi
-    done
+install_programs_pacman() {
+    # Install the programs from pacman
+    sudo pacman -S --noconfirm "$@"
+    if [ $? -ne 0 ]; then
+        echo "Failed to install some programs from pacman. Aborting."
+        exit 1
+    fi
 }
 
-# Install yay (AUR helper) if not already installed
+install_programs_aur() {
+    # Install the programs from AUR using yay
+    if [[ ${#1[@]} -gt 0 ]]; then
+        yay -S --needed --noconfirm "$@"
+        if [ $? -ne 0 ]; then
+            echo "Failed to install some programs from AUR. Aborting."
+            exit 1
+        fi
+    fi
+}
+
+# Check if yay (AUR helper) is installed, if not, install it
 if ! command -v yay &>/dev/null; then
     echo "Installing yay..."
     if ! sudo pacman -S --needed --noconfirm git base-devel; then
@@ -62,21 +69,28 @@ if ! sudo pacman -Sy; then
     exit 1
 fi
 
-# Install the programs from pacman
-install_programs "${pacman_programs[@]}"
+# Check if the --all flag is provided
+install_full_programs=false
+if [[ "$1" == "--full" ]]; then
+    install_full_programs=true
+    shift
+fi
 
-# Install the programs from AUR using yay without sudo
-if [[ ${#aur_programs[@]} -gt 0 ]]; then
-    echo "Installing AUR programs using yay..."
-    if ! yay -S --needed --noconfirm "${aur_programs[@]}"; then
-        echo "Failed to install AUR programs using yay. Aborting."
-        exit 1
-    fi
+# Install the programs from pacman
+install_programs_pacman "${essential_pacman_programs[@]}"
+if $install_full_programs; then
+    install_programs_pacman "${misc_pacman_programs[@]}"
+fi
+
+# Install the programs from AUR using yay
+install_programs_aur "${essential_aur_programs[@]}"
+if $install_full_programs; then
+    install_programs_aur "${misc_aur_programs[@]}"
 fi
 
 # Install Ohmyzsh
 echo "Installing Ohmyzsh..."
-chsh -s $(which zsh)
+chsh -s "$(command -v zsh)"
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
     echo "Ohmyzsh installed successfully."
 else
