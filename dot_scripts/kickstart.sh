@@ -7,7 +7,7 @@ sudo pacman -S --noconfirm chezmoi
 chezmoi init dhupee
 
 # install the needed programs
-curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-arch.sh | sh
+curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-arch.sh | sudo bash
 
 # apply the dotfiles
 chezmoi -v apply

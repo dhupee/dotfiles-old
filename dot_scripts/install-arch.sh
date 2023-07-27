@@ -32,18 +32,12 @@ aur_programs=(
     spotify
 )
 
-# Check if the script is run as root
-if [[ $EUID -ne 0 ]]; then
-    echo "This script must be run as root. Please use sudo."
-    exit 1
-fi
-
 # Function to install programs from pacman and AUR
 install_programs() {
     for program in "$@"; do
-        if ! pacman -Qi "$program" &>/dev/null; then
+        if ! sudo pacman -Qi "$program" &>/dev/null; then
             echo "Installing $program..."
-            if ! pacman -S --noconfirm "$program"; then
+            if ! sudo pacman -S --noconfirm "$program"; then
                 echo "Failed to install $program from pacman. Aborting."
                 exit 1
             fi
@@ -70,7 +64,7 @@ fi
 
 # Update package database
 echo "Updating package database..."
-if ! pacman -Sy; then
+if ! sudo pacman -Sy; then
     echo "Failed to update package database. Aborting."
     exit 1
 fi
