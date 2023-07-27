@@ -12,7 +12,6 @@ dir_array=(
     "$HOME/.local/share/wallpapers/"
     "$HOME/.fonts/"
 	"$HOME/.config/micro/"
-	"$HOME/.zfunc/"
 )
 
 file_array=(

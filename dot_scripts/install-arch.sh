@@ -1,34 +1,48 @@
 #!/bin/bash
 
-# List of essential programs to install from pacman
+# LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
 essential_pacman_programs=(
-    git
     zsh
     chezmoi
     git-lfs
     htop
+    thefuck
+    micro
+    github-cli
+    neofetch
+    podman
 )
 
-# List of misc programs to install from pacman
+# LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
+    discord
     cmatrix
     steam
+    prusa-slicer
+    virt-manager
+    qemu
+    lutris
+    kicad
 )
 
-# List of essential programs to install from AUR using yay
+# LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
     spotify
+    visual-studio-code-bin
+    brave-bin
+    arduino-ide-bin
 )
 
-# List of misc programs to install from AUR using yay
+# LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
 misc_aur_programs=(
+    bottles
     osu-lazer-bin
     heroic-games-launcher-bin
 )
 
-# Function to install programs from pacman and AUR
+# FUNCTION TO INSTALL PROGRAMS FROM PACMAN AND AUR
 install_programs_pacman() {
-    # Install the programs from pacman
+    # INSTALL THE PROGRAMS FROM PACMAN
     sudo pacman -S --noconfirm "$@"
     if [ $? -ne 0 ]; then
         echo "Failed to install some programs from pacman. Skipping."
@@ -36,21 +50,21 @@ install_programs_pacman() {
 }
 
 install_programs_aur() {
-    # Install the programs from AUR using yay
+    # INSTALL THE PROGRAMS FROM AUR USING YAY
     yay -S --needed --noconfirm "$@"
     if [ $? -ne 0 ]; then
         echo "Failed to install some programs from AUR. Skipping."
     fi
 }
 
-# Check if yay (AUR helper) is installed, if not, install it
+# CHECK IF YAY (AUR HELPER) IS INSTALLED, IF NOT, INSTALL IT
 if ! command -v yay &>/dev/null; then
     echo "Installing yay..."
     if ! sudo pacman -S --needed --noconfirm git base-devel; then
         echo "Failed to install prerequisites for yay. Skipping."
     fi
 
-    # Clone yay repository from AUR and install without sudo
+    # CLONE YAY REPOSITORY FROM AUR AND INSTALL WITHOUT SUDO
     tmp_dir=$(mktemp -d)
     git clone https://aur.archlinux.org/yay.git "$tmp_dir"
     (cd "$tmp_dir" && makepkg -si --noconfirm)
@@ -58,14 +72,14 @@ if ! command -v yay &>/dev/null; then
 fi
 wait
 
-# Update package database
+# UPDATE PACKAGE DATABASE
 echo "Updating package database..."
 if ! sudo pacman -Sy; then
     echo "Failed to update package database. Skipping."
 fi
 wait
 
-# Check if the --all flag is provided
+# CHECK IF --all FLAGS IS PROVIDED
 install_full_programs=false
 if [[ "$1" == "--full" ]]; then
     install_full_programs=true
@@ -73,21 +87,21 @@ if [[ "$1" == "--full" ]]; then
 fi
 wait
 
-# Install the programs from pacman
+# INSTALL PACMAN PROGRAMS
 install_programs_pacman "${essential_pacman_programs[@]}"
 if $install_full_programs; then
     install_programs_pacman "${misc_pacman_programs[@]}"
 fi
 wait
 
-# Install the programs from AUR using yay
+# INSTALL AUR PROGRAMS WITH YAY
 install_programs_aur "${essential_aur_programs[@]}"
 if $install_full_programs; then
     install_programs_aur "${misc_aur_programs[@]}"
 fi
 wait
 
-# Install Ohmyzsh
+# INSTALL OHMYZSH
 echo "Installing Ohmyzsh..."
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
     echo "Ohmyzsh installed successfully."
@@ -96,7 +110,14 @@ else
 fi
 wait
 
-# Install Gobrew
+# INSTALL CUSTOM OHMYZSH PLUGINS & P10K THEME
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions &&
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete &&
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+wait
+
+# INSTALL GOBREW
 echo "Installing Gobrew..."
 if curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh; then
     echo "Gobrew installed successfully."
@@ -105,17 +126,7 @@ else
 fi
 wait
 
-# Install Ohmyzsh plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
-wait
-
-# Install Ohmyzsh themes
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-wait
-
-# Install nvm
+# IINSTALL NVM
 echo "Installing nvm..."
 if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
     echo "nvm installed successfully."
@@ -124,7 +135,7 @@ else
 fi
 wait
 
-# Install pyenv
+# INSTALL PYENV
 echo "Installing pyenv..."
 if curl https://pyenv.run | bash; then
     echo "pyenv installed successfully."
@@ -135,6 +146,6 @@ wait
 
 echo "All programs have been installed successfully!"
 
-# change the shell to zsh
+# CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
 sudo chsh -s "$(which zsh)"

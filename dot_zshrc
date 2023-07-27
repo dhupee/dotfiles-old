@@ -170,7 +170,3 @@ _gobrew()
     return 0
 }
 complete -F _gobrew gobrew
-
-# Sourcing Rustup and its complementary tools
-source "$HOME/.cargo/env"
-fpath+=~/.zfunc

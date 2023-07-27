@@ -7,20 +7,23 @@ this dotfiles used [Chezmoi](https://www.chezmoi.io/) as it's manager.
 
 Since I use [EndeavourOS](https://endeavouros.com/) with KDE I can say that "I use Arch, btw".
 
+pretty sure it will work with any Arch-based install, not sure about Manjaro though since they holding back Pacman iirc.
+
 ## Installation
 
-to use this dotfile(to remind me if I somehow forgot), connect your github first with [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) to make you dont have to login every commit.
-then in terminal paste shell script below.
+to use this dotfile, simply copy this to terminal and run
 
 ```sh
-# I should repair this
-cd $HOME
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.bin
-chezmoi init git@github.com:dhupee/dotfiles.git
-chezmoi cd
-sudo bash dot_scripts/install.sh
-chezmoi -v apply
+curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/kickstart-full.sh | bash
 ```
+
+or, if you just need the essential stuff
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/kickstart.sh | bash
+```
+
+check the file to see what you will download, or fork it and you used it for your own need
 
 ## Adding New Dotfiles
 
@@ -50,9 +53,7 @@ chezmoi -v apply
 
 ## To-Add List
 
-- [ ] making ~~gnome~~ KDE backup and restore (need VM for this, dont want to ruin my config)
+- [ ] making KDE backup and restore (will use Konsave)
 - [ ] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
 - [ ] saving osu's songs/skins/data and other big files to google drive/dropbox
 - [ ] automation script for copy gitignore content to dockerignore
-- [ ] script for init on live usb
-- [ ] branch for parrot OS/BlackArch
