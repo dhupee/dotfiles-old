@@ -61,6 +61,7 @@ if ! command -v yay &>/dev/null; then
     (cd "$tmp_dir" && makepkg -si --noconfirm)
     rm -rf "$tmp_dir"
 fi
+wait
 
 # Update package database
 echo "Updating package database..."
@@ -68,6 +69,7 @@ if ! sudo pacman -Sy; then
     echo "Failed to update package database. Aborting."
     exit 1
 fi
+wait
 
 # Check if the --all flag is provided
 install_full_programs=false
@@ -75,20 +77,19 @@ if [[ "$1" == "--full" ]]; then
     install_full_programs=true
     shift
 fi
+wait
 
 # Install the programs from pacman
-if $install_all_programs; then
-    install_programs_pacman "${essential_pacman_programs[@]}" "${all_pacman_programs[@]}"
-else
-    install_programs_pacman "${essential_pacman_programs[@]}"
+install_programs_pacman "${essential_pacman_programs[@]}"
+if $install_full_programs; then
+    install_programs_pacman "${misc_pacman_programs[@]}"
 fi
 wait
 
-# Install the programs from Misc AUR using yay
-if $install_all_programs; then
-    install_programs_misc_aur "${essential_misc_aur_programs[@]}" "${all_misc_aur_programs[@]}"
-else
-    install_programs_misc_aur "${essential_misc_aur_programs[@]}"
+# Install the programs from AUR using yay
+install_programs_aur "${essential_aur_programs[@]}"
+if $install_full_programs; then
+    install_programs_aur "${misc_aur_programs[@]}"
 fi
 wait
 
