@@ -6,6 +6,7 @@ pacman_programs=(
     # Example: "firefox"
     # Example: "code"
     # Example: "git"
+    chezmoi
     git
     git-lfs
     zsh
