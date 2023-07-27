@@ -77,16 +77,20 @@ if [[ "$1" == "--full" ]]; then
 fi
 
 # Install the programs from pacman
-install_programs_pacman "${essential_pacman_programs[@]}"
-if $install_full_programs; then
-    install_programs_pacman "${misc_pacman_programs[@]}"
+if $install_all_programs; then
+    install_programs_pacman "${essential_pacman_programs[@]}" "${all_pacman_programs[@]}"
+else
+    install_programs_pacman "${essential_pacman_programs[@]}"
 fi
+wait
 
-# Install the programs from AUR using yay
-install_programs_aur "${essential_aur_programs[@]}"
-if $install_full_programs; then
-    install_programs_aur "${misc_aur_programs[@]}"
+# Install the programs from Misc AUR using yay
+if $install_all_programs; then
+    install_programs_misc_aur "${essential_misc_aur_programs[@]}" "${all_misc_aur_programs[@]}"
+else
+    install_programs_misc_aur "${essential_misc_aur_programs[@]}"
 fi
+wait
 
 # Install Ohmyzsh
 echo "Installing Ohmyzsh..."
@@ -97,6 +101,7 @@ else
     echo "Failed to install Ohmyzsh. Aborting."
     exit 1
 fi
+wait
 
 # Install Gobrew
 echo "Installing Gobrew..."
@@ -106,14 +111,17 @@ else
     echo "Failed to install Gobrew. Aborting."
     exit 1
 fi
+wait
 
 # Install Ohmyzsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+wait
 
 # Install Ohmyzsh themes
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+wait
 
 # Install nvm
 echo "Installing nvm..."
@@ -123,6 +131,7 @@ else
     echo "Failed to install nvm. Aborting."
     exit 1
 fi
+wait
 
 # Install pyenv
 echo "Installing pyenv..."
@@ -132,5 +141,6 @@ else
     echo "Failed to install pyenv. Aborting."
     exit 1
 fi
+wait
 
 echo "All programs have been installed successfully!"
