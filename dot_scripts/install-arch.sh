@@ -61,7 +61,7 @@ wait
 # Update package database
 echo "Updating package database..."
 if ! sudo pacman -Sy; then
-    echo "Failed to update package database. Skipping.
+    echo "Failed to update package database. Skipping."
 fi
 wait
 
@@ -92,7 +92,7 @@ echo "Installing Ohmyzsh..."
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
     echo "Ohmyzsh installed successfully."
 else
-    echo "Failed to install Ohmyzsh. Skipping.
+    echo "Failed to install Ohmyzsh. Skipping."
 fi
 wait
 
@@ -101,7 +101,7 @@ echo "Installing Gobrew..."
 if curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh; then
     echo "Gobrew installed successfully."
 else
-    echo "Failed to install Gobrew. Skipping.
+    echo "Failed to install Gobrew. Skipping."
 fi
 wait
 
@@ -129,7 +129,7 @@ echo "Installing pyenv..."
 if curl https://pyenv.run | bash; then
     echo "pyenv installed successfully."
 else
-    echo "Failed to install pyenv. Skipping.
+    echo "Failed to install pyenv. Skipping."
 fi
 wait
 
