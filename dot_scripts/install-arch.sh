@@ -94,9 +94,6 @@ fi
 wait
 
 # Install Ohmyzsh
-echo "Change default shell to zsh..."
-chsh -s "$(command -v zsh)"
-wait
 echo "Installing Ohmyzsh..."
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
     echo "Ohmyzsh installed successfully."
@@ -147,3 +144,7 @@ fi
 wait
 
 echo "All programs have been installed successfully!"
+
+# change the shell to zsh
+echo "Change default shell to zsh..."
+chsh -s "$(command -v zsh)"
