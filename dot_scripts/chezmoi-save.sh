@@ -12,6 +12,7 @@ dir_array=(
     "$HOME/.local/share/wallpapers/"
     "$HOME/.fonts/"
 	"$HOME/.config/micro/"
+	"$HOME/.config/PrusaSlicer/"	
 )
 
 file_array=(
