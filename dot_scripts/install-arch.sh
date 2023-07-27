@@ -38,12 +38,10 @@ install_programs_pacman() {
 
 install_programs_aur() {
     # Install the programs from AUR using yay
-    if [[ ${#1[@]} -gt 0 ]]; then
-        yay -S --needed --noconfirm "$@"
-        if [ $? -ne 0 ]; then
-            echo "Failed to install some programs from AUR. Aborting."
-            exit 1
-        fi
+    yay -S --needed --noconfirm "$@"
+    if [ $? -ne 0 ]; then
+        echo "Failed to install some programs from AUR. Aborting."
+        exit 1
     fi
 }
 
@@ -147,4 +145,4 @@ echo "All programs have been installed successfully!"
 
 # change the shell to zsh
 echo "Change default shell to zsh..."
-chsh -s "$(command -v zsh)"
+sudo chsh -s "$(which zsh)"
