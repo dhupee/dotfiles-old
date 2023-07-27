@@ -1,10 +1,3 @@
-# for arch based distro
-# not recommended for Manjaro at all due to usage of AUR
-
-
-# set the directory to home
-cd $HOME
-
 #!/bin/bash
 
 # List of programs to install from pacman
@@ -19,7 +12,6 @@ pacman_programs=(
     htop
     cmatrix
     steam
-
 )
 
 # List of programs to install from AUR using yay
@@ -35,7 +27,7 @@ aur_programs=(
 # Function to install programs from pacman and AUR
 install_programs() {
     for program in "$@"; do
-        if ! sudo pacman -Qi "$program" &>/dev/null; then
+        if ! pacman -Qi "$program" &>/dev/null; then
             echo "Installing $program..."
             if ! sudo pacman -S --noconfirm "$program"; then
                 echo "Failed to install $program from pacman. Aborting."
@@ -50,15 +42,15 @@ install_programs() {
 # Install yay (AUR helper) if not already installed
 if ! command -v yay &>/dev/null; then
     echo "Installing yay..."
-    if ! pacman -S --needed --noconfirm git base-devel; then
+    if ! sudo pacman -S --needed --noconfirm git base-devel; then
         echo "Failed to install prerequisites for yay. Aborting."
         exit 1
     fi
 
-    # Clone yay repository from AUR and install
+    # Clone yay repository from AUR and install without sudo
     tmp_dir=$(mktemp -d)
     git clone https://aur.archlinux.org/yay.git "$tmp_dir"
-    (cd "$tmp_dir" && yes | makepkg -si)
+    (cd "$tmp_dir" && makepkg -si --noconfirm)
     rm -rf "$tmp_dir"
 fi
 
@@ -72,7 +64,7 @@ fi
 # Install the programs from pacman
 install_programs "${pacman_programs[@]}"
 
-# Install the programs from AUR using yay
+# Install the programs from AUR using yay without sudo
 if [[ ${#aur_programs[@]} -gt 0 ]]; then
     echo "Installing AUR programs using yay..."
     if ! yay -S --needed --noconfirm "${aur_programs[@]}"; then
@@ -81,10 +73,10 @@ if [[ ${#aur_programs[@]} -gt 0 ]]; then
     fi
 fi
 
-# install ohmyzsh
+# Install Ohmyzsh
 echo "Installing Ohmyzsh..."
 chsh -s $(which zsh)
-if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
     echo "Ohmyzsh installed successfully."
 else
     echo "Failed to install Ohmyzsh. Aborting."
@@ -100,14 +92,13 @@ else
     exit 1
 fi
 
-# install ohmyzsh plugins
+# Install Ohmyzsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 
-# install ohmyzsh themes
+# Install Ohmyzsh themes
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
 
 # Install nvm
 echo "Installing nvm..."
