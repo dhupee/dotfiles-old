@@ -22,6 +22,7 @@ file_array=(
     "$HOME/.bashrc"
     "$HOME/.nanorc"
     "$HOME/.aliases.sh"
+    "$HOME/.fonts.conf"	
 )
 
 #----------------------SAVING FILES AND DIRS----------------------
