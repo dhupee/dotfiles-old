@@ -43,20 +43,36 @@ misc_aur_programs=(
     heroic-games-launcher-bin
 )
 
+# success and failure report array
+succ_arr=()
+fail_arr=()
+
+# List of custom Ohmyzsh plugins
+custom_ohmyzsh_plugins=(
+    "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    "https://github.com/zsh-users/zsh-autosuggestions.git"
+    "https://github.com/marlonrichert/zsh-autocomplete.git"
+)
+
 # FUNCTION TO INSTALL PROGRAMS FROM PACMAN AND AUR
 install_programs_pacman() {
     # INSTALL THE PROGRAMS FROM PACMAN
     sudo pacman -S --noconfirm "$@"
     if [ $? -ne 0 ]; then
-        echo "Failed to install some programs from pacman. Skipping."
+        fail_arr+=("Failed to install some programs from Pacman.")
+    else
+    	succ_arr+=("Success install from Pacman." )
     fi
 }
 
 install_programs_aur() {
     # INSTALL THE PROGRAMS FROM AUR USING YAY
     yay -S --needed --noconfirm "$@"
+    succ_arr+=("Success install from AUR." )
     if [ $? -ne 0 ]; then
-        echo "Failed to install some programs from AUR. Skipping."
+        fail_arr+=("Failed to install some programs from AUR.")
+    else
+    	succ_arr+=("Success install from AUR." )
     fi
 }
 
@@ -64,7 +80,9 @@ install_programs_aur() {
 if ! command -v yay &>/dev/null; then
     echo "Installing yay..."
     if ! sudo pacman -S --needed --noconfirm git base-devel; then
-        echo "Failed to install prerequisites for yay. Skipping."
+        fail_arr+=("Failed to install prerequisites for yay.")
+    else
+    	succ_arr+=("Success to install prerequisites for yay." )
     fi
 
     # CLONE YAY REPOSITORY FROM AUR AND INSTALL WITHOUT SUDO
@@ -78,7 +96,9 @@ wait
 # UPDATE PACKAGE DATABASE
 echo "Updating package database..."
 if ! sudo pacman -Sy; then
-    echo "Failed to update package database. Skipping."
+    fail_arr+=("Failed to update package database.)"
+else
+    succ_arr+=("Success to update package database." )
 fi
 wait
 
@@ -107,49 +127,76 @@ wait
 # INSTALL OHMYZSH
 echo "Installing Ohmyzsh..."
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
-    echo "Ohmyzsh installed successfully."
+    succ_arr+=("Ohmyzsh installed successfully.")
 else
-    echo "Failed to install Ohmyzsh. Skipping."
+    fail_arr+=("Failed to install Ohmyzsh.")
 fi
 wait
 
-# INSTALL CUSTOM OHMYZSH PLUGINS & P10K THEME
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions &&
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete &&
+# Install custom Ohmyzsh plugins using a for loop
+for plugin in "${custom_ohmyzsh_plugins[@]}"; do
+    echo "Cloning plugin: ${plugin}"
+    if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
+        succ_arr+=("Plugin cloned successfully.")
+    else
+        fail_arr+=("Failed to clone plugin: ${plugin}")
+    fi
+done
+wait
+
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 wait
 
 # INSTALL GOBREW
 echo "Installing Gobrew..."
 if curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh; then
-    echo "Gobrew installed successfully."
+    succ_arr+=("Gobrew installed successfully.")
 else
-    echo "Failed to install Gobrew. Skipping."
+    fail_arr+=("Failed to install Gobrew.")
 fi
 wait
 
 # IINSTALL NVM
 echo "Installing nvm..."
 if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
-    echo "nvm installed successfully."
+    succ_arr+=("nvm installed successfully.")
 else
-    echo "Failed to install nvm. Skipping."
+    fail_arr+=("Failed to install nvm.")
 fi
 wait
 
 # INSTALL PYENV
 echo "Installing pyenv..."
 if curl https://pyenv.run | bash; then
-    echo "pyenv installed successfully."
+    succ_arr+=("pyenv installed successfully.")
 else
-    echo "Failed to install pyenv. Skipping."
+    fail_arr+=("Failed to install pyenv.")
 fi
 wait
-
-# TODO: Make report, if its failed or not
-echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
 sudo chsh -s "$(which zsh)"
+wait
+
+# Check if the array is empty
+if [ ${#succ_arr[@]} -eq 0 ]; then
+    echo " "
+else
+    # Iterate the loop to read and print each array element
+    for value in "${succ_arr[@]}"
+    do
+         echo $value
+    done
+fi
+
+# Check if the array is empty
+if [ ${#fail_arr[@]} -eq 0 ]; then
+    echo " "
+else
+    # Iterate the loop to read and print each array element
+    for value in "${fail_arr[@]}"
+    do
+         echo $value
+    done
+fi
