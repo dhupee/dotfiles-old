@@ -124,9 +124,9 @@ wait
 for plugin in "${custom_ohmyzsh_plugins[@]}"; do
     echo "Cloning plugin: ${plugin}"
     if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
-        succ_arr+=("Plugin cloned successfully.")
+        echo "Plugin cloned successfully."
     else
-        fail_arr+=("Failed to clone plugin: ${plugin}")
+        echo "Failed to clone plugin: ${plugin}"
     fi
 done
 wait
