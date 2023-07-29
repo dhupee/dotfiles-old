@@ -147,6 +147,7 @@ else
 fi
 wait
 
+# TODO: Make report, if its failed or not
 echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
