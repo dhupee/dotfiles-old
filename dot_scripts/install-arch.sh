@@ -131,7 +131,7 @@ for plugin in "${custom_ohmyzsh_plugins[@]}"; do
 done
 wait
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 wait
 
 # INSTALL GOBREW
@@ -143,7 +143,7 @@ else
 fi
 wait
 
-# IINSTALL NVM
+# INSTALL NVM
 echo "Installing nvm..."
 if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
     echo "nvm installed successfully."

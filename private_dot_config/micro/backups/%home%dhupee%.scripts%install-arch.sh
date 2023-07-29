@@ -43,6 +43,13 @@ misc_aur_programs=(
     heroic-games-launcher-bin
 )
 
+# List of custom Ohmyzsh plugins
+custom_ohmyzsh_plugins=(
+    "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    "https://github.com/zsh-users/zsh-autosuggestions.git"
+    "https://github.com/marlonrichert/zsh-autocomplete.git"
+)
+
 # FUNCTION TO INSTALL PROGRAMS FROM PACMAN AND AUR
 install_programs_pacman() {
     # INSTALL THE PROGRAMS FROM PACMAN
@@ -113,11 +120,18 @@ else
 fi
 wait
 
-# INSTALL CUSTOM OHMYZSH PLUGINS & P10K THEME
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions &&
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete &&
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+# Install custom Ohmyzsh plugins using a for loop
+for plugin in "${custom_ohmyzsh_plugins[@]}"; do
+    echo "Cloning plugin: ${plugin}"
+    if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
+        succ_arr+=("Plugin cloned successfully.")
+    else
+        fail_arr+=("Failed to clone plugin: ${plugin}")
+    fi
+done
+wait
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 wait
 
 # INSTALL GOBREW
@@ -129,7 +143,7 @@ else
 fi
 wait
 
-# IINSTALL NVM
+# INSTALL NVM
 echo "Installing nvm..."
 if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
     echo "nvm installed successfully."
@@ -147,6 +161,7 @@ else
 fi
 wait
 
+# TODO: Make report, if its failed or not
 echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
