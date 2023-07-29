@@ -123,7 +123,7 @@ wait
 # Install custom Ohmyzsh plugins using a for loop
 for plugin in "${custom_ohmyzsh_plugins[@]}"; do
     echo "Cloning plugin: ${plugin}"
-    if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
+    if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
         succ_arr+=("Plugin cloned successfully.")
     else
         fail_arr+=("Failed to clone plugin: ${plugin}")
