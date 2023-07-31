@@ -36,3 +36,6 @@ alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
 
 # Install all Blackarch tools
 alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u"
+
+# tunneling url/localhost
+alias tunnel="cloudflared tunnel --url $1"

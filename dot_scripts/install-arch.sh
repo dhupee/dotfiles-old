@@ -3,6 +3,7 @@
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
 essential_pacman_programs=(
     zsh
+    fzf
     chezmoi
     git-lfs
     htop
@@ -11,6 +12,8 @@ essential_pacman_programs=(
     github-cli
     neofetch
     podman
+	cloudflared
+	tldr
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
