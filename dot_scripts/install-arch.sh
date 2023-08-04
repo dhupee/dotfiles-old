@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
+# Note: this one is CLI only, make sure of that
 essential_pacman_programs=(
     zsh
     fzf
@@ -14,6 +15,7 @@ essential_pacman_programs=(
     podman
 	cloudflared
 	tldr
+	tmux
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
@@ -29,6 +31,7 @@ misc_pacman_programs=(
     kicad
 	inkscape
     yt-dlp
+	obs-studio
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY

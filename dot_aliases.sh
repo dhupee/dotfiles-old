@@ -33,6 +33,7 @@ alias docker="podman"
 
 # Remove orphan packages
 alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
+alias orphanrm-aur="yay -Yc"
 
 # Install all Blackarch tools
 alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u"

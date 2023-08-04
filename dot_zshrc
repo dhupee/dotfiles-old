@@ -109,7 +109,7 @@ plugins=(
     npm
     pyenv
     python
-    rust
+    emoji
     golang
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -155,12 +155,13 @@ export NVM_DIR="$HOME/.nvm"
 # Sourcing Gobrew for Go versioning
 export PATH="$HOME/.gobrew/current/bin:$HOME/.gobrew/bin:$PATH"
 export GOROOT="$HOME/.gobrew/current/go"
+
 _gobrew()
 {
     COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
     case "$COMP_CWORD" in
         1)
-            COMMANDS="ls ls-remote use install uninstall prune version help"
+            COMMANDS="ls ls-remote use install uninstall self-update prune version help"
             ;;
         2)
             COMMANDS=`gobrew ls |sed '/*/d'| sed '/current/d' |awk NF`
@@ -169,4 +170,5 @@ _gobrew()
     COMPREPLY=(`compgen -W "$COMMANDS" -- "${COMP_WORDS[COMP_CWORD]}"`)
     return 0
 }
+
 complete -F _gobrew gobrew
