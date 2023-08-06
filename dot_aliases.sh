@@ -9,6 +9,7 @@ alias bt-start="systemctl start bluetooth"
 
 # start qemu/kvm virtual machines
 alias vm-start="systemctl start libvirtd"
+alias vm-stop="systemctl stop libvirtd"
 
 # ls
 alias ls="ls -a --color='auto'"

@@ -114,6 +114,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-autocomplete
+    zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh

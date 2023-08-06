@@ -40,6 +40,7 @@ essential_aur_programs=(
     visual-studio-code-bin
     brave-bin
     arduino-ide-bin
+    cloudflare-warp-bin
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
@@ -54,6 +55,7 @@ custom_ohmyzsh_plugins=(
     "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     "https://github.com/zsh-users/zsh-autosuggestions.git"
     "https://github.com/marlonrichert/zsh-autocomplete.git"
+    "https://github.com/zsh-users/zsh-history-substring-search"
 )
 
 # FUNCTION TO INSTALL PROGRAMS FROM PACMAN AND AUR
