@@ -7,9 +7,13 @@ alias f="fzf"
 # start bluetooth
 alias bt-start="systemctl start bluetooth"
 
-# start qemu/kvm virtual machines
+# start qemu/kvm services
 alias vm-start="systemctl start libvirtd"
 alias vm-stop="systemctl stop libvirtd"
+
+# start warp-cli services
+alias warp-service-start="systemctl start warp-svc.service"
+alias warp-service-stop="systemctl stop warp-svc.service"
 
 # ls
 alias ls="ls -a --color='auto'"
@@ -19,9 +23,6 @@ alias vim="nvim"
 
 # save my dotfiles
 alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
-
-# cloudflare cli
-# alias cloudflared="$HOME/.bin/cloudflared-linux-amd64"
 
 # symlink
 alias symlink="ln -s"
