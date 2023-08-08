@@ -27,7 +27,7 @@ curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/
 
 check the file to see what you will download, or fork it and you used it for your own need
 
-## Install Parrot
+## Install Parrot (NOT DONE YET)
 
 I use parrot okay, and not all tools I need is there, so
 
