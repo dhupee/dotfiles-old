@@ -3,7 +3,7 @@
 # status: operational
 
 dir_array=(
-    "$HOME/.backup_bottles/"
+    "$HOME/.backup-bottles/"
     "$HOME/.scripts/"
     "$HOME/.config/htop/"
     "$HOME/.config/neofetch/"
