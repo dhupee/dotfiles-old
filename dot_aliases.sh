@@ -45,3 +45,9 @@ alias tunnel="cloudflared tunnel --url $1"
 
 # copy gitignore to create a similar dockerignore
 alias git2dock-ignore="cp $PWD/.gitignore $PWD/.gitignore"
+
+# backup bottles yml
+alias bottles-backup="bash .scripts/bottles-backup.sh"
+
+# flatpak aliases, tidy up
+alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
