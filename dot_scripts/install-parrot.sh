@@ -7,7 +7,6 @@ deb_programs=(
     htop
     tldr
     fzf
-    chezmoi
 )
 
 # Install the programs
@@ -55,4 +54,4 @@ sudo chsh -s "$(which zsh)"
 wait
 
 # Clone your dotfiles repository using Chezmoi
-chezmoi init --apply dhupee
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply dhupee
