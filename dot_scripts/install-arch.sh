@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
-# Note: this one is CLI only, make sure of that
+
+# Note:
+# 'essential_pacman_programs' is CLI only, make sure of that.
+# use flatpak for any sandbox software, like bottles
+
 essential_pacman_programs=(
     zsh
     fzf
@@ -32,6 +36,7 @@ misc_pacman_programs=(
 	inkscape
     yt-dlp
 	obs-studio
+	flatpak
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
@@ -48,6 +53,10 @@ misc_aur_programs=(
     bottles
     osu-lazer-bin
     heroic-games-launcher-bin
+)
+
+flatpak_programs=(
+	com.usebottles.bottles
 )
 
 # List of custom Ohmyzsh plugins
@@ -119,6 +128,10 @@ if $install_full_programs; then
 fi
 wait
 
+# INSTALL SOFTWARE WITH FLATPAK
+flatpak install flathub "${flatpak_programs}"
+wait
+
 # INSTALL OHMYZSH
 echo "Installing Ohmyzsh..."
 if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
@@ -128,7 +141,7 @@ else
 fi
 wait
 
-# Install custom Ohmyzsh plugins using a for loop
+# INSTALL CUSTOM OHMYZSH PLUGINS USING A FOR LOOP
 for plugin in "${custom_ohmyzsh_plugins[@]}"; do
     echo "Cloning plugin: ${plugin}"
     if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then

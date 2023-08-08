@@ -42,3 +42,6 @@ alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 |
 
 # tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
+
+# copy gitignore to create a similar dockerignore
+alias git2dock-ignore="cp $PWD/.gitignore $PWD/.gitignore"

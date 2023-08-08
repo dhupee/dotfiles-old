@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 
 # status: operational
-# TODO: add function for /etc/dnf/dnf.conf
-
 
 dir_array=(
     "$HOME/.backup_bottles/"

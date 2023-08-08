@@ -9,7 +9,9 @@ Since I use [EndeavourOS](https://endeavouros.com/) with KDE I can say that "I u
 
 pretty sure it will work with any Arch-based install, not sure about Manjaro though since they holding back Pacman iirc.
 
-## Installation
+I also use Parrot sometimes so I made versions for debian.
+
+## Installation For My Arch
 
 to use this dotfile, simply copy this to terminal and run
 
@@ -24,6 +26,14 @@ curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/
 ```
 
 check the file to see what you will download, or fork it and you used it for your own need
+
+## Install Parrot
+
+I use parrot okay, and not all tools I need is there, so
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scriptsinstall-arch.sh | bash
+```
 
 ## Adding New Dotfiles
 
@@ -55,5 +65,4 @@ chezmoi -v apply
 
 - [ ] making KDE backup and restore (will use Konsave)
 - [ ] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
-- [ ] saving osu's songs/skins/data and other big files to google drive/dropbox
-- [ ] automation script for copy gitignore content to dockerignore
+- [ ] saving osu's songs/skins/data and other big files to google drive/dropbox\
