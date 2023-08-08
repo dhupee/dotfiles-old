@@ -7,11 +7,12 @@ deb_programs=(
     htop
     tldr
     fzf
+    chezmoi
 )
 
 # Install the programs
 echo "Installing programs..."
-if apt install -y "${deb_programs[@]}"; then
+if sudo apt install -y "${deb_programs[@]}"; then
     echo "Programs installed successfully."
 else
     echo "Failed to install programs. Skipping."

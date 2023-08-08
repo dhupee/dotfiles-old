@@ -9,5 +9,5 @@ for d in "${bottles_path}"/*; do
     basename="${d##*/}"
     echo "$basename"
 
-    cp -r "$d/bottle.yml" "$HOME/.backup-bottles/$basename.yml"
+    cp -r "$d/bottle.yml" "$HOME/backup-bottles/$basename.yml"
 done
