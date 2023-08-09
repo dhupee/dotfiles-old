@@ -33,9 +33,10 @@ alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
 # Podman is Docker, fight me
 alias docker="podman"
 
-# Remove orphan packages
+# Arch-based maintenance
 alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
 alias orphanrm-aur="yay -Yc"
+alias cacherm-"rm -rf ~/.cache/*"
 
 # Install all Blackarch tools
 alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u"
