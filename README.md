@@ -27,12 +27,12 @@ curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/
 
 check the file to see what you will download, or fork it and you used it for your own need
 
-## Install Parrot (NOT DONE YET)
+## Install Kali/Parrot (NOT DONE YET)
 
-I use parrot okay, and not all tools I need is there, so
+I use ~~parrot~~ Kali okay, and not all tools I need is there, so
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-parrot.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-arch.sh | bash
 ```
 
 ## Adding New Dotfiles
@@ -64,5 +64,5 @@ chezmoi -v apply
 ## To-Add List
 
 - [ ] making KDE backup and restore (will use Konsave)
-- [ ] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
+- [*] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
 - [ ] saving osu's songs/skins/data and other big files to google drive/dropbox\

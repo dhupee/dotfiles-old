@@ -36,7 +36,7 @@ alias docker="podman"
 # Arch-based maintenance
 alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
 alias orphanrm-aur="yay -Yc"
-alias cacherm-"rm -rf ~/.cache/*"
+alias cacherm="rm -rf ~/.cache/*"
 
 # Install all Blackarch tools
 alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u"
