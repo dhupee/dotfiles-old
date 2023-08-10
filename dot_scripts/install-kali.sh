@@ -10,6 +10,7 @@ deb_programs=(
     python3-dev
     python3-pip
     python3-setuptools
+	flatpak
 )
 
 # List of custom Ohmyzsh plugins
@@ -21,6 +22,7 @@ custom_ohmyzsh_plugins=(
 )
 
 sudo apt update && sudo apt upgrade
+wait
 
 # Install the programs
 echo "Installing programs..."
@@ -29,6 +31,7 @@ if sudo apt install -y "${deb_programs[@]}"; then
 else
     echo "Failed to install programs. Skipping."
 fi
+wait
 
 pip3 install thefuck --user
 wait
@@ -62,4 +65,5 @@ sudo chsh -s "$(which zsh)"
 wait
 
 # Clone your dotfiles repository using Chezmoi
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.bin init --apply dhupee
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.bin
+./.bin/chezmoi init --apply dhupee
