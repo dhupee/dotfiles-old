@@ -30,7 +30,7 @@ misc_pacman_programs=(
     steam
     prusa-slicer
     virt-manager
-    qemu
+    qemu-base
     lutris
     kicad
 	inkscape
