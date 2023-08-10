@@ -24,13 +24,14 @@ custom_ohmyzsh_plugins=(
 sudo apt update && sudo apt upgrade
 wait
 
-# Install the programs
 echo "Installing programs..."
-if sudo apt install -y "${deb_programs[@]}"; then
-    echo "Programs installed successfully."
-else
-    echo "Failed to install programs. Skipping."
-fi
+for program in "${deb_programs[@]}"; do
+    if sudo apt install -y "$program"; then
+        echo "$program installed successfully."
+    else
+        echo "Failed to install $program. Skipping."
+    fi
+done
 wait
 
 pip3 install thefuck --user
