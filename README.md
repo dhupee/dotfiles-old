@@ -32,7 +32,7 @@ check the file to see what you will download, or fork it and you used it for you
 I use ~~parrot~~ Kali okay, and not all tools I need is there, so
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-arch.sh | bash
+curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-kali.sh | bash
 ```
 
 ## Adding New Dotfiles
