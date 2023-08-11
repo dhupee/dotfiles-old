@@ -134,7 +134,7 @@ wait
 
 # INSTALL OHMYZSH
 echo "Installing Ohmyzsh..."
-if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
+if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --skip-chsh; then
     echo "Ohmyzsh installed successfully."
 else
     echo "Failed to install Ohmyzsh. Skipping."

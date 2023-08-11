@@ -4,12 +4,12 @@
 
 deb_programs=(
     zsh
+    git-lfs
     htop
     tldr
     fzf
-    python3-dev
-    python3-pip
-    python3-setuptools
+    thefuck
+    micro
 	flatpak
 )
 
@@ -34,12 +34,9 @@ for program in "${deb_programs[@]}"; do
 done
 wait
 
-pip3 install thefuck --user
-wait
-
 # INSTALL OHMYZSH
 echo "Installing Ohmyzsh..."
-if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
+if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --skip-chsh; then
     echo "Ohmyzsh installed successfully."
 else
     echo "Failed to install Ohmyzsh. Skipping."
@@ -60,6 +57,33 @@ wait
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 wait
 
+# INSTALL GOBREW
+echo "Installing Gobrew..."
+if curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh; then
+    echo "Gobrew installed successfully."
+else
+    echo "Failed to install Gobrew. Skipping."
+fi
+wait
+
+# INSTALL NVM
+echo "Installing nvm..."
+if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
+    echo "nvm installed successfully."
+else
+    echo "Failed to install nvm. Skipping."
+fi
+wait
+
+# INSTALL PYENV
+echo "Installing pyenv..."
+if curl https://pyenv.run | bash; then
+    echo "pyenv installed successfully."
+else
+    echo "Failed to install pyenv. Skipping."
+fi
+wait
+
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
 sudo chsh -s "$(which zsh)"
@@ -67,4 +91,5 @@ wait
 
 # Clone your dotfiles repository using Chezmoi
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.bin
+sleep 3
 ./.bin/chezmoi init --apply dhupee
