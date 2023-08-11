@@ -21,7 +21,7 @@ custom_ohmyzsh_plugins=(
     "https://github.com/zsh-users/zsh-history-substring-search"
 )
 
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 wait
 
 echo "Installing programs..."
