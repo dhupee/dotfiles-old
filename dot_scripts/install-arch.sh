@@ -129,7 +129,7 @@ fi
 wait
 
 # INSTALL SOFTWARE WITH FLATPAK
-flatpak install flathub "${flatpak_programs}"
+flatpak install -y flathub "${flatpak_programs}"
 wait
 
 # INSTALL OHMYZSH
