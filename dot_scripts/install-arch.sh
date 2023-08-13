@@ -24,6 +24,10 @@ essential_pacman_programs=(
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
+	noto-fonts-emoji
+	fcitx5-im
+	fcitx5-mozc
+	fcitx5-configtool
 	libreoffice
     discord
     cmatrix
