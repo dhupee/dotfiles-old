@@ -24,6 +24,10 @@ essential_pacman_programs=(
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
+	noto-fonts-emoji
+	fcitx5-im
+	fcitx5-mozc
+	fcitx5-configtool
 	libreoffice
     discord
     cmatrix
@@ -129,7 +133,7 @@ fi
 wait
 
 # INSTALL SOFTWARE WITH FLATPAK
-flatpak install flathub "${flatpak_programs}"
+flatpak install -y flathub "${flatpak_programs}"
 wait
 
 # INSTALL OHMYZSH

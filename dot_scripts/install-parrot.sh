@@ -11,6 +11,13 @@ deb_programs=(
     thefuck
     micro
 	flatpak
+	parrot-desktop-kde
+)
+
+flatpak_programs=(
+	com.brave.Browser
+	com.visualstudio.code
+	io.github.shiftey.Desktop
 )
 
 # List of custom Ohmyzsh plugins
@@ -24,6 +31,7 @@ custom_ohmyzsh_plugins=(
 sudo apt update && sudo apt upgrade -y
 wait
 
+# install programs from the debian repo
 echo "Installing programs..."
 for program in "${deb_programs[@]}"; do
     if sudo apt install -y "$program"; then
@@ -32,6 +40,14 @@ for program in "${deb_programs[@]}"; do
         echo "Failed to install $program. Skipping."
     fi
 done
+wait
+
+# add flathub repo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+wait
+
+# INSTALL SOFTWARE WITH FLATPAK
+flatpak install -y flathub "${flatpak_programs}"
 wait
 
 # INSTALL OHMYZSH
