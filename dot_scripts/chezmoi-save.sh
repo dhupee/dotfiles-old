@@ -10,7 +10,8 @@ dir_array=(
     "$HOME/.local/share/wallpapers/"
     "$HOME/.fonts/"
 	"$HOME/.config/micro/"
-	"$HOME/.config/PrusaSlicer/"	
+	"$HOME/.config/PrusaSlicer/"
+	"$HOME/.konsave-profiles/"
 )
 
 file_array=(

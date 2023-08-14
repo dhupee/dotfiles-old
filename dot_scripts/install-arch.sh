@@ -24,6 +24,7 @@ essential_pacman_programs=(
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
+	latte-dock
 	noto-fonts-emoji
 	fcitx5-im
 	fcitx5-mozc
