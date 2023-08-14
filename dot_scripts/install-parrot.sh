@@ -86,7 +86,7 @@ wait
 
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
-sudo chsh -s "$(which zsh)"
+sudo chsh -s $(which zsh)
 wait
 
 # Clone your dotfiles repository using Chezmoi
