@@ -6,6 +6,7 @@ dir_array=(
     "$HOME/.backup-bottles/"
     "$HOME/.scripts/"
     "$HOME/.config/htop/"
+    "$HOME/.config/btop/"
     "$HOME/.config/neofetch/"
     "$HOME/.local/share/wallpapers/"
     "$HOME/.fonts/"
