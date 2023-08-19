@@ -19,11 +19,11 @@ essential_pacman_programs=(
     podman
 	cloudflared
 	tldr
-	tmux
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
+	kwin-bismuth
 	latte-dock
 	noto-fonts-emoji
 	fcitx5-im
