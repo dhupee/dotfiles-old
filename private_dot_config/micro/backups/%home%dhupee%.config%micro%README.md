@@ -1,4 +1,4 @@
-# Visual Studio Code-like Keybindings for [micro editor](https://github.com/zyedidia/micro)
+	# Visual Studio Code-like Keybindings for [micro editor](https://github.com/zyedidia/micro)
 
 ## Note From Dhupee
 
