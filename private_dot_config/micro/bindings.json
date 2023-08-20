@@ -39,6 +39,7 @@
     "CtrlUp": "ScrollUp",
     "F1": "command:cheat",
     "F3": "FindNext",
+    "F5": "lua:wc.wordCount",
     "OldBackspace": "DeleteWordLeft",
     "ShiftDelete": "CutLine",
     "ShiftEscape": "RemoveAllMultiCursors",
