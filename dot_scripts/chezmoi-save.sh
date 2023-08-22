@@ -8,7 +8,7 @@ dir_array=(
     "$HOME/.config/htop/"
     "$HOME/.config/btop/"
     "$HOME/.config/neofetch/"
-    "$HOME/.local/share/wallpapers/"
+    "$HOME/Wallpapers/"
     "$HOME/.fonts/"
 	"$HOME/.config/micro/"
 	"$HOME/.config/PrusaSlicer/"
@@ -23,6 +23,7 @@ file_array=(
     "$HOME/.nanorc"
     "$HOME/.aliases.sh"
     "$HOME/.fonts.conf"	
+    "$HOME/.config/spicetify/config-xpui.ini"
 )
 
 #----------------------SAVING FILES AND DIRS----------------------
@@ -60,5 +61,6 @@ done
 # pushing to github
 cd $HOME/.local/share/chezmoi
 git add .
-git commit -m "automated update by dhupee"
+# git commit -m "automated update by dhupee"
+git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push

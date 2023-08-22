@@ -48,6 +48,7 @@ misc_pacman_programs=(
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
     spotify
+    spicetify-cli
     visual-studio-code-bin
     brave-bin
     arduino-ide-bin
@@ -187,6 +188,15 @@ else
     echo "Failed to install pyenv. Skipping."
 fi
 wait
+
+# CHANGE PERMISSION OF SPICETIFY, ACCORDING TO DOCS
+if [ -d "/opt/spotify" ]; then
+    sudo chmod a+wr /opt/spotify
+    sudo chmod a+wr /opt/spotify/Apps -R
+    echo "Permissions changed successfully."
+else
+    echo "Directory /opt/spotify does not exist."
+fi
 
 # TODO: Make report, if its failed or not
 echo "All programs have been installed successfully!"
