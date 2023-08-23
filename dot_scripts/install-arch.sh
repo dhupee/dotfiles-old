@@ -24,7 +24,6 @@ essential_pacman_programs=(
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
 	ttf-jetbrains-mono-nerd
-	kwin-bismuth
 	latte-dock
 	noto-fonts-emoji
 	fcitx5-im
@@ -47,6 +46,7 @@ misc_pacman_programs=(
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
+	kwin-polonium
     spotify
     spicetify-cli
     visual-studio-code-bin
