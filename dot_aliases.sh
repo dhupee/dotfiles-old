@@ -4,6 +4,9 @@ alias c="clear"
 # fuzzy search
 alias f="fzf"
 
+# plasma restart
+alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
+
 # start bluetooth
 alias bt-start="systemctl start bluetooth"
 alias bt-stop="systemctl stop bluetooth"
