@@ -3,6 +3,7 @@
 repository containing my config files.
 
 this is not a fancy stuff just my stuff used mostly.
+
 this dotfiles used [Chezmoi](https://www.chezmoi.io/) as it's manager.
 
 Since I use [EndeavourOS](https://endeavouros.com/) with KDE I can say that "I use Arch, btw".
@@ -27,9 +28,9 @@ curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/
 
 check the file to see what you will download, or fork it and you used it for your own need
 
-## Install Kali/Parrot (NOT DONE YET)
+## Install Kali/Parrot (kinda done, not sure)
 
-I use ~~parrot~~ Kali okay, and not all tools I need is there, so
+I use parrot ~~Kali~~ okay, and not all tools I need is there, so
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-kali.sh | bash
@@ -63,6 +64,6 @@ chezmoi -v apply
 
 ## To-Add List
 
-- [ ] making KDE backup and restore (will use Konsave)
-- [*] automate my Bottles setting update (Use python for creating file name with regex, iirc bash dont have regex)
+- [v] making KDE backup and restore (will use Konsave), `not automated since the size is humongous`
+- [v] automate my Bottles setting update ~~(Use python for creating file name with regex, iirc bash dont have regex)~~ manage to made one in bash script
 - [ ] saving osu's songs/skins/data and other big files to google drive/dropbox\
