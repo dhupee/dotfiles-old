@@ -19,6 +19,7 @@ essential_pacman_programs=(
     podman
 	cloudflared
 	tldr
+	distrobox
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN

@@ -12,6 +12,16 @@ pretty sure it will work with any Arch-based install, not sure about Manjaro tho
 
 I also use Parrot sometimes so I made versions for debian.
 
+## Table of Contents
+
+- [dotfiles](#dotfiles)
+  - [Table of Contents](#table-of-contents)
+  - [Installation For My Arch](#installation-for-my-arch)
+  - [Install Kali/Parrot (kinda done, not sure)](#install-kaliparrot-kinda-done-not-sure)
+  - [Adding New Dotfiles](#adding-new-dotfiles)
+  - [Editing](#editing)
+  - [To-Add List](#to-add-list)
+
 ## Installation For My Arch
 
 to use this dotfile, simply copy this to terminal and run
@@ -64,6 +74,7 @@ chezmoi -v apply
 
 ## To-Add List
 
-- [v] making KDE backup and restore (will use Konsave), `not automated since the size is humongous`
-- [v] automate my Bottles setting update ~~(Use python for creating file name with regex, iirc bash dont have regex)~~ manage to made one in bash script
-- [ ] saving osu's songs/skins/data and other big files to google drive/dropbox\
+- [x] making KDE backup and restore (will use Konsave), `not automated since the size is humongous`
+- [x] automate my Bottles setting update ~~(Use python for creating file name with regex, iirc bash dont have regex)~~ manage to made one in bash script
+- [ ] saving osu's songs/skins/data and other big files to google drive/dropbox(need to find the cli)
+- [ ] making one-liner scripts for micro only, incase i need SSH works
