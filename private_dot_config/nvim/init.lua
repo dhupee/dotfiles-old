@@ -23,3 +23,5 @@ require "plugins"
 -- wilder setup
 local wilder = require('wilder')
 wilder.setup({modes = {':', '/', '?'}})
+
+local codeium = require(codeium)
