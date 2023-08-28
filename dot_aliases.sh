@@ -29,6 +29,7 @@ alias ls="ls -a --color='auto'"
 
 # nvim
 alias vim="nvim"
+alias nv="nvim"
 
 # save my dotfiles
 alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
@@ -37,8 +38,14 @@ alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
 alias symlink="ln -s"
 
 # run osu with dedicated graphics by default
-# TODO: add if-else so only enabled when the dir exist
-alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
+if [[ -d "$HOME/.var/app/sh.ppy.osu" ]]; then
+  alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
+fi
+
+# flatpak aliases, tidy up
+if [[ -d "$HOME/.var/app/com.usebottles.bottles" ]]; then
+  alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
+fi
 
 # Podman is Docker, fight me
 alias docker="podman"
@@ -60,6 +67,4 @@ alias git2dock-ignore="cp $PWD/.gitignore $PWD/.gitignore"
 # backup bottles yml
 alias bottles-backup="bash .scripts/bottles-backup.sh"
 
-# flatpak aliases, tidy up
-# TODO: same as Osu, if-else if the dir exist
-alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
+

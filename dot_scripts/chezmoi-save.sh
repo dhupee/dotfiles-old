@@ -10,9 +10,9 @@ dir_array=(
     "$HOME/.config/neofetch/"
     "$HOME/Wallpapers/"
     "$HOME/.fonts/"
-	"$HOME/.config/micro/"
-	"$HOME/.config/PrusaSlicer/"
-	"$HOME/.konsave-profiles/"
+    "$HOME/.config/micro/"
+    "$HOME/.config/nvim/"
+    "$HOME/.config/PrusaSlicer/"
 )
 
 file_array=(
@@ -64,3 +64,8 @@ git add .
 # git commit -m "automated update by dhupee"
 git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
+sleep 3
+
+# pushing the big files to google drive
+echo "pushing konsave profiles to gdrive"
+rclone copy .konsave-profiles/ gdrive-dh:konsave-profiles/  
