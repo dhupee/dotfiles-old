@@ -68,4 +68,4 @@ sleep 3
 
 # pushing the big files to google drive
 echo "pushing konsave profiles to gdrive"
-rclone copy .konsave-profiles/ gdrive-dh:konsave-profiles/  
+rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/  
