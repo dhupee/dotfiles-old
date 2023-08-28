@@ -20,8 +20,5 @@ dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
--- wilder setup
 local wilder = require('wilder')
 wilder.setup({modes = {':', '/', '?'}})
-
-local codeium = require(codeium)
