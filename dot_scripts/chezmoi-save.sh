@@ -12,6 +12,7 @@ dir_array=(
     "$HOME/.fonts/"
     "$HOME/.config/micro/"
     "$HOME/.config/nvim/"
+    "$HOME/.config/nvchad.bak/"
     "$HOME/.config/PrusaSlicer/"
 )
 
@@ -68,4 +69,5 @@ sleep 3
 
 # pushing the big files to google drive
 echo "pushing konsave profiles to gdrive"
-rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/  
+rclone delete gdrive-dh:konsave-profiles/
+rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/ -P  

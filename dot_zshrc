@@ -173,3 +173,9 @@ _gobrew()
 }
 
 complete -F _gobrew gobrew
+
+
+# Begin: PlatformIO Core completion support
+eval "$(_PIO_COMPLETE=zsh_source pio)"
+# End: PlatformIO Core completion support
+
