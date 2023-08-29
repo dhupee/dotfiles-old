@@ -18,8 +18,8 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
-
+  colorscheme = "nord",
+  
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -81,5 +81,13 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.api.nvim_create_autocmd("LspAttach", {
+      callback = function(args)
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
+      client.server_capabilities.semanticTokensProvider = nil
+    end,
+    })
   end,
+  
+
 }
