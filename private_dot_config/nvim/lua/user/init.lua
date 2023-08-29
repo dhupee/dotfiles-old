@@ -19,7 +19,7 @@ return {
 
   -- Set colorscheme to use
   colorscheme = "nord",
-  
+
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -33,7 +33,10 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "go",
+          "py",
+          "cpp",
+          "md",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -81,13 +84,5 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-    vim.api.nvim_create_autocmd("LspAttach", {
-      callback = function(args)
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-      client.server_capabilities.semanticTokensProvider = nil
-    end,
-    })
   end,
-  
-
 }
