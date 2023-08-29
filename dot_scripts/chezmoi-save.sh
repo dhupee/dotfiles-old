@@ -66,6 +66,7 @@ git add .
 git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
 sleep 3
+echo "\n"
 
 # pushing the big files to google drive
 echo "pushing konsave profiles to gdrive"
