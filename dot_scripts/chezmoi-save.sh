@@ -58,6 +58,8 @@ for f in "${file_array[@]}";do
     chezmoi add $f
 done
 
+echo " "
+
 #---------------------------COMMIT TO GIT----------------------
 
 # pushing to github
@@ -70,6 +72,6 @@ sleep 3
 echo " "
 
 # pushing the big files to google drive
-echo "pushing konsave profiles to gdrive"
+echo "Pushing konsave profiles to gdrive"
 rclone delete gdrive-dh:konsave-profiles/
 rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/ -P  
