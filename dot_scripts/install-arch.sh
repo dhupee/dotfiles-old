@@ -2,9 +2,10 @@
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
 
-# Note:
+## Note:
 # 'essential_pacman_programs' is CLI only, make sure of that.
 # use flatpak for any sandbox software, like bottles
+
 
 essential_pacman_programs=(
     zsh
@@ -43,6 +44,7 @@ misc_pacman_programs=(
     yt-dlp
 	obs-studio
 	flatpak
+	kio-gdrive
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY

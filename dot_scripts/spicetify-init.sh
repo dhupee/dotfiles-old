@@ -1,6 +1,11 @@
 #!/bin/bash
 
 cd $HOME
+
+# spicetify marketplace
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+wait
+
 # downloading the themes i used
 if [ -d "$HOME/.config/spicetify/Themes/" ]; then
 	if [ -d "/tmp/spicetify-themes/" ]; then
