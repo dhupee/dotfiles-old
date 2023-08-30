@@ -10,6 +10,7 @@ dir_array=(
     "$HOME/.config/neofetch/"
     "$HOME/Wallpapers/"
     "$HOME/.fonts/"
+    "$HOME/.completion_zsh/"
     "$HOME/.config/micro/"
     "$HOME/.config/nvim/"
     "$HOME/.config/nvchad.bak/"
