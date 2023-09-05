@@ -24,8 +24,10 @@ alias ssh-server-check="nc -v -z 127.0.0.1 22"
 alias warp-service-start="systemctl start warp-svc.service"
 alias warp-service-stop="systemctl stop warp-svc.service"
 
-# ls
-alias ls="ls -a --color='auto'"
+# ls and ll
+alias ls="ls --color='auto'"
+alias lsa="ls -a --color='auto'"
+alias lla="ll -a"
 
 # nvim
 alias vim="nvim"
@@ -48,7 +50,7 @@ if [[ -d "$HOME/.var/app/com.usebottles.bottles" ]]; then
 fi
 
 # Podman is Docker, fight me
-alias docker="podman"
+# alias docker="podman"
 
 # Arch-based maintenance
 alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
