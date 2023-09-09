@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repository_url="https://github.com/kanocz/plasma-applet-eventcalendar.git"
+repository_url="https://github.com/gaganpreet/plasma-applet-eventcalendar.git"
 install_directory=".eventcalendar"
 
 if [ "$1" = "--update" ]; then
