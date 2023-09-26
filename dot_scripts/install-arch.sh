@@ -13,25 +13,26 @@ essential_pacman_programs=(
     chezmoi
     git-lfs
     htop
+    btop
     thefuck
     micro
     github-cli
     neofetch
-    podman
-	cloudflared
-	tldr
-	distrobox
+    docker
+    cloudflared
+    tldr
+    distrobox
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
-	ttf-jetbrains-mono-nerd
-	latte-dock
-	noto-fonts-emoji
-	fcitx5-im
-	fcitx5-mozc
-	fcitx5-configtool
-	libreoffice
+    ttf-jetbrains-mono-nerd
+    latte-dock
+    noto-fonts-emoji
+    fcitx5-im
+    fcitx5-mozc
+    fcitx5-configtool
+    libreoffice
     discord
     cmatrix
     steam
@@ -40,16 +41,16 @@ misc_pacman_programs=(
     qemu-base
     lutris
     kicad
-	inkscape
+    inkscape
     yt-dlp
-	obs-studio
-	flatpak
-	kio-gdrive
+    obs-studio
+    flatpak
+    kio-gdrive
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
-	kwin-polonium
+    kwin-polonium
     spotify
     spicetify-cli
     visual-studio-code-bin
@@ -66,7 +67,7 @@ misc_aur_programs=(
 )
 
 flatpak_programs=(
-	com.usebottles.bottles
+    com.usebottles.bottles
 )
 
 # List of custom Ohmyzsh plugins
@@ -201,9 +202,8 @@ else
     echo "Directory /opt/spotify does not exist."
 fi
 
-# TODO: Make report, if its failed or not
 echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
-sudo chsh -s $(which zsh)
+sudo chsh -s bin/zsh
