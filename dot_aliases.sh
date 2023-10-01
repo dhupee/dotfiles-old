@@ -23,6 +23,8 @@ alias ssh-server-check="nc -v -z 127.0.0.1 22"
 # start warp-cli services
 alias warp-service-start="systemctl start warp-svc.service"
 alias warp-service-stop="systemctl stop warp-svc.service"
+alias warp-init="warp-cli register ; sleep 1s ; warp-cli set-mode warp+doh"
+alias warp-check="curl https://www.cloudflare.com/cdn-cgi/trace/"
 
 # ls and ll
 alias ls="ls --color='auto'"
@@ -68,5 +70,3 @@ alias git2dock-ignore="cp $PWD/.gitignore $PWD/.gitignore"
 
 # backup bottles yml
 alias bottles-backup="bash .scripts/bottles-backup.sh"
-
-
