@@ -201,9 +201,11 @@ if [ -d "/opt/spotify" ]; then
 else
     echo "Directory /opt/spotify does not exist."
 fi
+wait
 
 echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
 sudo chsh -s bin/zsh
+wait
