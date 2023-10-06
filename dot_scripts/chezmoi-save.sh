@@ -15,6 +15,7 @@ dir_array=(
     "$HOME/.config/nvim/"
     "$HOME/.config/nvchad.bak/"
     "$HOME/.config/PrusaSlicer/"
+    "$HOME/.config/obs-studio/basic/"
 )
 
 file_array=(
@@ -26,6 +27,7 @@ file_array=(
     "$HOME/.aliases.sh"
     "$HOME/.fonts.conf"	
     "$HOME/.config/spicetify/config-xpui.ini"
+    "$HOME/.config/obs-studio/global.ini"
 )
 
 #----------------------SAVING FILES AND DIRS----------------------
@@ -71,7 +73,10 @@ git push
 sleep 3
 echo " "
 
-# pushing the big files to google drive
-echo "Pushing konsave profiles to gdrive"
-rclone delete gdrive-dh:konsave-profiles/
-rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/ -P  
+# if no-konsave flag then dont save konsave profiles
+if [ "$1" != "--no-konsave" ]; then
+    # pushing the big files to google drive
+    echo "Pushing konsave profiles to gdrive"
+    rclone delete gdrive-dh:konsave-profiles/
+    rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/ -P  
+done
