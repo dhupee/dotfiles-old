@@ -44,6 +44,7 @@ misc_pacman_programs=(
     inkscape
     yt-dlp
     obs-studio
+    v4l2loopback-dkms
     flatpak
     kio-gdrive
 )
