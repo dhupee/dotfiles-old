@@ -79,4 +79,4 @@ if [ "$1" != "--no-konsave" ]; then
     echo "Pushing konsave profiles to gdrive"
     rclone delete gdrive-dh:konsave-profiles/
     rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/ -P  
-done
+fi
