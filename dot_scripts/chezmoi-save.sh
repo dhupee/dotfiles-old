@@ -74,7 +74,7 @@ sleep 3
 echo " "
 
 # if no-konsave flag then dont save konsave profiles
-if [ "$1" != "--no-konsave" ]; then
+if [ "$1" != "--no-rclone" ]; then
     # pushing the big files to google drive
     echo "Pushing konsave profiles to gdrive"
     rclone delete gdrive-dh:konsave-profiles/
