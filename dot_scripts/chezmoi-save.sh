@@ -90,5 +90,13 @@ if [ "$1" != "--no-rclone" ]; then
         n|N ) echo "skipping";;
         * ) echo "choice is invalid";;
         esac
+        
+        # ask to delete lazerexport locally
+        read -p "Would you like to delete lazerexport folder? (y/n)?" choice
+        case "$choice" in
+        y|Y ) echo "yes, deleting lazerexport folder" && rm -rf "$HOME/lazerexport/";;
+        n|N ) echo "skipping";;
+        * ) echo "choice is invalid";;
+        esac
     fi
 fi
