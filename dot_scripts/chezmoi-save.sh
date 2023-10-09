@@ -89,4 +89,5 @@ if [ "$1" != "--no-rclone" ]; then
         y|Y ) echo "yes, backing up lazerexport folder" && rclone copy "$HOME/.lazerexport" mega-dh:akago.lazerexport -P ;;
         n|N ) echo "skipping";;
         * ) echo "choice is invalid";;
+    fi
 fi
