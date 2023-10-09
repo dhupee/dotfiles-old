@@ -42,9 +42,11 @@ alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
 alias symlink="ln -s"
 
 # run osu with dedicated graphics by default
-if [[ -d "$HOME/.var/app/sh.ppy.osu" ]]; then
-  alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
-fi
+# if [[ -d "$HOME/.var/app/sh.ppy.osu" ]]; then
+#   alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
+# fi
+alias osu="DRI_PRIME=1 /usr/bin/osu-lazer"
+
 
 # flatpak aliases, tidy up
 if [[ -d "$HOME/.var/app/com.usebottles.bottles" ]]; then

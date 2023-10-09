@@ -51,6 +51,7 @@ misc_pacman_programs=(
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
+	nbfc-linux
     kwin-polonium
     spotify
     spicetify-cli
