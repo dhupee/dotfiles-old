@@ -86,8 +86,9 @@ if [ "$1" != "--no-rclone" ]; then
     if [ -d "$HOME/.lazerexport" ]; then
         read -p "Would you like to backup this folder? (y/n)?" choice
         case "$choice" in 
-        y|Y ) echo "yes, backing up lazerexport folder" && rclone copy "$HOME/.lazerexport" mega-dh:akago.lazerexport -P ;;
+        y|Y ) echo "yes, backing up lazerexport folder" && rclone copy "$HOME/.lazerexport" mega-dh:akago.lazerexport -P;;
         n|N ) echo "skipping";;
         * ) echo "choice is invalid";;
+        esac
     fi
 fi
