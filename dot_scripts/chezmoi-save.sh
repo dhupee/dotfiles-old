@@ -71,12 +71,22 @@ git add .
 git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
 sleep 3
-echo " "
 
 # if no-konsave flag then dont save konsave profiles
 if [ "$1" != "--no-rclone" ]; then
     # pushing the big files to google drive
+    echo " "
     echo "Pushing konsave profiles to gdrive"
-    rclone delete gdrive-dh:konsave-profiles/
-    rclone copy "$HOME/.konsave-profiles/" gdrive-dh:konsave-profiles/ -P  
+    rclone delete mega-dh:akago/
+
+    # Saving konsave profiles
+    rclone copy "$HOME/.konsave-profiles/" mega-dh:akago/konsave-profiles/ -P
+    
+    # if folder lazerexport exist, ask to backup or not
+    if [ -d "$HOME/.lazerexport" ]; then
+        read -p "Would you like to backup this folder? (y/n)?" choice
+        case "$choice" in 
+        y|Y ) echo "yes, backing up lazerexport folder" && rclone copy "$HOME/.lazerexport" mega-dh:akago.lazerexport -P ;;
+        n|N ) echo "skipping";;
+        * ) echo "choice is invalid";;
 fi
