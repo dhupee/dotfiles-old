@@ -72,3 +72,7 @@ alias git2dock-ignore="cp $PWD/.gitignore $PWD/.gitignore"
 
 # backup bottles yml
 alias bottles-backup="bash .scripts/bottles-backup.sh"
+
+# nbfc fan control
+alias fan-speed-full="sudo nbfc set --speed=100"
+alias fan-speed-auto="sudo nbfc set --auto"

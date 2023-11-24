@@ -14,6 +14,7 @@ essential_pacman_programs=(
     git-lfs
     htop
     btop
+    nvtop
     thefuck
     micro
     github-cli
@@ -22,6 +23,8 @@ essential_pacman_programs=(
     cloudflared
     tldr
     distrobox
+    gamemode
+    lib32-gamemode
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
@@ -51,7 +54,6 @@ misc_pacman_programs=(
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
-	ryzenadj-git
 	nbfc-linux
     kwin-polonium
     spotify

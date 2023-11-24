@@ -1,3 +1,4 @@
+# if there is any empty variable mainly on helper variable, delete it since it can cause trouble
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
