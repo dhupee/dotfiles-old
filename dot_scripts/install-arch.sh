@@ -39,6 +39,7 @@ misc_pacman_programs=(
     discord
     cmatrix
     steam
+    gparted
     prusa-slicer
     virt-manager
     qemu-base
@@ -180,12 +181,12 @@ else
 fi
 wait
 
-# INSTALL NVM
-echo "Installing nvm..."
-if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
-    echo "nvm installed successfully."
+# INSTALL VOLTA
+echo "Installing volta..."
+if curl https://get.volta.sh | bash
+    echo "volta installed successfully."
 else
-    echo "Failed to install nvm. Skipping."
+    echo "Failed to install volta. Skipping."
 fi
 wait
 

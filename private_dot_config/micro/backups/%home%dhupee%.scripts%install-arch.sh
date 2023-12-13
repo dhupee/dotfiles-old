@@ -1,39 +1,68 @@
 #!/bin/bash
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
+
+## Note:
+# 'essential_pacman_programs' is CLI only, make sure of that.
+# use flatpak for any sandbox software, like bottles
+
+
 essential_pacman_programs=(
     zsh
+    fzf
     chezmoi
     git-lfs
     htop
+    btop
+    nvtop
     thefuck
     micro
     github-cli
     neofetch
-    podman
+    docker
+    cloudflared
+    tldr
+    distrobox
+    gamemode
+    lib32-gamemode
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
-	libreoffice
+    ttf-jetbrains-mono-nerd
+    latte-dock
+    noto-fonts-emoji
+    fcitx5-im
+    fcitx5-mozc
+    fcitx5-configtool
+    libreoffice
     discord
     cmatrix
     steam
+    gparted
     prusa-slicer
     virt-manager
-    qemu
+    qemu-base
     lutris
     kicad
-	inkscape
+    inkscape
     yt-dlp
+    obs-studio
+    v4l2loopback-dkms
+    flatpak
+    kio-gdrive
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
+	nbfc-linux
+    kwin-polonium
     spotify
+    spicetify-cli
     visual-studio-code-bin
     brave-bin
     arduino-ide-bin
+    cloudflare-warp-bin
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
@@ -43,11 +72,16 @@ misc_aur_programs=(
     heroic-games-launcher-bin
 )
 
+flatpak_programs=(
+    com.usebottles.bottles
+)
+
 # List of custom Ohmyzsh plugins
 custom_ohmyzsh_plugins=(
     "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     "https://github.com/zsh-users/zsh-autosuggestions.git"
     "https://github.com/marlonrichert/zsh-autocomplete.git"
+    "https://github.com/zsh-users/zsh-history-substring-search"
 )
 
 # FUNCTION TO INSTALL PROGRAMS FROM PACMAN AND AUR
@@ -111,22 +145,26 @@ if $install_full_programs; then
 fi
 wait
 
+# INSTALL SOFTWARE WITH FLATPAK
+flatpak install -y flathub "${flatpak_programs}"
+wait
+
 # INSTALL OHMYZSH
 echo "Installing Ohmyzsh..."
-if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
+if sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --skip-chsh; then
     echo "Ohmyzsh installed successfully."
 else
     echo "Failed to install Ohmyzsh. Skipping."
 fi
 wait
 
-# Install custom Ohmyzsh plugins using a for loop
+# INSTALL CUSTOM OHMYZSH PLUGINS USING A FOR LOOP
 for plugin in "${custom_ohmyzsh_plugins[@]}"; do
     echo "Cloning plugin: ${plugin}"
-    if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
-        succ_arr+=("Plugin cloned successfully.")
+    if git clone --depth 1 "$plugin" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$(basename "$plugin" .git)"; then
+        echo "Plugin cloned successfully."
     else
-        fail_arr+=("Failed to clone plugin: ${plugin}")
+        echo "Failed to clone plugin: ${plugin}"
     fi
 done
 wait
@@ -143,12 +181,12 @@ else
 fi
 wait
 
-# INSTALL NVM
-echo "Installing nvm..."
-if curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash; then
-    echo "nvm installed successfully."
+# INSTALL VOLTA
+echo "Installing volta..."
+if curl https://get.volta.sh | bash
+    echo "volta installed successfully."
 else
-    echo "Failed to install nvm. Skipping."
+    echo "Failed to install volta. Skipping."
 fi
 wait
 
@@ -161,9 +199,19 @@ else
 fi
 wait
 
-# TODO: Make report, if its failed or not
+# CHANGE PERMISSION OF SPICETIFY, ACCORDING TO DOCS
+if [ -d "/opt/spotify" ]; then
+    sudo chmod a+wr /opt/spotify
+    sudo chmod a+wr /opt/spotify/Apps -R
+    echo "Permissions changed successfully."
+else
+    echo "Directory /opt/spotify does not exist."
+fi
+wait
+
 echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
-sudo chsh -s "$(which zsh)"
+sudo chsh -s bin/zsh
+wait
