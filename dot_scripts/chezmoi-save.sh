@@ -81,7 +81,8 @@ if [ "$1" != "--no-rclone" ]; then
     # Saving konsave profiles
     rclone delete mega-dh:akago/konsave-profiles/
     rclone copy "$HOME/.konsave-profiles/" mega-dh:akago/konsave-profiles/ -P
-    
+
+    # MAKE THIS FOR ANOTHER HUGE STORAGE
     # if folder lazerexport exist, ask to backup or not
     if [ -d "$HOME/lazerexport/" ]; then
         read -p "Would you like to backup this folder? (y/n)?" choice
