@@ -20,7 +20,6 @@ essential_pacman_programs=(
     github-cli
     neofetch
     docker
-    cloudflared
     tldr
     distrobox
     gamemode
@@ -62,6 +61,7 @@ essential_aur_programs=(
     visual-studio-code-bin
     brave-bin
     arduino-ide-bin
+    ngrok
     cloudflare-warp-bin
 )
 
