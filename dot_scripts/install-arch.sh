@@ -12,6 +12,7 @@ essential_pacman_programs=(
     fzf
     chezmoi
     git-lfs
+    p7zip
     htop
     btop
     nvtop
@@ -67,6 +68,7 @@ essential_aur_programs=(
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
 misc_aur_programs=(
+	konsave
     bottles
     osu-lazer-bin
     heroic-games-launcher-bin

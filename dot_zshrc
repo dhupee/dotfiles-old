@@ -108,7 +108,7 @@ plugins=(
     thefuck
     copypath
     docker
-    nvm
+    node
     npm
     pyenv
     python
