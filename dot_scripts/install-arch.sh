@@ -8,70 +8,70 @@
 
 
 essential_pacman_programs=(
-    zsh
-    fzf
-    chezmoi
-    git-lfs
-    p7zip
-    htop
     btop
-    nvtop
-    thefuck
-    micro
-    github-cli
-    neofetch
-    docker
-    tldr
+    chezmoi
     distrobox
+    docker
+    fzf
     gamemode
+    github-cli
+    git-lfs
+    htop
     lib32-gamemode
+    micro
+    neofetch
+    nvtop
+    p7zip
+    tldr
+    thefuck
+    zsh
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
 misc_pacman_programs=(
-    ttf-jetbrains-mono-nerd
-    latte-dock
-    noto-fonts-emoji
+    cmatrix
+    discord
+    fcitx5-configtool
     fcitx5-im
     fcitx5-mozc
-    fcitx5-configtool
-    libreoffice
-    discord
-    cmatrix
-    steam
-    gparted
-    prusa-slicer
-    virt-manager
-    qemu-base
-    lutris
-    kicad
-    inkscape
-    yt-dlp
-    obs-studio
-    v4l2loopback-dkms
     flatpak
+    gparted
+    inkscape
+    kicad
     kio-gdrive
+    latte-dock
+    libreoffice
+    lutris
+    noto-fonts-emoji
+    obs-studio
+    prusa-slicer
+    qemu-base
+    steam
+    ttf-jetbrains-mono-nerd
+    virt-manager
+    v4l2loopback-dkms
+    yt-dlp
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
 essential_aur_programs=(
-	nbfc-linux
-    kwin-polonium
-    spotify
-    spicetify-cli
-    visual-studio-code-bin
-    brave-bin
     arduino-ide-bin
-    ngrok
+    brave-bin
     cloudflare-warp-bin
+    kwin-polonium
+    nbfc-linux
+    ngrok
+    spicetify-cli
+    spotify
+    visual-studio-code-bin
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
 misc_aur_programs=(
-	konsave
     bottles
-    osu-lazer-bin
     heroic-games-launcher-bin
+    konsave
+    osu-lazer-bin
 )
 
 flatpak_programs=(

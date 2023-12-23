@@ -1,5 +1,6 @@
 #!/bin/bash
 
+## PROBABLY NOT GONNA USE IT ANYMORE
 ## I straight up rip this from https://blackarch.org/downloads.html#install-repo
 
 # Make sure its running as root
