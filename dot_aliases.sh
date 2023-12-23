@@ -68,7 +68,7 @@ alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 |
 alias tunnel="cloudflared tunnel --url $1"
 
 # copy gitignore to create a similar dockerignore
-alias git2dock-ignore="cp $PWD/.gitignore $PWD/.gitignore"
+alias git2dock-ignore="cp $PWD/.gitignore $PWD/.dockerignore"
 
 # backup bottles yml
 alias bottles-backup="bash .scripts/bottles-backup.sh"
