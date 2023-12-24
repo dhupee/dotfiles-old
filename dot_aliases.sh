@@ -76,3 +76,7 @@ alias bottles-backup="bash .scripts/bottles-backup.sh"
 # nbfc fan control
 alias fan-speed-full="sudo nbfc set --speed=100"
 alias fan-speed-auto="sudo nbfc set --auto"
+
+# for distroboxes
+alias kali-install-large="apt update && apt -y install kali-linux-large"
+alias kali-install-headless="apt update && apt -y install kali-linux-headless"
