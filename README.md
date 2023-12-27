@@ -42,6 +42,8 @@ check the file to see what you will download, or fork it and you used it for you
 
 I use parrot ~~Kali~~ okay, and not all tools I need is there, so
 
+NOTE: I plan to deprecate this or just simply delete since I might use distrobox in the future for my kali linux usage
+
 ```sh
 curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-kali.sh | bash
 ```
@@ -74,7 +76,7 @@ chezmoi -v apply
 
 ## To-Add List
 
-- [x] making KDE backup and restore (will use Konsave), `not automated since the size is humongous`
+- [x] making KDE backup and restore (will use Konsave), `not automated since the size is humongous`, EDIT: I use rclone to do it and manage to used it for backup osu beatmap aswell, and smaller sensitive file like ssh
 - [x] automate my Bottles setting update ~~(Use python for creating file name with regex, iirc bash dont have regex)~~ manage to made one in bash script
-- [ ] saving osu's songs/skins/data and other big files to google drive/dropbox(need to find the cli)
-- [ ] making one-liner scripts for micro only, incase i need SSH works
+- [x] saving osu's songs/skins/data and other big files to google drive/dropbox(need to find the cli)
+- [ ] (URGENT) making one-liner scripts for micro only, incase i need SSH works
