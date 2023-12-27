@@ -74,6 +74,7 @@ git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
 sleep 3
 
+echo " "
 echo "backupping ssh keys to mega"
 rclone delete $rclone_remote:akago/ssh/
 rclone copy "$HOME/.ssh/" $rclone_remote:akago/ssh/ -P
