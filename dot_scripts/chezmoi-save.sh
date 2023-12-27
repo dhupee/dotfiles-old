@@ -76,8 +76,8 @@ sleep 3
 
 echo " "
 echo "backupping ssh keys to mega"
-rclone delete $rclone_remote:akago/ssh/
-rclone copy "$HOME/.ssh/" $rclone_remote:akago/ssh/ -P
+rclone delete $rclone_remote:akago/.ssh/
+rclone copy "$HOME/.ssh/" $rclone_remote:akago/.ssh/ -P
 
 # if no-konsave flag then dont save konsave profiles
 if [ "$1" != "--no-rclone" ]; then
@@ -85,9 +85,11 @@ if [ "$1" != "--no-rclone" ]; then
     echo " "
     echo "Pushing konsave profiles to Mega"
 
+    # NOTE: make sure to have same folder name, I want to try automate the backup method
+
     # Saving konsave profiles
     rclone delete $rclone_remote:akago/konsave-profiles/
-    rclone copy "$HOME/.konsave-profiles/" $rclone_remote:akago/konsave-profiles/ -P
+    rclone copy "$HOME/.konsave-profiles/" $rclone_remote:akago/.konsave-profiles/ -P
 
     # MAKE THIS FOR ANOTHER HUGE STORAGE
     # if folder lazerexport exist, ask to backup or not
