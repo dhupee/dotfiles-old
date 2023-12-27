@@ -2,6 +2,8 @@
 
 # status: operational
 
+rclone_remote="mega-dh"
+
 dir_array=(
     "$HOME/.backup-bottles/"
     "$HOME/.scripts/"
@@ -72,6 +74,10 @@ git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
 sleep 3
 
+echo "backupping ssh keys to mega"
+rclone delete $rclone_remote:akago/ssh/
+rclone copy "$HOME/.ssh/" $rclone_remote:akago/ssh/ -P
+
 # if no-konsave flag then dont save konsave profiles
 if [ "$1" != "--no-rclone" ]; then
     # pushing the big files to google drive
@@ -79,15 +85,15 @@ if [ "$1" != "--no-rclone" ]; then
     echo "Pushing konsave profiles to Mega"
 
     # Saving konsave profiles
-    rclone delete mega-dh:akago/konsave-profiles/
-    rclone copy "$HOME/.konsave-profiles/" mega-dh:akago/konsave-profiles/ -P
+    rclone delete $rclone_remote:akago/konsave-profiles/
+    rclone copy "$HOME/.konsave-profiles/" $rclone_remote:akago/konsave-profiles/ -P
 
     # MAKE THIS FOR ANOTHER HUGE STORAGE
     # if folder lazerexport exist, ask to backup or not
     if [ -d "$HOME/lazerexport/" ]; then
         read -p "Would you like to backup this folder? (y/n)?" choice
         case "$choice" in 
-        y|Y ) echo "yes, backing up lazerexport folder" && rclone delete mega-dh:akago/lazerexport/ && rclone copy "$HOME/lazerexport/" mega-dh:akago/lazerexport/ -P;;
+        y|Y ) echo "yes, backing up lazerexport folder" && rclone delete $rclone_remote:akago/lazerexport/ && rclone copy "$HOME/lazerexport/" mega-dh:akago/lazerexport/ -P;;
         n|N ) echo "skipping";;
         * ) echo "choice is invalid";;
         esac
