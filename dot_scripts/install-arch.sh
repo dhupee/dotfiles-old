@@ -22,6 +22,7 @@ essential_pacman_programs=(
     neofetch
     nvtop
     p7zip
+    ranger
     tldr
     thefuck
     zsh
@@ -34,6 +35,7 @@ misc_pacman_programs=(
     fcitx5-configtool
     fcitx5-im
     fcitx5-mozc
+    filelight
     flatpak
     gparted
     inkscape
