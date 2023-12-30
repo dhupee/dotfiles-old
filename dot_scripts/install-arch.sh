@@ -20,11 +20,13 @@ essential_pacman_programs=(
     lib32-gamemode
     micro
     neofetch
+    openssh
     nvtop
     p7zip
     ranger
     tldr
     thefuck
+    yt-dlp
     zsh
 )
 
@@ -52,7 +54,6 @@ misc_pacman_programs=(
     ttf-jetbrains-mono-nerd
     virt-manager
     v4l2loopback-dkms
-    yt-dlp
 )
 
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
