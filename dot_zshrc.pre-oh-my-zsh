@@ -1,0 +1,10 @@
+# Example zshrc
+
+# Set the prompt
+PS1="%n@%m %~%# "
+
+# Set some aliases
+alias ll='ls -l'
+alias la='ls -a'
+
+# Add other configurations as needed

@@ -22,6 +22,7 @@ dir_array=(
 
 file_array=(
     "$HOME/.zshrc"
+    "$HOME/.zshrc.pre-oh-my-zsh"
     "$HOME/.gitconfig"
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
@@ -74,6 +75,7 @@ git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
 sleep 3
 
+# backup sensitive files to Mega
 echo " "
 echo "backupping ssh keys to mega"
 rclone delete $rclone_remote:akago/.ssh/
