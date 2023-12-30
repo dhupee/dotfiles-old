@@ -20,6 +20,10 @@ alias ssh-server-start="systemctl start sshd.service"
 alias ssh-server-stop="systemctl stop sshd.service"
 alias ssh-server-check="nc -v -z 127.0.0.1 22"
 
+# firewall
+alias firewall-start="systemctl start firewalld.service"
+alias firewall-stop="systemctl stop firewalld.service"
+
 # start warp-cli services
 alias warp-service-start="systemctl start warp-svc.service"
 alias warp-service-stop="systemctl stop warp-svc.service"
