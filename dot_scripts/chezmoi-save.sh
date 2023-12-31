@@ -82,7 +82,7 @@ rclone delete $rclone_remote:akago/.ssh/
 rclone copy "$HOME/.ssh/" $rclone_remote:akago/.ssh/ -P
 
 echo " "
-echo "backupping ssh keys to mega"
+echo "backupping transmission's setting to mega"
 rclone delete $rclone_remote:akago/.config/transmission/
 rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmission/ -P
 
