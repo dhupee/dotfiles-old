@@ -18,7 +18,6 @@ dir_array=(
     "$HOME/.config/nvchad.bak/"
     "$HOME/.config/PrusaSlicer/"
     "$HOME/.config/obs-studio/basic/"
-    "$HOME/.config/qBittorrent"
 )
 
 file_array=(
@@ -81,6 +80,11 @@ echo " "
 echo "backupping ssh keys to mega"
 rclone delete $rclone_remote:akago/.ssh/
 rclone copy "$HOME/.ssh/" $rclone_remote:akago/.ssh/ -P
+
+echo " "
+echo "backupping ssh keys to mega"
+rclone delete $rclone_remote:akago/.config/transmission/
+rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmission/ -P
 
 # if no-konsave flag then dont save konsave profiles
 if [ "$1" != "--no-rclone" ]; then
