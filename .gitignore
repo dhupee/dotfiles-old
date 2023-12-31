@@ -1,2 +1,6 @@
 .vscode
 dot_scripts/dot_vscode/
+
+# qBittorrent
+private_dot_config/qBittorrent/rss
+private_dot_config/qBittorrent/empty_lockfile
