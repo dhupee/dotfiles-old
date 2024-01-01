@@ -88,7 +88,7 @@ rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmiss
 
 # if no-konsave flag then dont save konsave profiles
 if [ "$1" != "--no-rclone" ]; then
-    # pushing the big files to google drive
+    # pushing the big files to mega
     echo " "
     echo "Pushing konsave profiles to Mega"
 
@@ -98,7 +98,7 @@ if [ "$1" != "--no-rclone" ]; then
     rclone delete $rclone_remote:akago/konsave-profiles/
     rclone copy "$HOME/.konsave-profiles/" $rclone_remote:akago/.konsave-profiles/ -P
 
-    # MAKE THIS FOR ANOTHER HUGE STORAGE
+    # MAKE THIS FOR VERY HUGE STORAGE
     # if folder lazerexport exist, ask to backup or not
     # don't delete, append since the contain of the beatmap didn't change like others
     if [ -d "$HOME/lazerexport/" ]; then

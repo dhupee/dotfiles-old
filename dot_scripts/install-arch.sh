@@ -71,9 +71,11 @@ essential_aur_programs=(
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
 misc_aur_programs=(
+    ani-cli
     bottles
     heroic-games-launcher-bin
     konsave
+    mov-cli
     osu-lazer-bin
 )
 

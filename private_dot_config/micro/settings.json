@@ -1,5 +1,7 @@
 {
     "colorscheme": "simple",
+    "tabstospaces": true,
+    "tabsize": 4
     "ftoptions": false,
     "lsp.autocompleteDetails": false,
     "lsp.formatOnSave": true,
