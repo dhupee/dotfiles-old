@@ -1,12 +1,11 @@
 {
     "colorscheme": "simple",
-    "tabstospaces": true,
-    "tabsize": 4
     "ftoptions": false,
     "lsp.autocompleteDetails": false,
     "lsp.formatOnSave": true,
     "lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
     "lsp.ignoreTriggerCharacters": "completion,signature",
     "lsp.server": "python=pylsp,go=gopls,typescript=deno lsp={\"importMap\": \"./import_map.json\"}",
-    "lsp.tabcompletion": true
+    "lsp.tabcompletion": true,
+    "tabstospaces": true
 }

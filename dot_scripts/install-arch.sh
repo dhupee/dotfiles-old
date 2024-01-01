@@ -46,6 +46,7 @@ misc_pacman_programs=(
     latte-dock
     libreoffice
     lutris
+    mpv
     noto-fonts-emoji
     obs-studio
     prusa-slicer
