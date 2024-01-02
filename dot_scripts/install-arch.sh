@@ -54,6 +54,7 @@ misc_pacman_programs=(
     steam
     ttf-jetbrains-mono-nerd
     virt-manager
+    vlc
     v4l2loopback-dkms
 )
 
