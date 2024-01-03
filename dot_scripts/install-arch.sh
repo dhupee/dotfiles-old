@@ -90,8 +90,10 @@ custom_ohmyzsh_plugins=(
     "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     "https://github.com/zsh-users/zsh-autosuggestions.git"
     "https://github.com/marlonrichert/zsh-autocomplete.git"
-    "https://github.com/zsh-users/zsh-history-substring-search"
 )
+
+# Placeholder for unused omz plugins
+# "https://github.com/zsh-users/zsh-history-substring-search"
 
 # FUNCTION TO INSTALL PROGRAMS FROM PACMAN AND AUR
 install_programs_pacman() {
