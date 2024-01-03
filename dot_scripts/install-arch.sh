@@ -24,6 +24,7 @@ essential_pacman_programs=(
     nvtop
     p7zip
     ranger
+    rmlint
     tldr
     thefuck
     yt-dlp
