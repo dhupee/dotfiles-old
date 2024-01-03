@@ -1,11 +1,31 @@
 {
+    "autoclose": true,
+    "autosu": true,
     "colorscheme": "simple",
+    "comment": true,
+    "diff": true,
+    "eofnewline": false,
+    "fastdirty": true,
+    "filemanager.compressparent": true,
+    "filemanager.foldersfirst": true,
+    "filemanager.openonstart": false,
+    "filemanager.showdotfiles": true,
+    "filemanager.showignored": true,
     "ftoptions": false,
+    "ignorecase": false,
+    "linter": true,
+    "literate": true,
     "lsp.autocompleteDetails": false,
     "lsp.formatOnSave": true,
     "lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
     "lsp.ignoreTriggerCharacters": "completion,signature",
     "lsp.server": "python=pylsp,go=gopls,typescript=deno lsp={\"importMap\": \"./import_map.json\"}",
     "lsp.tabcompletion": true,
-    "tabstospaces": true
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "status": true,
+    "tabstospaces": true,
+    "wc": true
 }
