@@ -28,10 +28,6 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.gobrew/current/bin:$HOME/.gobrew/bin:$PATH"
 export GOROOT="$HOME/.gobrew/current/go"
 
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
@@ -177,3 +173,7 @@ _gobrew()
 }
 
 complete -F _gobrew gobrew
+
+# fnm
+export PATH="/home/dhupee/.local/share/fnm:$PATH"
+eval "`fnm env`"
