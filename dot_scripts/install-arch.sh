@@ -3,13 +3,16 @@
 # LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM PACMAN
 
 ## Note:
-# 'essential_pacman_programs' is CLI only, make sure of that.
+# 'cli_pacman_programs' is CLI only, make sure of that.
+# SEPERATE GUI AND CLI APPS!!!!
 # use flatpak for any sandbox software, like bottles
 
 
-essential_pacman_programs=(
+# LIST OF CLI PROGRAMS TO INSTALL FROM PACMAN
+cli_pacman_programs=(
     btop
     chezmoi
+    cmatrix
     distrobox
     docker
     fzf
@@ -32,9 +35,8 @@ essential_pacman_programs=(
     zsh
 )
 
-# LIST OF MISC PROGRAMS TO INSTALL FROM PACMAN
-misc_pacman_programs=(
-    cmatrix
+# LIST OF GUI PROGRAMS TO INSTALL FROM PACMAN
+gui_pacman_programs=(
     discord
     fcitx5-configtool
     fcitx5-im
@@ -60,8 +62,8 @@ misc_pacman_programs=(
     v4l2loopback-dkms
 )
 
-# LIST OF ESSENTIAL PROGRAMS TO INSTALL FROM AUR USING YAY
-essential_aur_programs=(
+# LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
+cli_aur_programs=(
     arduino-ide-bin
     brave-bin
     cloudflare-warp-bin
@@ -74,8 +76,8 @@ essential_aur_programs=(
     visual-studio-code-bin
 )
 
-# LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
-misc_aur_programs=(
+# LIST OF GUI PROGRAMS TO INSTALL FROM AUR USING YAY
+gui_aur_programs=(
     ani-cli
     czkawka-gui
     bottles
@@ -139,30 +141,34 @@ if ! sudo pacman -Sy; then
 fi
 wait
 
-# CHECK IF --all FLAGS IS PROVIDED
-install_full_programs=false
-if [[ "$1" == "--full" ]]; then
-    install_full_programs=true
+# CHECK IF --cli-only FLAGS IS PROVIDED
+install_gui_programs=true
+if [[ "$1" == "--cli-only" ]]; then
+    install_gui_programs=false
     shift
 fi
 wait
 
+# TODO: add seperate if function for AUR, and check if AUR is needed
+
 # INSTALL PACMAN PROGRAMS
-install_programs_pacman "${essential_pacman_programs[@]}"
-if $install_full_programs; then
-    install_programs_pacman "${misc_pacman_programs[@]}"
+install_programs_pacman "${cli_pacman_programs[@]}"
+if $install_gui_programs; then
+    install_programs_pacman "${gui_pacman_programs[@]}"
 fi
 wait
 
 # INSTALL AUR PROGRAMS WITH YAY
-install_programs_aur "${essential_aur_programs[@]}"
-if $install_full_programs; then
-    install_programs_aur "${misc_aur_programs[@]}"
+install_programs_aur "${cli_aur_programs[@]}"
+if $install_gui_programs; then
+    install_programs_aur "${gui_aur_programs[@]}"
 fi
 wait
 
 # INSTALL SOFTWARE WITH FLATPAK
-flatpak install -y flathub "${flatpak_programs}"
+if $install_gui_programs; then
+    flatpak install -y flathub "${flatpak_programs}"
+fi
 wait
 
 # INSTALL OHMYZSH

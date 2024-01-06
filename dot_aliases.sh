@@ -1,34 +1,37 @@
 # TODO: organize the aliases alphabetically
 
-# clear
+# Clear
 alias c="clear"
 
-# fuzzy search
+# FZF
 alias f="fzf"
 
-# plasma restart
+# Plasma
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 
 # Git
+alias ga="git add"
+alias gcm="git commit -m"
+alias gpsh="git push"
 
-# start bluetooth
+# Bluetooth
 alias bt-start="systemctl start bluetooth"
 alias bt-stop="systemctl stop bluetooth"
 
-# start qemu/kvm services
+# Qemu/KVM
 alias vm-start="systemctl start libvirtd"
 alias vm-stop="systemctl stop libvirtd"
 
-# start ssh server services
+# SSH Server
 alias ssh-server-start="systemctl start sshd.service"
 alias ssh-server-stop="systemctl stop sshd.service"
 alias ssh-server-check="nc -v -z 127.0.0.1 22"
 
-# firewall
+# Firewal
 alias firewall-start="systemctl start firewalld.service"
 alias firewall-stop="systemctl stop firewalld.service"
 
-# start warp-cli services
+# WARP 1.1.1.1
 alias warp-service-start="systemctl start warp-svc.service"
 alias warp-service-stop="systemctl stop warp-svc.service"
 alias warp-init="warp-cli register ; sleep 1s ; warp-cli set-mode warp+doh"
@@ -36,19 +39,19 @@ alias warp-check="curl https://www.cloudflare.com/cdn-cgi/trace/"
 alias warp-connect="warp-cli connect"
 alias warp-disconnect="warp-cli disconnect"
 
-# ls and ll
+# LS & LL
 alias ls="ls --color='auto'"
 alias lsa="ls -a --color='auto'"
 alias lla="ll -a"
 
-# nvim
+# NVIM
 alias vim="nvim"
 alias nv="nvim"
 
-# save my dotfiles
+# Dotfile save
 alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
 
-# symlink
+# Symlink
 alias symlink="ln -s"
 
 # run osu with dedicated graphics by default
