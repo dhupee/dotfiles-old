@@ -27,6 +27,7 @@ essential_pacman_programs=(
     rmlint
     tldr
     thefuck
+    unrar
     yt-dlp
     zsh
 )
@@ -69,12 +70,14 @@ essential_aur_programs=(
     ngrok
     spicetify-cli
     spotify
+    tt
     visual-studio-code-bin
 )
 
 # LIST OF MISC PROGRAMS TO INSTALL FROM AUR USING YAY
 misc_aur_programs=(
     ani-cli
+    czkawka-gui
     bottles
     heroic-games-launcher-bin
     konsave
@@ -84,6 +87,7 @@ misc_aur_programs=(
 
 flatpak_programs=(
     com.usebottles.bottles
+    com.playonlinux.PlayOnLinux4
 )
 
 # List of custom Ohmyzsh plugins

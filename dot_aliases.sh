@@ -1,3 +1,5 @@
+# TODO: organize the aliases alphabetically
+
 # clear
 alias c="clear"
 
@@ -6,6 +8,8 @@ alias f="fzf"
 
 # plasma restart
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
+
+# Git
 
 # start bluetooth
 alias bt-start="systemctl start bluetooth"
@@ -87,3 +91,6 @@ alias fan-speed-auto="sudo nbfc set --auto"
 alias kali-install-large="sudo apt update && sudo apt -y install kali-linux-large"
 alias kali-install-headless="sudo apt update && sudo apt -y install kali-linux-headless"
 alias ubuntu-install-essential="sudo apt update && sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git"
+
+# fnm
+alias fnm-update="curl -fsSL https://fnm.vercel.app/install | zsh -s -- --skip-shell"
