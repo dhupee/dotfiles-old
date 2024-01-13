@@ -14,7 +14,6 @@ cli_pacman_programs=(
     chezmoi
     cmatrix
     distrobox
-    docker
     fzf
     gamemode
     github-cli
@@ -26,6 +25,7 @@ cli_pacman_programs=(
     openssh
     nvtop
     p7zip
+    podman
     ranger
     rmlint
     tldr
@@ -70,6 +70,7 @@ cli_aur_programs=(
     kwin-polonium
     nbfc-linux
     ngrok
+    podman-desktop-bin
     spicetify-cli
     spotify
     tt

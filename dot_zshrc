@@ -24,9 +24,16 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Sourcing Gobrew for Go versioning
-export PATH="$HOME/.gobrew/current/bin:$HOME/.gobrew/bin:$PATH"
-export GOROOT="$HOME/.gobrew/current/go"
+# Setup environtment for Goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
+# fnm
+export PATH="/home/dhupee/.local/share/fnm:$PATH"
+eval "`fnm env`"
 
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
@@ -156,24 +163,4 @@ eval $(thefuck --alias)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# gobrew shell completions
-_gobrew()
-{
-    COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
-    case "$COMP_CWORD" in
-        1)
-            COMMANDS="ls ls-remote use install uninstall self-update prune version help"
-            ;;
-        2)
-            COMMANDS=`gobrew ls |sed '/*/d'| sed '/current/d' |awk NF`
-            ;;
-    esac
-    COMPREPLY=(`compgen -W "$COMMANDS" -- "${COMP_WORDS[COMP_CWORD]}"`)
-    return 0
-}
 
-complete -F _gobrew gobrew
-
-# fnm
-export PATH="/home/dhupee/.local/share/fnm:$PATH"
-eval "`fnm env`"

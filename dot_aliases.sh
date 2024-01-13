@@ -14,6 +14,9 @@ alias ga="git add"
 alias gcm="git commit -m"
 alias gpsh="git push"
 
+# Goenv
+alias goenv-update="cd ~/.goenv && git fetch --all && git pull"
+
 # Bluetooth
 alias bt-start="systemctl start bluetooth"
 alias bt-stop="systemctl stop bluetooth"
