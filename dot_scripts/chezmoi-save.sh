@@ -18,6 +18,7 @@ dir_array=(
     "$HOME/.config/nvchad.bak/"
     "$HOME/.config/PrusaSlicer/"
     "$HOME/.config/obs-studio/basic/"
+    "$HOME/.config/containers/"
 )
 
 file_array=(
