@@ -84,7 +84,7 @@ gui_aur_programs=(
     bottles
     heroic-games-launcher-bin
     konsave
-    mov-cli
+    lobster
     osu-lazer-bin
 )
 
