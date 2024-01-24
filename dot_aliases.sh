@@ -57,14 +57,14 @@ alias dotsave="bash $HOME/.scripts/chezmoi-save.sh"
 # Symlink
 alias symlink="ln -s"
 
-# run osu with dedicated graphics by default
+# Run osu with dedicated graphics by default
 # if [[ -d "$HOME/.var/app/sh.ppy.osu" ]]; then
 #   alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
 # fi
 alias osu="DRI_PRIME=1 /usr/bin/osu-lazer"
 
 
-# flatpak aliases, tidy up
+# Flatpak aliases, tidy up
 if [[ -d "$HOME/.var/app/com.usebottles.bottles" ]]; then
   alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
 fi
@@ -80,7 +80,7 @@ alias cacherm="rm -rf ~/.cache/*"
 # Install all Blackarch tools
 alias blackarch-install-all="sudo pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u"
 
-# tunneling url/localhost
+# Tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
 
 # copy gitignore to create a similar dockerignore
@@ -93,10 +93,12 @@ alias bottles-backup="bash .scripts/bottles-backup.sh"
 alias fan-speed-full="sudo nbfc set --speed=100"
 alias fan-speed-auto="sudo nbfc set --auto"
 
-# for distroboxes
+# For distroboxes
+## Kali
 alias kali-install-large="sudo apt update && sudo apt -y install kali-linux-large"
 alias kali-install-headless="sudo apt update && sudo apt -y install kali-linux-headless"
+## Ubuntu
 alias ubuntu-install-essential="sudo apt update && sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git"
 
-# fnm
+# FNM
 alias fnm-update="curl -fsSL https://fnm.vercel.app/install | zsh -s -- --skip-shell"
