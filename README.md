@@ -82,4 +82,5 @@ chezmoi -v apply
 - [x] saving osu's songs/skins/data and other big files to google drive/dropbox(need to find the cli)
 - [ ] (URGENT) making one-liner scripts for micro only, incase i need SSH works
 - [ ] make a script to backup my files from mega to my home dir, with making the dir, and file size checking to just to make sure
-- [ ] make a script for backup my torrents, yes I pirate movies
+- [x] make a script for backup my torrents, yes I pirate movies(just save the .config to mega lol)
+- [ ] split my aliases into smaller chunks
