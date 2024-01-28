@@ -19,7 +19,7 @@
     "lsp.formatOnSave": true,
     "lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
     "lsp.ignoreTriggerCharacters": "completion,signature",
-    "lsp.server": "python=pylsp,go=gopls,typescript=deno lsp={\"importMap\": \"./import_map.json\"}",
+    "lsp.server": "python=pylsp,go=gopls,typescript=deno,bash=bash-language-server",
     "lsp.tabcompletion": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"

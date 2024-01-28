@@ -67,7 +67,7 @@ alias lsa="ls -a --color='auto'"
 alias lla="ll -a"
 
 # NVIM
-alias vim="nvim"
+alias v="vim"
 alias nv="nvim"
 
 # Dotfile save
