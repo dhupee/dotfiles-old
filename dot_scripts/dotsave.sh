@@ -20,7 +20,7 @@ dir_array=(
     "$HOME/.config/obs-studio/basic/"
     "$HOME/.config/containers/"
     "$HOME/.aliases/"
-    "$HOME/.tmux/plugins/tpm"
+    "$HOME/.tmux/plugins/"
 )
 
 file_array=(

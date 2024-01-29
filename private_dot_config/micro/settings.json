@@ -25,6 +25,7 @@
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
     "pluginrepos": [],
+    "softwrap": true,
     "status": true,
     "statusformatr": "Alt-g: bindings, Alt-h: help",
     "tabstospaces": true,
