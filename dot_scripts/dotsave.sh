@@ -20,6 +20,7 @@ dir_array=(
     "$HOME/.config/obs-studio/basic/"
     "$HOME/.config/containers/"
     "$HOME/.aliases/"
+    "$HOME/.tmux/plugins/tpm"
 )
 
 file_array=(
@@ -29,7 +30,8 @@ file_array=(
     "$HOME/.p10k.zsh"
     "$HOME/.bashrc"
     "$HOME/.nanorc"
-    "$HOME/.fonts.conf"	
+    "$HOME/.fonts.conf"
+    "$HOME/.tmux.conf"		
     "$HOME/.config/spicetify/config-xpui.ini"
     "$HOME/.config/obs-studio/global.ini"
 )
