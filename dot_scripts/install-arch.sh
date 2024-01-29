@@ -30,6 +30,7 @@ cli_pacman_programs=(
     rmlint
     tldr
     thefuck
+    tmux
     unrar
     yt-dlp
     zsh

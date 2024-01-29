@@ -153,8 +153,20 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # source line for aliases
-if [ -e ~/.aliases.sh ]; then
-  source ~/.aliases.sh
+# if [ -e ~/.aliases.sh ]; then
+  # source ~/.aliases.sh
+# fi
+
+# Sourcing aliases
+if [ -d ~/.aliases/ ]; then
+    # Loop through all .sh files in the aliases directory and source them
+    for file in ~/.aliases/*.sh; do
+        if [ -f "$file" ]; then
+            source "$file"
+        fi
+    done
+else
+    echo "Aliases directory not found"
 fi
 
 # Sourcing thefuck
