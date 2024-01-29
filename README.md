@@ -8,18 +8,41 @@ Since I use [EndeavourOS](https://endeavouros.com/) with KDE I can say that "I u
 
 I also use Parrot sometimes so I made versions for debian, but I plan to deprecate it since I decided to use distrobox instead of VMs
 
+## WARNING
+
+This Dotfiles is for me and I only make this for me, so if you want to used it or maybe fork it be careful, it might auto-update everyday, it might have a different script next day, it might break.
+
+I don't take any consideration for someone's idea because this dotfile is for me, but if you want to fork for learning purpose, then have fun.
+
 ## Table of Contents
 
 - [dotfiles](#dotfiles)
+  - [WARNING](#warning)
   - [Table of Contents](#table-of-contents)
-  - [Installation For My Arch](#installation-for-my-arch)
-  - [Install Kali/Parrot (kinda done, not sure)](#install-kaliparrot-kinda-done-not-sure)
-  - [Adding Micro Configs](#adding-micro-configs)
-  - [Adding New Dotfiles](#adding-new-dotfiles)
-  - [Editing](#editing)
+  - [Gallery of my Rice](#gallery-of-my-rice)
+  - [Install stuffs](#install-stuffs)
+    - [Installation For My Arch](#installation-for-my-arch)
+    - [Install Kali/Parrot (kinda done, not sure)](#install-kaliparrot-kinda-done-not-sure)
+    - [Adding Micro Configs Only](#adding-micro-configs-only)
+    - [Adding Tmux Configs Only](#adding-tmux-configs-only)
+  - [Managing My/Your Dotfiles](#managing-myyour-dotfiles)
+    - [Adding New Dotfiles](#adding-new-dotfiles)
+    - [Editing](#editing)
   - [To-Add List](#to-add-list)
 
-## Installation For My Arch
+## Gallery of my Rice
+
+![Wallpaper 1](img/dh-nordic-dark-bmw/4%20-%20jsURB6I.png)
+
+![Wallpaper 2](img/dh-nordic-dark-bmw/5%20-%20oTbWYwb.png)
+
+![Wallpaper 1](img/dh-nordic-dark-bmw/2%20-%201FItUUI.png)
+
+## Install stuffs
+
+NOTE: I plan to deprecate the script in favour of unified method with ansible, I'm still learning it but just heads up for you who fork this, and for future me.
+
+### Installation For My Arch
 
 to use this dotfile, simply copy this to terminal and run
 
@@ -35,7 +58,7 @@ curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/
 
 check the file to see what you will download, or fork it and you used it for your own need
 
-## Install Kali/Parrot (kinda done, not sure)
+### Install Kali/Parrot (kinda done, not sure)
 
 I use parrot ~~Kali~~ okay, and not all tools I need is there, so
 
@@ -45,11 +68,17 @@ NOTE: I plan to deprecate this or just simply delete since I might use distrobox
 curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-kali.sh | bash
 ```
 
-## Adding Micro Configs
+### Adding Micro Configs Only
 
 **TBA**
 
-## Adding New Dotfiles
+### Adding Tmux Configs Only
+
+**TBA**
+
+## Managing My/Your Dotfiles
+
+### Adding New Dotfiles
 
 if you want to add new dotfile, do this in terminal.
 
@@ -57,9 +86,9 @@ if you want to add new dotfile, do this in terminal.
 chezmoi add <dotfile directory>
 ```
 
-or you can add your file/folder directory in the `dot_scripts/chezmoi-save.sh` to automate it.
+or you can add your file/folder directory in the `dot_scripts/dotsave.sh` to automate it.
 
-## Editing
+### Editing
 
 since i use VScode as my text editor/IDE so what I do to edit the dotfiles easily is like this, first open terminal.
 
