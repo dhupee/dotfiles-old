@@ -21,6 +21,7 @@ dir_array=(
     "$HOME/.config/containers/"
     "$HOME/.aliases/"
     "$HOME/.tmux/plugins/"
+    "$HOME/.config/helix/"
 )
 
 file_array=(

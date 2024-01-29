@@ -8,6 +8,9 @@ alias c="clear"
 # FZF
 alias f="fzf"
 
+# Helix
+alias hx="helix"
+
 # FFMPEG
 alias ffconv="ffmpeg -i"
 # Function to convert to 720p (16:9)
