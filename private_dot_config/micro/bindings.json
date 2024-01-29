@@ -7,6 +7,7 @@
     "Alt-d": "command:definition",
     "Alt-f": "command:format",
     "Alt-k": "command:hover",
+    "Alt-h": "command:help",
     "Alt-r": "command:references",
     "Alt-z": "lua:initlua.toggleSoftwrap",
     "AltCtrlSpace": "command:palettero",
