@@ -2,5 +2,6 @@ README.md
 .gitattributes
 .vscode
 .gitignore
+img
 
 # this is a comment, gonna be useful later
