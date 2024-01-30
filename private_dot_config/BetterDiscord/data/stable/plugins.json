@@ -1,3 +1,5 @@
 {
-    "FreeEmojis": true
+    "FreeEmojis": true,
+    "PluginRepo": true,
+    "BDFDB": false
 }
