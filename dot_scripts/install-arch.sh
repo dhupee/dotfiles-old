@@ -81,6 +81,7 @@ cli_aur_programs=(
 # LIST OF GUI PROGRAMS TO INSTALL FROM AUR USING YAY
 gui_aur_programs=(
     ani-cli
+    betterdiscord-installer
     czkawka-gui
     bottles
     heroic-games-launcher-bin

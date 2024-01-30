@@ -22,6 +22,7 @@ dir_array=(
     "$HOME/.aliases/"
     "$HOME/.tmux/"
     "$HOME/.config/helix/"
+    "$HOME/.config/BetterDiscord/"
 )
 
 file_array=(
