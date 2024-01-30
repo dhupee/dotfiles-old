@@ -21,6 +21,20 @@ else
 	echo "downloading Spicetify Themes failed"
 fi
 
+# downloading dracula themes
+if [ -d "$HOME/.config/spicetify/Themes/" ]; then
+	if [ -d "/tmp/spicetify-dracula/" ]; then
+		echo "Dracula Themes already exist"
+	else
+		echo "Downloading Dracula Themes"
+		git clone --depth=1 https://github.com/dracula/spicetify.git /tmp/spicetify-dracula
+	fi	
+	cp -r /tmp/spicetify-dracula/Dracula ~/.config/spicetify/Themes/Dracula
+	echo "success initialized Dracula Themes"
+else
+	echo "downloading Dracula Themes failed"
+fi
+
 cd $HOME
 if [ -d "$HOME/.config/spicetify/Extensions/" ]; then
 	if [ -d "/tmp/spicetify-extensions/" ]; then
