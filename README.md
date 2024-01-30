@@ -23,7 +23,7 @@ I don't take any consideration for someone's idea because this dotfile is for me
   - [Install stuffs](#install-stuffs)
     - [Installation For My Arch](#installation-for-my-arch)
     - [Install Kali/Parrot (kinda done, not sure)](#install-kaliparrot-kinda-done-not-sure)
-    - [Adding Micro Configs Only](#adding-micro-configs-only)
+    - [Adding Helix Configs Only](#adding-helix-configs-only)
     - [Adding Tmux Configs Only](#adding-tmux-configs-only)
   - [Managing My/Your Dotfiles](#managing-myyour-dotfiles)
     - [Adding New Dotfiles](#adding-new-dotfiles)
@@ -68,13 +68,21 @@ NOTE: I plan to deprecate this or just simply delete since I might use distrobox
 curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/install-kali.sh | bash
 ```
 
-### Adding Micro Configs Only
+### Adding Helix Configs Only
 
-**TBA**
+If you need Helix config of mine(why?) you can import it with this, assuming you have Helix installed already.
+
+```sh
+curl -fsSL https://github.com/dhupee/dotfiles/raw/master/dot_scripts/helix-config-init.sh | bash
+```
 
 ### Adding Tmux Configs Only
 
-**TBA**
+Same goes for Tmux, Tmux somehow pre-installed in every vast.ai instance so I'm forced to used this, the config of mine used TPM as plugin manager, and maybe I will add few additions or mix.
+
+```sh
+curl -fsSL https://github.com/dhupee/dotfiles/raw/master/dot_scripts/tmux-config-init.sh | bash
+```
 
 ## Managing My/Your Dotfiles
 
