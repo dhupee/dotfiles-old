@@ -7,7 +7,6 @@
 # SEPERATE GUI AND CLI APPS!!!!
 # use flatpak for any sandbox software, like bottles
 
-
 # LIST OF CLI PROGRAMS TO INSTALL FROM PACMAN
 cli_pacman_programs=(
     btop
