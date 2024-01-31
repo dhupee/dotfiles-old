@@ -38,6 +38,7 @@ eval "`fnm env`"
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:usr/local/bin:$PATH
 
 # export completion cli to fpath
 fpath=($HOME/.completion_zsh $fpath)

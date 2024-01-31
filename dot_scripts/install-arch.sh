@@ -11,7 +11,6 @@
 # LIST OF CLI PROGRAMS TO INSTALL FROM PACMAN
 cli_pacman_programs=(
     btop
-    chezmoi
     cmatrix
     distrobox
     fzf
