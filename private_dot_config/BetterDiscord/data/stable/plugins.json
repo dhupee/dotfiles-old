@@ -1,5 +1,6 @@
 {
     "FreeEmojis": true,
     "PluginRepo": true,
-    "BDFDB": false
+    "BDFDB": false,
+    "SpotifyControls": true
 }

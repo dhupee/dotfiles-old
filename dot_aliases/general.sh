@@ -10,6 +10,9 @@ alias f="fzf"
 
 # Helix
 alias hx="helix"
+hxf() {
+  helix $(fzf)	
+}
 
 # Plasma
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
