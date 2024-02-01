@@ -5,6 +5,7 @@ return {
   -- Configure LazyVim to load dracula
   {
     "LazyVim/LazyVim",
+    Lazy = true,
     opts = {
       colorscheme = "dracula",
     },
