@@ -21,7 +21,8 @@ dir_array=(
     "$HOME/.config/containers/"
     "$HOME/.aliases/"
     "$HOME/.config/helix/"
-    "$HOME/.config/BetterDiscord/"
+    "$HOME/.config/BetterDiscord/plugins"
+    "$HOME/.config/BetterDiscord/themes"
 )
 
 file_array=(
