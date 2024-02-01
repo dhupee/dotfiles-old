@@ -9,3 +9,6 @@ alias tsr="tmux rename-session"
 # Windows
 alias twl="tmux list-windows"
 alias twk="tmux kill-window"
+
+# Sourcing
+alias tsrc="tmux source ~/.tmux.conf"
