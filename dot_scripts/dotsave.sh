@@ -83,12 +83,12 @@ sleep 3
 # backup sensitive files to Mega
 echo " "
 echo "backupping ssh keys to mega"
-rclone delete $rclone_remote:akago/.ssh/
+# rclone delete $rclone_remote:akago/.ssh/
 rclone copy "$HOME/.ssh/" $rclone_remote:akago/.ssh/ -P
 
 echo " "
 echo "backupping transmission's setting to mega"
-rclone delete $rclone_remote:akago/.config/transmission/
+# rclone delete $rclone_remote:akago/.config/transmission/
 rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmission/ -P
 
 # if no-konsave flag then dont save konsave profiles
@@ -100,7 +100,7 @@ if [ "$1" != "--no-rclone" ]; then
     # NOTE: make sure to have same folder name, I want to try automate the backup method
 
     # Saving konsave profiles
-    rclone delete $rclone_remote:akago/konsave-profiles/
+    # rclone delete $rclone_remote:akago/konsave-profiles/
     rclone copy "$HOME/.konsave-profiles/" $rclone_remote:akago/.konsave-profiles/ -P
 
     # MAKE THIS FOR VERY HUGE STORAGE
