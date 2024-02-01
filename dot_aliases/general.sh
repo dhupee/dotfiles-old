@@ -11,7 +11,7 @@ alias f="fzf"
 # Helix
 alias hx="helix"
 hxf() {
-  helix $(fzf)	
+	helix $(fzf)
 }
 
 # Plasma
@@ -63,10 +63,9 @@ alias symlink="ln -s"
 # fi
 alias osu="DRI_PRIME=1 /usr/bin/osu-lazer"
 
-
 # Flatpak aliases, tidy up
 if [[ -d "$HOME/.var/app/com.usebottles.bottles" ]]; then
-  alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
+	alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
 fi
 
 # Podman is Docker, fight me
