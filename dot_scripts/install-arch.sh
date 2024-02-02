@@ -80,6 +80,7 @@ cli_aur_programs=(
 gui_aur_programs=(
     ani-cli
     betterdiscord-installer
+    botflix-git
     czkawka-gui
     bottles
     heroic-games-launcher-bin
