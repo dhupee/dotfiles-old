@@ -5,3 +5,14 @@
 
 -- Enable WildMenu
 vim.o.wildmenu = true
+
+-- tab is 4 spaces width
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+
+-- show tabline
+vim.o.showtabline = 1
+
+-- show indent line
+vim.o.list = true
+vim.o.listchars = "tab:▸ ,trail:·,nbsp:␣"

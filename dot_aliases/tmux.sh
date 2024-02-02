@@ -10,5 +10,8 @@ alias tsr="tmux rename-session"
 alias twl="tmux list-windows"
 alias twk="tmux kill-window"
 
+# Panes
+alias tpk="tmux kill-pane"
+
 # Sourcing
 alias tsrc="tmux source ~/.tmux.conf"
