@@ -15,7 +15,6 @@ dir_array=(
 	"$HOME/.completion_zsh/"
 	"$HOME/.config/micro/"
 	"$HOME/.config/nvim/"
-	"$HOME/.config/nvchad.bak/"
 	"$HOME/.config/PrusaSlicer/"
 	"$HOME/.config/obs-studio/basic/"
 	"$HOME/.config/containers/"
@@ -24,6 +23,7 @@ dir_array=(
 	"$HOME/.config/BetterDiscord/plugins/"
 	"$HOME/.config/BetterDiscord/themes/"
 	"$HOME/.config/lobster/"
+	"$HOME/.config/alacritty/"
 )
 
 file_array=(

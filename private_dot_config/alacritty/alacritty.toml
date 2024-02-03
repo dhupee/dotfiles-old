@@ -1,0 +1,4 @@
+# dhupee's configuration for alacritty
+# https://github.com/dhupee/dotfiles
+
+import = [".config/alacritty/dracula.toml"]
