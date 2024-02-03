@@ -224,6 +224,18 @@ else
 fi
 wait
 
+# Install Platformio Core CLI
+
+curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+python3 get-platformio.py
+wait
+mkdir -p /usr/local/bin/
+sudo ln -s ~/.platformio/penv/bin/platformio /usr/local/bin/platformio
+sudo ln -s ~/.platformio/penv/bin/pio /usr/local/bin/pio
+sudo ln -s ~/.platformio/penv/bin/piodebuggdb /usr/local/bin/piodebuggdb
+wait
+
+
 # CHANGE PERMISSION OF SPICETIFY, ACCORDING TO DOCS
 if [ -d "/opt/spotify" ]; then
     sudo chmod a+wr /opt/spotify

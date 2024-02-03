@@ -176,3 +176,6 @@ eval $(thefuck --alias)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Begin: PlatformIO Core completion support
+eval "$(_PIO_COMPLETE=zsh_source pio)"
+# End: PlatformIO Core completion support
