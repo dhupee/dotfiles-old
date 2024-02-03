@@ -27,8 +27,10 @@ alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 
 # Git
 alias ga="git add"
+alias gs="git status"
 alias gcm="git commit -m"
 alias gpsh="git push"
+alias gpll="git pull"
 
 # Goenv
 alias goenv-update="cd ~/.goenv && git fetch --all && git pull"
@@ -58,6 +60,9 @@ alias lla="ll -a"
 # NVIM
 alias v="vim"
 alias nv="nvim"
+nvf() {
+	nvim $(fzf)
+}
 
 # Dotfile save
 alias dotsave="sh $HOME/.scripts/dotsave.sh"

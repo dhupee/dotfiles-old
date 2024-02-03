@@ -108,7 +108,7 @@ if [ "$1" != "--no-rclone" ]; then
 	# if folder lazerexport exist, ask to backup or not
 	# don't delete, append since the contain of the beatmap didn't change like others
 	if [ -d "$HOME/lazerexport/" ]; then
-		read -p "Would you like to backup this folder? (y/n)?" choice
+		read -p "Would you like to backup lazerexport folder? (y/n)?" choice
 		case "$choice" in
 		y | Y) echo "yes, backing up lazerexport folder" && rclone copy "$HOME/lazerexport/" mega-dh:akago/lazerexport/ -P ;;
 		n | N) echo "skipping" ;;
