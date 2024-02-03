@@ -3,6 +3,11 @@
 
 import = [".config/alacritty/dracula.toml"]
 
+[scrolling]
+
+history = 10000
+
+
 [font]
 
 normal = {family = "Hack Nerd Font", style = "Regular"}

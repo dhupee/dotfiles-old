@@ -13,6 +13,9 @@ if [ -e "/bin/bat" ]; then
 	alias cat="bat"
 fi
 
+# Tmux 256 colors
+# alias tmux='TERM=screen-256color tmux'
+
 # Helix
 alias hx="helix"
 hxf() {
