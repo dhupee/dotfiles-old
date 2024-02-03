@@ -2,3 +2,9 @@
 # https://github.com/dhupee/dotfiles
 
 import = [".config/alacritty/dracula.toml"]
+
+[font]
+
+normal = {family = "Hack Nerd Font", style = "Regular"}
+
+size = 12
