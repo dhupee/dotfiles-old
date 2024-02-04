@@ -4,4 +4,7 @@ README.md
 .gitignore
 img
 
+# unused files
+wip_*
+
 # this is a comment, gonna be useful later
