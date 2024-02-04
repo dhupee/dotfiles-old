@@ -28,7 +28,10 @@ alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 # Git
 alias ga="git add"
 alias gs="git status"
+alias gb='git branch'
+alias gl='git log'
 alias gcm="git commit -m"
+alias gco='git checkout'
 alias gpsh="git push"
 alias gpll="git pull"
 

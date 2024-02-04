@@ -5,10 +5,11 @@
 
 -- Enable WildMenu
 vim.o.wildmenu = true
+vim.o.wildmenu = "full"
 
 -- tab is 4 spaces width
 vim.o.shiftwidth = 4
-vim.o.tabstop = 4
+vim.o.tabstogp = 4
 
 -- show tabline
 vim.o.showtabline = 1

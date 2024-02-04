@@ -21,7 +21,7 @@ export QT_IM_MODULE=fcitx
 
 # Setup environment for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Setup environtment for Goenv
@@ -38,7 +38,7 @@ eval "`fnm env`"
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # export completion cli to fpath
 fpath=($HOME/.completion_zsh $fpath)
