@@ -93,6 +93,7 @@ gui_aur_programs=(
 flatpak_programs=(
     com.usebottles.bottles
     com.playonlinux.PlayOnLinux4
+    org.openscad.OpenSCAD
 )
 
 # List of custom Ohmyzsh plugins
