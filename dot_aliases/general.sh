@@ -74,15 +74,9 @@ alias dotsave="sh $HOME/.scripts/dotsave.sh"
 alias symlink="ln -s"
 
 # Run osu with dedicated graphics by default
-# if [[ -d "$HOME/.var/app/sh.ppy.osu" ]]; then
-#   alias osu="DRI_PRIME=1 flatpak run sh.ppy.osu"
-# fi
 alias osu="DRI_PRIME=1 /usr/bin/osu-lazer"
 
 # Flatpak aliases, tidy up
-if [[ -d "$HOME/.var/app/com.usebottles.bottles" ]]; then
-	alias bottles-cli="flatpak run --command=bottles-cli com.usebottles.bottles"
-fi
 
 # Podman is Docker, fight me
 # alias docker="podman"
