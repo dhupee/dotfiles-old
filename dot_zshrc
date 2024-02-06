@@ -40,6 +40,10 @@ eval "`fnm env`"
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Adding Tmuxifier in the path
+export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
 # export completion cli to fpath
 fpath=($HOME/.completion_zsh $fpath)
 
