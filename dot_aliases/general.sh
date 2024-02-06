@@ -86,6 +86,9 @@ alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
 alias orphanrm-aur="yay -Yc"
 alias cacherm="rm -rf ~/.cache/*"
 
+# Update Ohmyzsh's custom plugins
+alias omz_custom_update="sh $HOME/.scripts/omz-custom-upgrade.sh"
+
 # Tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
 
