@@ -3,7 +3,7 @@
 lobster_editor=${VISUAL:-${EDITOR:-vim}}
 player=mpv
 download_dir="$PWD"
-provider="Vidcloud"
+provider="UpCloud"
 history=1
 subs_language="english"
 histfile="$HOME/.local/share/lobster/lobster_history.txt"
