@@ -9,6 +9,7 @@
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM PACMAN
 cli_pacman_programs=(
+    arduino-cli
     bat
     btop
     cmatrix
@@ -64,7 +65,6 @@ gui_pacman_programs=(
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
 cli_aur_programs=(
-    arduino-ide-bin
     brave-bin
     cloudflare-warp-bin
     kwin-polonium
