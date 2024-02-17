@@ -5,9 +5,9 @@ return {
     "ThePrimeagen/vim-be-good",
   },
 
-  -- PlatformIO Helper Plugin
-  {
-    "normen/vim-pio",
-    lazy = false,
-  },
+  -- -- PlatformIO Helper Plugin
+  -- {
+  --   "normen/vim-pio",
+  --   lazy = false,
+  -- },
 }
