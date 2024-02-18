@@ -1,3 +1,4 @@
 return {
-  "stevearc/vim-arduino",
+  { "stevearc/vim-arduino", ft = { "arduino" } },
+  { "glebzlat/Arduino.nvim" },
 }

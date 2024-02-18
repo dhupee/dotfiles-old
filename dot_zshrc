@@ -123,3 +123,6 @@ eval $(thefuck --alias)
 
 # Initialize Platformio Core CLI
 eval "$(_PIO_COMPLETE=zsh_source pio)"
+
+# Add arduino-cli to PATH
+export PATH=$PATH:$(which arduino-cli)
