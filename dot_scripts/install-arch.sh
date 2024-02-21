@@ -18,6 +18,7 @@ cli_pacman_programs=(
     github-cli
     git-lfs
     htop
+    lazygit
     lib32-gamemode
     micro
     neofetch
