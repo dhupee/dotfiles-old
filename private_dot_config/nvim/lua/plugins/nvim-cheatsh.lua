@@ -5,6 +5,16 @@ return {
       "nvim-telescope/telescope.nvim",
     },
     cmd = { "Cheat", "CheatClose", "CheatList" },
+    keys = {
+      {
+        "<leader>ch",
+        function()
+          -- run command CheatList
+          return vim.cmd.CheatList()
+        end,
+        desc = "Find Cheatsheets",
+      },
+    },
     opts = {
       cheatsh_url = "https://cht.sh/", -- URL of the cheat.sh instance to use, support self-hosted instances
       position = "bottom", -- position of the window can be: bottom, top, left, right
