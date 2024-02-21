@@ -4,8 +4,8 @@
 --
 
 -- Enable WildMenu
-vim.o.wildmenu = true
-vim.o.wildmenu = "full"
+-- vim.o.wildmenu = true
+-- vim.o.wildmenu = "full"
 
 -- tab is 4 spaces width
 vim.o.shiftwidth = 4
