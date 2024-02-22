@@ -65,7 +65,7 @@ gui_pacman_programs=(
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
 cli_aur_programs=(
-    arduino-ide-bin
+    arduino-cli
     brave-bin
     cloudflare-warp-bin
     kwin-polonium
@@ -83,7 +83,6 @@ gui_aur_programs=(
     ani-cli
     betterdiscord-installer
     botflix-git
-    czkawka-gui
     bottles
     heroic-games-launcher-bin
     konsave
