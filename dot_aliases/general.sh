@@ -92,6 +92,11 @@ alias lg="lazygit"
 # Update Ohmyzsh's custom plugins
 alias omz_custom_update="sh $HOME/.scripts/omz-custom-upgrade.sh"
 
+# zoxide as cd
+if command -v zoxide >/dev/null; then
+	alias cd="z"
+fi
+
 # Tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
 

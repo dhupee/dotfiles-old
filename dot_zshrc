@@ -35,6 +35,11 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="/home/dhupee/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
+# zoxide
+if command -v zoxide > /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
@@ -74,6 +79,7 @@ plugins=(
     python
     emoji
     golang
+    zoxide
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-autocomplete

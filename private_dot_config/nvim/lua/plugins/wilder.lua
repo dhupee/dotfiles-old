@@ -1,10 +1,25 @@
 return {
-  -- "ogaken-1/wilder.nvim",
-  "gelguy/wilder.nvim",
+  -- "ogaken-1/wilder.nvim", -- most updated fork
+  "gelguy/wilder.nvim", -- original repo, bit outdated
+  lazy = false,
   config = function()
     local wilder = require("wilder")
     wilder.setup({ modes = { ":", "/", "?" } })
 
+    -- fuzzy config
+    wilder.set_option("pipeline", {
+      wilder.branch(
+        wilder.cmdline_pipeline({
+          fuzzy = 1,
+          set_pcre2_pattern = 1,
+        }),
+        wilder.python_search_pipeline({
+          pattern = "fuzzy",
+        })
+      ),
+    })
+
+    -- rendering config
     wilder.set_option(
       "renderer",
       wilder.popupmenu_renderer(wilder.popupmenu_border_theme({
