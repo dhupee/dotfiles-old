@@ -1,4 +1,5 @@
 return {
+  -- "ogaken-1/wilder.nvim",
   "gelguy/wilder.nvim",
   config = function()
     local wilder = require("wilder")

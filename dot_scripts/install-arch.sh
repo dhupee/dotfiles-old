@@ -45,6 +45,7 @@ gui_pacman_programs=(
     filelight
     flatpak
     gparted
+    gnome-boxes
     inkscape
     kicad
     kio-gdrive
@@ -55,10 +56,8 @@ gui_pacman_programs=(
     noto-fonts-emoji
     obs-studio
     prusa-slicer
-    qemu-base
     steam
     ttf-jetbrains-mono-nerd
-    virt-manager
     vlc
     v4l2loopback-dkms
 )
