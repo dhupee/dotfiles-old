@@ -20,9 +20,6 @@ return {
         "goimports", -- formatter
         "gopls", -- lsp
 
-        -- JSON
-        "json-lsp", -- lsp
-
         -- Lua
         "lua-language-server", -- lsp
         "stylua",
@@ -33,6 +30,7 @@ return {
 
         -- HTML, JS, CSS, JSON
         "prettier", -- formatter
+        "json-lsp", -- lsp
 
         -- Python
         "autopep8", -- formatter
@@ -43,7 +41,7 @@ return {
         -- Shell Script
         "bash-language-server", -- lsp
         "shellcheck", -- linter
-        "shfmt", -- formatter
+        "beautysh", -- formatter
 
         -- TailwindCSS
         "tailwindcss-language-server", -- lsp

@@ -34,6 +34,7 @@ cli_pacman_programs=(
     unrar
     yt-dlp
     zsh
+    zoxide
 )
 
 # LIST OF GUI PROGRAMS TO INSTALL FROM PACMAN
@@ -225,8 +226,7 @@ else
 fi
 wait
 
-# Install Platformio Core CLI
-
+# INSTALL PLATFORMIO CORE CLI
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
 python3 get-platformio.py
 wait
@@ -251,5 +251,5 @@ echo "All programs have been installed successfully!"
 
 # CHANGE THE DEFAULT SHELL TO ZSH
 echo "Change default shell to zsh..."
-sudo chsh -s bin/zsh
+sudo chsh -s $(which zsh)
 wait
