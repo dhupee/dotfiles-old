@@ -14,11 +14,14 @@ This Dotfiles is for me and I only make this for me, so if you want to used it o
 
 I don't take any consideration for someone's idea because this dotfile is for me, but if you want to fork for learning purpose, then have fun.
 
+IF YOU REALLY WANT TO TRY THIS, please read the code first to see how the scripts work, this awful documentation is either for show-off or simply to give me reminder because I'll know what I'm doing.
+
 ## Table of Contents
 
 - [dotfiles](#dotfiles)
   - [WARNING](#warning)
   - [Table of Contents](#table-of-contents)
+  - [Features, sort of](#features-sort-of)
   - [Gallery of my Rice](#gallery-of-my-rice)
   - [Install stuffs](#install-stuffs)
     - [Installation For My Arch](#installation-for-my-arch)
@@ -29,6 +32,10 @@ I don't take any consideration for someone's idea because this dotfile is for me
     - [Adding New Dotfiles](#adding-new-dotfiles)
     - [Editing](#editing)
   - [To-Add List](#to-add-list)
+
+## Features, sort of
+
+TBA
 
 ## Gallery of my Rice
 
@@ -98,11 +105,11 @@ or you can add your file/folder directory in the `dot_scripts/dotsave.sh` to aut
 
 ### Editing
 
-since i use VScode as my text editor/IDE so what I do to edit the dotfiles easily is like this, first open terminal.
+since i use ~~VScode~~ Neovim as my text editor/IDE so what I do to edit the dotfiles easily is like this, first open terminal.
 
 ```sh
 chezmoi cd
-code .
+nvim .
 ```
 
 then you can code like usual then commit it to the repo and then on terminal apply the change.
@@ -114,10 +121,13 @@ chezmoi -v apply
 
 ## To-Add List
 
+Finished feature will be listed in [Features](#features-sort-of) section
+
 - [x] making KDE backup and restore (will use Konsave), `not automated since the size is humongous`, EDIT: I use rclone to do it and manage to used it for backup osu beatmap aswell, and smaller sensitive file like ssh
 - [x] automate my Bottles setting update ~~(Use python for creating file name with regex, iirc bash dont have regex)~~ manage to made one in bash script
 - [x] saving osu's songs/skins/data and other big files to google drive/dropbox(need to find the cli)
-- [ ] (URGENT) making one-liner scripts for micro only, incase i need SSH works
 - [ ] make a script to backup my files from mega to my home dir, with making the dir, and file size checking to just to make sure
 - [x] make a script for backup my torrents, yes I pirate movies(just save the .config to mega lol)
-- [ ] split my aliases into smaller chunks
+- [x] split my aliases into smaller chunks
+- [ ] modified the bootstrap/installer scripts to check if the listed app installed or not, and add uninstaller method
+- [ ] Split the distro agnostic functions from the installer scripts.
