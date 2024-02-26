@@ -88,7 +88,10 @@ plugins=(
 # unused custom plugins commented here
 #     zsh-history-substring-search
 
-source $ZSH/oh-my-zsh.sh
+# Apparently broken in Nix, so check the dir
+if [ -d $HOME/.oh-my-zsh/ ]; then
+    source $HOME/.oh-my-zsh/oh-my-zsh.sh
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
