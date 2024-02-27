@@ -13,6 +13,7 @@ cli_pacman_programs=(
     btop
     cmatrix
     distrobox
+    dust
     fzf
     gamemode
     github-cli
@@ -72,7 +73,7 @@ cli_aur_programs=(
     kwin-polonium
     nbfc-linux
     ngrok
-    podman-desktop-bin
+    podman-desktop-bi
     spicetify-cli
     spotify
     tt
