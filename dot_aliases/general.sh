@@ -5,9 +5,6 @@
 # Clear
 alias c="clear"
 
-# FZF
-alias f="fzf"
-
 # Bat to Cat if Bat exists
 if [ -e "/bin/bat" ]; then
 	alias cat="bat"
