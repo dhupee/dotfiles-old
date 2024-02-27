@@ -79,8 +79,10 @@ curl -fsSL https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_scripts/
 
 If you need Helix config of mine(why?) you can import it with this, assuming you have Helix installed already.
 
+Helix is better than Neovim at this because it only has one file, perfect for cloud instances.
+
 ```sh
-curl -fsSL https://github.com/dhupee/dotfiles/raw/master/dot_scripts/helix-config-init.sh | bash
+mkdir -p $HOME/.config/helix && curl https://raw.githubusercontent.com/dhupee/dotfiles/master/private_dot_config/helix/config.toml > $HOME.config/helix/config.toml
 ```
 
 ### Adding Tmux Configs Only
@@ -88,7 +90,7 @@ curl -fsSL https://github.com/dhupee/dotfiles/raw/master/dot_scripts/helix-confi
 Same goes for Tmux, Tmux somehow pre-installed in every vast.ai instance so I'm forced to used this, the config of mine used TPM as plugin manager, and maybe I will add few additions or mix.
 
 ```sh
-curl -fsSL https://github.com/dhupee/dotfiles/raw/master/dot_scripts/tmux-config-init.sh | bash
+curl https://raw.githubusercontent.com/dhupee/dotfiles/master/dot_tmux.conf > $HOME/.tmux.conf
 ```
 
 ## Managing My/Your Dotfiles
