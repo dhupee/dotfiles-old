@@ -5,10 +5,11 @@
 # Clear
 alias c="clear"
 
+# NOTE: I dont really think using bat as cat is a good idea
 # Bat to Cat if Bat exists
-if [ -e "/bin/bat" ]; then
-	alias cat="bat"
-fi
+# if [ -e "/bin/bat" ]; then
+# 	alias cat="bat"
+# fi
 
 # Tmux 256 colors
 # alias tmux='TERM=screen-256color tmux'
@@ -109,3 +110,11 @@ alias fan-speed-auto="sudo nbfc set --auto"
 
 # FNM
 alias fnm-update="curl -fsSL https://fnm.vercel.app/install | zsh -s -- --skip-shell"
+
+# Delete X number of latest shell history
+function delete_latest_history() {
+    # Default count is 1
+    local count=${1:-1}
+    echo "Deleting last $count shell history entries"
+    fc -p -1 | tail -n $count | awk "{print $1}" | xargs -I {} fc -d {}
+}

@@ -37,6 +37,11 @@ file_array=(
 	"$HOME/.tmux.conf"
 	"$HOME/.config/spicetify/config-xpui.ini"
 	"$HOME/.config/obs-studio/global.ini"
+  "$HOME/.config/chezmoi/chezmoi.toml"
+)
+
+encrypted_dir_array=(
+    "$HOME/.ssh/"
 )
 
 #----------------------SAVING FILES AND DIRS----------------------
@@ -67,6 +72,25 @@ for f in "${file_array[@]}"; do
 	fi
 
 	chezmoi add $f
+done
+
+#-----------------ENCRYPTING AND ADDING DIRS AND FILES---------------------
+
+for e in "${encrypted_dir_array[@]}"; do
+	if [ -d $e ]; then
+		# echo "$d exists"
+		echo "adding and encypting $e"
+	else
+		echo "$d is not exists"
+		read -p "Would you like to make one? (y/n)?" choice
+		case "$choice" in
+		y | Y) echo "yes, creating directory $e && mkdir $e" ;;
+		n | N) echo "skipping" ;;
+		*) echo "choice is invalid" ;;
+		esac
+
+	fi
+	chezmoi add --encrypt $e
 done
 
 echo " "

@@ -76,7 +76,7 @@ cli_aur_programs=(
     podman-desktop-bi
     spicetify-cli
     spotify
-    tt
+    ttyper
     visual-studio-code-bin
 )
 
