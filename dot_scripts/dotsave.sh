@@ -13,7 +13,6 @@ dir_array=(
 	"$HOME/Wallpapers/"
 	"$HOME/.fonts/"
 	"$HOME/.completion_zsh/"
-	"$HOME/.config/micro/"
 	"$HOME/.config/nvim/"
 	"$HOME/.config/PrusaSlicer/"
 	"$HOME/.config/obs-studio/basic/"

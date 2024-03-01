@@ -1,9 +1,0 @@
-#!/bin/bash
-
-fake_bufferfile=/tmp/fake_xclip_buffer
-
-if [[ $1 == "-in" ]]; then
-	cat - > "$fake_bufferfile"
-else
-	cat "$fake_bufferfile"
-fi
