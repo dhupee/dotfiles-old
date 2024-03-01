@@ -43,6 +43,11 @@ encrypted_dir_array=(
     "$HOME/.ssh/"
 )
 
+encrypted_file_array=(
+    "$HOME/.config/ngrok/ngrok.yml"
+    "$HOME/.config/rclone/rclone.conf"
+)
+
 #----------------------SAVING FILES AND DIRS----------------------
 
 for d in "${dir_array[@]}"; do
@@ -75,21 +80,32 @@ done
 
 #-----------------ENCRYPTING AND ADDING DIRS AND FILES---------------------
 
-for e in "${encrypted_dir_array[@]}"; do
-	if [ -d $e ]; then
+for d in "${encrypted_dir_array[@]}"; do
+	if [ -d $d ]; then
 		# echo "$d exists"
 		echo "adding and encrypting $e"
 	else
 		echo "$d is not exists"
 		read -p "Would you like to make one? (y/n)?" choice
 		case "$choice" in
-		y | Y) echo "yes, creating directory $e && mkdir $e" ;;
+		y | Y) echo "yes, creating directory $d && mkdir $d" ;;
 		n | N) echo "skipping" ;;
 		*) echo "choice is invalid" ;;
 		esac
 
 	fi
-	chezmoi add --encrypt $e
+	chezmoi add --encrypt $d
+done
+
+for f in "${encrypted_file_array[@]}"; do
+    if [ -f $f ]; then
+        echo "adding and encrypting $f"
+    else
+        echo "$f is not exists"
+        echo ""
+    fi
+    
+    chezmoi add --encrypt $f
 done
 
 echo " "

@@ -135,3 +135,7 @@ eval "$(_PIO_COMPLETE=zsh_source pio)"
 
 # Add arduino-cli to PATH
 export PATH=$PATH:$(which arduino-cli)
+
+tmux-git-autofetch() {(/home/dhupee/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
+add-zsh-hook chpwd tmux-git-autofetch
+    
