@@ -5,8 +5,8 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = narutohaj00@gmail.com
-	email = 32934122+dhupee@users.noreply.github.com
+	name = Daffa Haj Tsaqif
+	email = narutohaj00@gmail.com
 [gui]
 	recentrepo = /home/dhupee/.local/share/chezmoi
 [credential "https://github.com"]
