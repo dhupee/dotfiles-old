@@ -83,7 +83,7 @@ done
 for d in "${encrypted_dir_array[@]}"; do
 	if [ -d $d ]; then
 		# echo "$d exists"
-		echo "adding and encrypting $e"
+		echo "adding and encrypting $d"
 	else
 		echo "$d is not exists"
 		read -p "Would you like to make one? (y/n)?" choice
