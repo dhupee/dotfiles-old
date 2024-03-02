@@ -23,6 +23,7 @@ dir_array=(
 	"$HOME/.config/BetterDiscord/themes/"
 	"$HOME/.config/lobster/"
 	"$HOME/.config/alacritty/"
+  "$HOME/.config/zellij/"
 )
 
 file_array=(
