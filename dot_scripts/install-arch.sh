@@ -66,6 +66,8 @@ gui_pacman_programs=(
     virt-manager
     vlc
     v4l2loopback-dkms
+    xwaylandvideobridge
+
 )
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
