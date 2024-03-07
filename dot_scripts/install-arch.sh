@@ -88,7 +88,6 @@ gui_aur_programs=(
     ani-cli
     betterdiscord-installer
     botflix-git
-    bottles
     heroic-games-launcher-bin
     konsave
     lobster
