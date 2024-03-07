@@ -7,6 +7,6 @@ function historygrep() {
 }
 
 # Live-grepping history with fzf but not run it
-function historygrep-norun() {
+function historygrep_no_run() {
     history | fzf | sed 's/ *[0-9]* *//'
 }

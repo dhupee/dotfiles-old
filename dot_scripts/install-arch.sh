@@ -9,6 +9,7 @@
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM PACMAN
 cli_pacman_programs=(
+    adobe-source-han-sans-jp-fonts
     age
     ansible
     bat
