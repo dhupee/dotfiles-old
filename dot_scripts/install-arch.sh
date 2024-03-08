@@ -92,7 +92,8 @@ gui_aur_programs=(
     botflix-git
     heroic-games-launcher-bin
     konsave
-    lobster
+    lobster-git
+    mov-cli-git
     osu-lazer-bin
 )
 
