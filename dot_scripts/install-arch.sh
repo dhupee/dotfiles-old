@@ -23,7 +23,6 @@ cli_pacman_programs=(
     git-lfs
     htop
     lazygit
-    lib32-gamemode
     micro
     neofetch
     openssh
@@ -53,7 +52,7 @@ gui_pacman_programs=(
     inkscape
     kicad
     kio-gdrive
-    latte-dock
+    lib32-gamemode
     libreoffice
     lutris
     mpv
@@ -67,7 +66,6 @@ gui_pacman_programs=(
     vlc
     v4l2loopback-dkms
     xwaylandvideobridge
-
 )
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
