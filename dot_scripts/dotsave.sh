@@ -24,6 +24,7 @@ dir_array=(
 	"$HOME/.config/lobster/"
 	"$HOME/.config/alacritty/"
   "$HOME/.config/zellij/"
+  "$HOME/.config/mov-cli/"
 )
 
 file_array=(

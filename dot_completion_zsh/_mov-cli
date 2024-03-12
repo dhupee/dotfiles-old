@@ -1,0 +1,7 @@
+#compdef mov-cli
+
+_mov_cli_completion() {
+  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _MOV_CLI_COMPLETE=complete_zsh mov-cli)
+}
+
+compdef _mov_cli_completion mov-cli
