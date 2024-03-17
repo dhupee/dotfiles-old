@@ -19,10 +19,11 @@ return {
         "gofumpt", -- formatter
         "goimports", -- formatter
         "gopls", -- lsp
+        "golangci-lint", -- linter
 
         -- Lua
         "lua-language-server", -- lsp
-        "stylua",
+        "stylua", -- formatter
 
         -- Markdown
         "markdownlint", -- linter
@@ -33,9 +34,7 @@ return {
         "json-lsp", -- lsp
 
         -- Python
-        "autopep8", -- formatter
-        "pyright", -- lsp
-        "pylint", --linter
+        "ruff", -- linter and formatter
         "ruff-lsp", -- lsp
 
         -- Shell Script
