@@ -43,6 +43,7 @@ file_array=(
 
 encrypted_dir_array=(
     "$HOME/.ssh/"
+    "$HOME/.config/qBittorrent/"
 )
 
 encrypted_file_array=(
@@ -128,10 +129,16 @@ echo "backupping ssh keys to mega"
 # rclone delete $rclone_remote:akago/.ssh/
 rclone copy "$HOME/.ssh/" $rclone_remote:akago/.ssh/ -P
 
+# echo " "
+# echo "backupping transmission's setting to mega"
+# # rclone delete $rclone_remote:akago/.config/transmission/
+# rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmission/ -P
+
+# Backup qbittorrent's torrent
 echo " "
-echo "backupping transmission's setting to mega"
+echo "backupping qbittorrent's data to mega"
 # rclone delete $rclone_remote:akago/.config/transmission/
-rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmission/ -P
+rclone copy "$HOME/.local/share/qBittorrent/" $rclone_remote:akago/.local/share/qBittorrent/ -P
 
 # if no-konsave flag then dont save konsave profiles
 if [ "$1" != "--no-rclone" ]; then
