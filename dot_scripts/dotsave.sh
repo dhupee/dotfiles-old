@@ -123,17 +123,6 @@ git commit -m "automated update by dhupee, at $(date +'%H:%M %d/%m/%Y')"
 git push
 sleep 3
 
-# backup sensitive files to Mega
-echo " "
-echo "backupping ssh keys to mega"
-# rclone delete $rclone_remote:akago/.ssh/
-rclone copy "$HOME/.ssh/" $rclone_remote:akago/.ssh/ -P
-
-# echo " "
-# echo "backupping transmission's setting to mega"
-# # rclone delete $rclone_remote:akago/.config/transmission/
-# rclone copy "$HOME/.config/transmission/" $rclone_remote:akago/.config/transmission/ -P
-
 # Backup qbittorrent's torrent
 echo " "
 echo "backupping qbittorrent's data to mega"
