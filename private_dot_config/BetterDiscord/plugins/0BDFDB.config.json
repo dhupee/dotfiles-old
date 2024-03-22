@@ -3,7 +3,7 @@
 		"changeLogs": {
 			"BDFDB": "3.5.9",
 			"PluginRepo": "2.5.5",
-			"SpotifyControls": "1.3.9"
+			"SpotifyControls": "1.4.0"
 		},
 		"choices": {
 			"toastPosition": "right"

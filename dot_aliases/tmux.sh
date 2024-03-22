@@ -9,6 +9,7 @@ alias tsr="tmux rename-session"
 # Windows
 alias twl="tmux list-windows"
 alias twk="tmux kill-window"
+alias twr="tmux rename-window"
 
 # Panes
 alias tpk="tmux kill-pane"
