@@ -212,12 +212,12 @@ else
 fi
 wait
 
-# INSTALL VOLTA
-echo "Installing volta..."
-if curl https://get.volta.sh | bash
-    echo "volta installed successfully."
+# INSTALL FNM
+echo "Installing FNM"
+if curl -fsSL https://fnm.vercel.app/install | bash; then
+   echo "FNM installed successfully."
 else
-    echo "Failed to install volta. Skipping."
+   echo "Failed to install FNM. Skipping."
 fi
 wait
 
