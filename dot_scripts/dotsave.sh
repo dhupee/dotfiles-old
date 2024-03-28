@@ -25,6 +25,7 @@ dir_array=(
 	"$HOME/.config/alacritty/"
   "$HOME/.config/zellij/"
   "$HOME/.config/mov-cli/"
+  "$HOME/.config/VSCodium/User/snippets/"
 )
 
 file_array=(
@@ -39,6 +40,9 @@ file_array=(
 	"$HOME/.config/spicetify/config-xpui.ini"
 	"$HOME/.config/obs-studio/global.ini"
   "$HOME/.config/chezmoi/chezmoi.toml"
+  "$HOME/.config/VSCodium/User/settings.json"
+  "$HOME/.config/VSCodium/User/keybindings.json"
+  "$HOME/.codium-extensions.txt"
 )
 
 encrypted_dir_array=(
@@ -50,6 +54,10 @@ encrypted_file_array=(
     "$HOME/.config/ngrok/ngrok.yml"
     "$HOME/.config/rclone/rclone.conf"
 )
+
+#----------------------BACKUP VSCODIUM EXTENSION LIST-------------
+
+codium --list-extensions > .codium-extensions.txt
 
 #----------------------SAVING FILES AND DIRS----------------------
 
