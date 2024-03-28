@@ -57,7 +57,7 @@ encrypted_file_array=(
 
 #----------------------BACKUP VSCODIUM EXTENSION LIST-------------
 
-codium --list-extensions > .codium-extensions.txt
+codium --list-extensions > $HOME/.codium-extensions.txt
 
 #----------------------SAVING FILES AND DIRS----------------------
 
