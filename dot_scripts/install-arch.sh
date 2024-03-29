@@ -31,6 +31,7 @@ cli_pacman_programs=(
     podman
     ranger
     rmlint
+    tectonic
     tldr
     thefuck
     tmux
