@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # This script is not mine, it's from Ratnadeep Bhattacharyya
 # Based from this blog: https://skylab.hashnode.dev/platformio-with-neovim

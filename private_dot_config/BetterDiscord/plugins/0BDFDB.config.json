@@ -1,7 +1,7 @@
 {
 	"all": {
 		"changeLogs": {
-			"BDFDB": "3.6.2",
+			"BDFDB": "3.6.3",
 			"PluginRepo": "2.5.5",
 			"SpotifyControls": "1.4.0"
 		},
@@ -15,7 +15,7 @@
 			"useChromium": false
 		},
 		"hashes": {
-			"0BDFDB.data.json": "74a000a66fef50abe25fc0c53ce72b2219fb86a8",
+			"0BDFDB.data.json": "1f7fe3a6ef0f812ecc4eb2239b72e430f99386d9",
 			"0BDFDB.raw.css": "8c083e2a87a82aded5f3b2e27fb8b2f816b5f74a"
 		}
 	}
