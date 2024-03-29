@@ -2,7 +2,7 @@
  * @name BDFDB
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 3.5.9
+ * @version 3.6.2
  * @description Required Library for DevilBro's Plugins
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -1402,7 +1402,7 @@ module.exports = (_ => {
 					let secondReturn = BDFDB.ModuleUtils.find(m => {
 						if (typeof m != "function") return false;
 						let stringified = m.toString().replace(/\s/g, "");
-						if (stringified.indexOf(".exports={") == -1 || !/function\([A-z],[A-z],[A-z]\)\{"usestrict";[A-z]\.exports=\{/.test(stringified)) return false;
+						if (stringified.indexOf(".exports={") == -1 || !(/function\([A-z],[A-z],[A-z]\)\{"usestrict";[A-z]\.exports=\{/.test(stringified) || /function\([A-z]\)\{"usestrict";[A-z]\.exports=\{/.test(stringified))) return false;
 						let amount = stringified.split(":\"").length - 1;
 						return (!config.length || (config.smaller ? amount < config.length : amount == config.length)) && [props].flat(10).every(string => stringified.indexOf(`${string}:`) > -1) && m;
 					}, {onlySearchUnloaded: true, all: config.all, defaultExport: config.defaultExport});
@@ -1420,7 +1420,9 @@ module.exports = (_ => {
 							BDFDB.LogUtils.warn([item, "Object not found in DiscordConstants"]);
 							return {};
 						}
-						DiscordConstants[item] = BDFDB.ModuleUtils.findByProperties(InternalData.DiscordConstants[item]);
+						if (InternalData.DiscordConstants[item].strings) DiscordConstants[item] = BDFDB.ModuleUtils.findByString(InternalData.DiscordConstants[item].strings);
+						else DiscordConstants[item] = BDFDB.ModuleUtils.findByProperties(InternalData.DiscordConstants[item]);
+						if (InternalData.DiscordConstants[item].value) DiscordConstants[item] = DiscordConstants[item][InternalData.DiscordConstants[item].value] || DiscordConstants[item];
 						return DiscordConstants[item] ? DiscordConstants[item] : {};
 					}
 				});
@@ -1758,7 +1760,7 @@ module.exports = (_ => {
 						
 						let icon = data.config.avatar ? BDFDB.ReactUtils.createElement(Internal.LibraryComponents.Avatars.Avatar, {
 							src: data.config.avatar,
-							size: Internal.LibraryComponents.AvatarConstants.Sizes.SIZE_24
+							size: Internal.LibraryComponents.AvatarConstants.AvatarSizes.SIZE_24
 						}) : ((data.config.icon || data.config.type && Internal.DiscordConstants.ToastIcons[data.config.type]) ? BDFDB.ReactUtils.createElement(Internal.LibraryComponents.SvgIcon, {
 							name: data.config.type && Internal.DiscordConstants.ToastIcons[data.config.type] && Internal.LibraryComponents.SvgIcon.Names[Internal.DiscordConstants.ToastIcons[data.config.type]],
 							iconSVG: data.config.icon,
@@ -5954,11 +5956,11 @@ module.exports = (_ => {
 						.replace(/\$month/g, timeObj.toLocaleDateString(language, {month: "long"}))
 						.replace(/\$dayS/g, timeObj.toLocaleDateString(language, {weekday: "short"}))
 						.replace(/\$day/g, timeObj.toLocaleDateString(language, {weekday: "long"}))
-						.replace(/\$agoAmount/g, daysAgo < 0 ? "" : daysAgo > 1 ? Internal.DiscordObjects.Timestamp(timeObj.getTime()).fromNow() : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
-						.replace(/\$agoWeekdayS/g, daysAgo < 0 ? "" : daysAgo > 1 ? timeObj.toLocaleDateString(language, {weekday: "short"}) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
-						.replace(/\$agoWeekday/g, daysAgo < 0 ? "" : daysAgo > 1 ? timeObj.toLocaleDateString(language, {weekday: "long"}) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
+						.replace(/\$agoAmount/g, daysAgo < 0 || daysAgo > 1 ? Internal.DiscordObjects.Timestamp(timeObj.getTime()).fromNow() : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
+						.replace(/\$agoWeekdayS/g, daysAgo < 0 || daysAgo > 1 ? timeObj.toLocaleDateString(language, {weekday: "short"}) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
+						.replace(/\$agoWeekday/g, daysAgo < 0 || daysAgo > 1 ? timeObj.toLocaleDateString(language, {weekday: "long"}) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
 						.replace(/\$agoDays/g, daysAgo < 0 ? "" : daysAgo > 1 ? BDFDB.LanguageUtils.LanguageStringsFormat(`GAME_LIBRARY_LAST_PLAYED_DAYS`, daysAgo) : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
-						.replace(/\$agoDate/g, daysAgo < 0 ? "" : daysAgo > 1 ? date : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
+						.replace(/\$agoDate/g, daysAgo < 0 || daysAgo > 1 ? date : BDFDB.LanguageUtils.LanguageStrings[`SEARCH_SHORTCUT_${daysAgo == 1 ? "YESTERDAY" : "TODAY"}`])
 						.replace(/\(\)|\[\]/g, "").replace(/,\s*$|^\s*,/g, "").replace(/ +/g, " ").trim();
 				};
 				CustomComponents.DateInput.formatDate = function (data, time) {
@@ -8098,7 +8100,7 @@ module.exports = (_ => {
 						}
 						if (role) {
 							if (avatar.type == "img") avatar = BDFDB.ReactUtils.createElement(Internal.LibraryComponents.Avatars.Avatar, Object.assign({}, avatar.props, {
-								size: Internal.LibraryComponents.AvatarConstants.Sizes.SIZE_40
+								size: Internal.LibraryComponents.AvatarConstants.AvatarSizes.SIZE_40
 							}));
 							delete avatar.props.className;
 							let newProps = {

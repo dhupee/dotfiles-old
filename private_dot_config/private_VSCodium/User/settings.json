@@ -73,6 +73,10 @@
         "comments": "on",
         "strings": "on"
     },
-    "python.languageServer": "Pylance",
-    "python.defaultInterpreterPath": "/home/dhupee/.pyenv/versions/3.12.1/bin/python"
+    "python.defaultInterpreterPath": "/home/dhupee/.pyenv/versions/3.12.1/bin/python",
+    "ruff.interpreter": [
+        "/home/dhupee/.pyenv/versions/3.12.1/bin/python"
+    ],
+    "python.languageServer": "Jedi",
+    "workbench.startupEditor": "none"
 }
