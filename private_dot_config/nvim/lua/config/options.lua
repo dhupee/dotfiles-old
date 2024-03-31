@@ -17,3 +17,6 @@ vim.o.showtabline = 1
 -- show indent line
 vim.o.list = true
 vim.o.listchars = "tab:▸ ,trail:·,nbsp:␣"
+
+-- column limit
+vim.o.textwidth = "80"
