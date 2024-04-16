@@ -20,6 +20,9 @@ hxf() {
 	helix $(fzf)
 }
 
+# Copying Tmux.conf to tmate.conf
+alias tmux2tmate="cp ~/.tmux.conf ~/.tmate.conf"
+
 # Plasma
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 
