@@ -78,5 +78,6 @@
         "/home/dhupee/.pyenv/versions/3.12.1/bin/python"
     ],
     "python.languageServer": "Jedi",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "git.autofetch": true
 }
