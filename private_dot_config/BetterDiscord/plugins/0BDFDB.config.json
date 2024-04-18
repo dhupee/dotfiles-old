@@ -1,7 +1,7 @@
 {
 	"all": {
 		"changeLogs": {
-			"BDFDB": "3.6.3",
+			"BDFDB": "3.6.4",
 			"PluginRepo": "2.5.5",
 			"SpotifyControls": "1.4.0"
 		},

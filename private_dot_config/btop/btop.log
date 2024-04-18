@@ -324,3 +324,13 @@ Use --utf-force argument to force start if you're sure your terminal can handle 
 2024/04/01 (23:14:33) | WARNING: ROCm SMI: Failed to get VRAM utilization
 2024/04/01 (23:14:33) | WARNING: ROCm SMI: Failed to get GPU power usage
 2024/04/01 (23:14:33) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2024/04/18 (12:51:30) | ===> btop++ v.1.3.2
+2024/04/18 (12:51:30) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2024/04/18 (12:51:30) | WARNING: ROCm SMI: Failed to get GPU power usage
+2024/04/18 (12:51:31) | WARNING: ROCm SMI: Failed to get device name
+2024/04/18 (12:51:31) | WARNING: ROCm SMI: Failed to get maximum GPU power draw, defaulting to 225W
+2024/04/18 (12:51:31) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2024/04/18 (12:51:31) | WARNING: ROCm SMI: Failed to get VRAM utilization
+2024/04/18 (12:51:31) | WARNING: ROCm SMI: Failed to get GPU power usage
+2024/04/18 (12:51:31) | WARNING: ROCm SMI: Failed to get PCIe throughput

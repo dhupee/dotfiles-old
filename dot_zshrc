@@ -40,6 +40,10 @@ if command -v zoxide > /dev/null; then
     eval "$(zoxide init zsh)"
 fi
 
+# fly.io
+export FLYCTL_INSTALL="/home/dhupee/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # If you come from bash you might have to change your $PATH.
 # Use this also to save binary apps
 export PATH=$HOME/.bin:/usr/local/bin:$PATH

@@ -231,6 +231,15 @@ else
 fi
 wait
 
+# INSTALL FLY.IO
+echo "Installing Fly.io..."
+if curl -L https://fly.io/install.sh | sh; then
+    echo "Fly.io installed successfully."
+else
+    echo "Failed to install Fly.io. Skipping."
+fi
+wait
+
 # INSTALL PLATFORMIO CORE CLI
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
 python3 get-platformio.py
