@@ -37,7 +37,7 @@ alias gpsh="git push"
 alias gpll="git pull"
 
 # Goenv
-alias goenv-update="cd ~/.goenv && git fetch --all && git pull"
+alias goenv-update="cd ~/.goenv && git fetch --all && git pull && cd"
 
 # Bluetooth
 alias bt-start="systemctl start bluetooth"

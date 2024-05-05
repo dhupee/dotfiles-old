@@ -21,6 +21,10 @@ return {
         "gopls", -- lsp
         "golangci-lint", -- linter
 
+        -- LaTeX
+        "texlab", -- lsp
+        "bibtex-tidy", -- formatter
+
         -- Lua
         "lua-language-server", -- lsp
         "stylua", -- formatter

@@ -37,6 +37,7 @@ file_array=(
 	"$HOME/.nanorc"
 	"$HOME/.fonts.conf"
 	"$HOME/.tmux.conf"
+  "$HOME/.tmate.conf"
 	"$HOME/.config/spicetify/config-xpui.ini"
 	"$HOME/.config/obs-studio/global.ini"
   "$HOME/.config/chezmoi/chezmoi.toml"
