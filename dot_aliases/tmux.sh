@@ -1,18 +1,21 @@
+# pick either "tmux" or "tmate""
+TARGET="tmux"
+
 # Sessions
-alias tsa="tmux attach -t"
-alias tsd="tmux detach -t"
-alias tsk="tmux kill-session -t"
-alias tsn="tmux new-session -t"
-alias tsl="tmux list-sessions"
-alias tsr="tmux rename-session"
+alias tsa="$TARGET attach -t"
+alias tsd="$TARGET detach -t"
+alias tsk="$TARGET kill-session -t"
+alias tsn="$TARGET new-session -t"
+alias tsl="$TARGET list-sessions"
+alias tsr="$TARGET rename-session"
 
 # Windows
-alias twl="tmux list-windows"
-alias twk="tmux kill-window"
-alias twr="tmux rename-window"
+alias twl="$TARGET list-windows"
+alias twk="$TARGET kill-window"
+alias twr="$TARGET rename-window"
 
 # Panes
-alias tpk="tmux kill-pane"
+alias tpk="$TARGET kill-pane"
 
 # Sourcing
-alias tsrc="tmux source ~/.tmux.conf"
+alias tsrc="$TARGET source ~/.$TARGET.conf"
