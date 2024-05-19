@@ -122,6 +122,12 @@ done
 
 echo " "
 
+#---------------------------COPYING NIXOS----------------------
+if [ -d /etc/nixos/ ]; then
+    cp -r /etc/nixos $HOME/.local/share/chezmoi/nixos/dhupee
+    echo "copying nixos config"
+fi
+
 #---------------------------COMMIT TO GIT----------------------
 
 # pushing to github
