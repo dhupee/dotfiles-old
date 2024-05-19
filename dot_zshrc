@@ -61,7 +61,10 @@ fpath=($HOME/.completion_zsh $fpath)
 export CHROME_EXECUTABLE="/opt/brave.com/brave/brave-browser"
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+if [ -d $HOME/.oh-my-zsh ]; then
+    export ZSH="$HOME/.oh-my-zsh"
+fi
+
 
 # Set ohmyzsh theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
