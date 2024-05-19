@@ -97,13 +97,13 @@
   # enabling zsh
   programs.zsh = {
     enable = true;
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     ohMyZsh = {
       enable = true;
       # theme = "powerlevel10k";
     };
   };
-
-  programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+  #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dhupee = {
@@ -129,6 +129,7 @@
       neofetch
       ngrok
       prusa-slicer
+      rclone
       spotify
       steam
       vscodium
@@ -153,8 +154,10 @@
     git
     git-lfs
     go
+    gparted
     htop
     libsForQt5.bismuth
+    luajit
     nodejs_21
     oh-my-zsh
     podman
@@ -163,6 +166,7 @@
     tectonic
     tldr
     tmux
+    unzip
     wget
     xclip
     zoxide
