@@ -123,10 +123,12 @@ done
 echo " "
 
 #---------------------------COPYING NIXOS----------------------
-if [ -d /etc/nixos/ ]; then
-    cp -r /etc/nixos $HOME/.local/share/chezmoi/nixos/dhupee
-    echo "copying nixos config"
-fi
+# if [ -d /etc/nixos/ ]; then
+#     cp -r /etc/nixos $HOME/.local/share/chezmoi/nixos/dhupee
+#     echo "copying nixos config"
+# fi
+
+chezmoi add "$HOME/nixos-config"
 
 #---------------------------COMMIT TO GIT----------------------
 
