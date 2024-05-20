@@ -35,6 +35,7 @@ cli_pacman_programs=(
     tectonic
     tldr
     thefuck
+    tmate
     tmux
     unrar
     yt-dlp
@@ -84,7 +85,7 @@ cli_aur_programs=(
     spicetify-cli
     spotify
     ttyper
-    visual-studio-code-bin
+    vscodium
 )
 
 # LIST OF GUI PROGRAMS TO INSTALL FROM AUR USING YAY
