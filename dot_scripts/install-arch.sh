@@ -21,6 +21,7 @@ cli_pacman_programs=(
     gamemode
     github-cli
     git-lfs
+    go
     htop
     lazygit
     micro
@@ -63,9 +64,11 @@ gui_pacman_programs=(
     qemu-desktop
     steam
     ttf-jetbrains-mono-nerd
+    ttf-hack-nerd
     virt-manager
     vlc
     v4l2loopback-dkms
+    wl-clipboard
     xwaylandvideobridge
 )
 
@@ -77,7 +80,7 @@ cli_aur_programs=(
     kwin-polonium
     nbfc-linux
     ngrok
-    podman-desktop-bi
+    podman-desktop-bin
     spicetify-cli
     spotify
     ttyper
@@ -204,12 +207,12 @@ wait
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 wait
 
-# INSTALL GOBREW
-echo "Installing Gobrew..."
-if curl -sLk https://raw.githubusercontent.com/kevincobain2000/gobrew/master/git.io.sh | sh; then
-    echo "Gobrew installed successfully."
+# INSTALL GOENV
+echo "Installing Goenv..."
+if git clone https://github.com/go-nv/goenv.git ~/.goenv; then
+    echo "Goenv installed successfully."
 else
-    echo "Failed to install Gobrew. Skipping."
+    echo "Failed to install Goenv. Skipping."
 fi
 wait
 
