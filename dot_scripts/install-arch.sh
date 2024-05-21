@@ -83,7 +83,7 @@ cli_aur_programs=(
     ngrok
     podman-desktop-bin
     spicetify-cli
-    spotify
+    spotify-adblock
     ttyper
     vscodium
 )

@@ -145,7 +145,6 @@ export PATH=$PATH:$(which arduino-cli)
 
 tmux-git-autofetch() {(/home/dhupee/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
 add-zsh-hook chpwd tmux-git-autofetch
-    
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
