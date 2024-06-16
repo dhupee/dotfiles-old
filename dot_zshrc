@@ -49,10 +49,10 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export PATH=$HOME/.bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Adding Tmuxifier in the path and export new layout path
-export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
-export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
+# # Adding Tmuxifier in the path and export new layout path
+# export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
+# eval "$(tmuxifier init -)"
+# export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
 
 # export completion cli to fpath
 fpath=($HOME/.completion_zsh $fpath)

@@ -15,4 +15,5 @@ while IFS= read -r extension; do
 done < "$FILEDIR"
 
 # make sure the extensions are updated
-codium --update-extensions
+# lmao it's updated anyway
+# codium --update-extensions

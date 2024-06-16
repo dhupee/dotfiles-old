@@ -17,6 +17,7 @@ cli_pacman_programs=(
     cmatrix
     distrobox
     dust
+    fastfetch
     fzf
     gamemode
     github-cli
@@ -25,7 +26,6 @@ cli_pacman_programs=(
     htop
     lazygit
     micro
-    neofetch
     openssh
     nvtop
     p7zip
