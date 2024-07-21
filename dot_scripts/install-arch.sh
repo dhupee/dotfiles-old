@@ -76,6 +76,7 @@ gui_pacman_programs=(
 # LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
 cli_aur_programs=(
     arduino-cli
+    betterdiscordctl
     brave-bin
     cloudflare-warp-bin
     kwin-polonium
@@ -220,9 +221,9 @@ wait
 # INSTALL FNM
 echo "Installing FNM"
 if curl -fsSL https://fnm.vercel.app/install | bash; then
-   echo "FNM installed successfully."
+    echo "FNM installed successfully."
 else
-   echo "Failed to install FNM. Skipping."
+    echo "Failed to install FNM. Skipping."
 fi
 wait
 
@@ -253,7 +254,6 @@ sudo ln -s ~/.platformio/penv/bin/platformio /usr/local/bin/platformio
 sudo ln -s ~/.platformio/penv/bin/pio /usr/local/bin/pio
 sudo ln -s ~/.platformio/penv/bin/piodebuggdb /usr/local/bin/piodebuggdb
 wait
-
 
 # CHANGE PERMISSION OF SPICETIFY, ACCORDING TO DOCS
 if [ -d "/opt/spotify" ]; then
