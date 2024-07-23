@@ -65,7 +65,7 @@
             ]
         }
     ],
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Dracula Theme",
     "workbench.iconTheme": "simple-icons",
     "editor.formatOnSave": true,
     "editor.quickSuggestionsDelay": 5,
@@ -79,5 +79,6 @@
     ],
     "python.languageServer": "Jedi",
     "workbench.startupEditor": "none",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "clangd.path": "/home/dhupee/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd"
 }

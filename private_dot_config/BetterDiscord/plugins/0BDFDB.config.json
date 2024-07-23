@@ -1,8 +1,9 @@
 {
 	"all": {
 		"changeLogs": {
-			"BDFDB": "3.6.5",
+			"BDFDB": "3.7.6",
 			"PluginRepo": "2.5.7",
+			"SpellCheck": "1.6.9",
 			"SpotifyControls": "1.4.0"
 		},
 		"choices": {
