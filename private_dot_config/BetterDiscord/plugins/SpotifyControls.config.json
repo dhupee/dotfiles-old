@@ -37,7 +37,7 @@
 			"doubleBack": true
 		},
 		"playerState": {
-			"maximized": true
+			"maximized": false
 		}
 	}
 }

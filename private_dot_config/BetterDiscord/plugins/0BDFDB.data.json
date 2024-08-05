@@ -1373,8 +1373,7 @@
 			"themeDark": "theme-dark",
 			"themeLight": "theme-light",
 			"themeUndefined": "theme-undefined",
-			"userPopoutNote": "note_c90ad7",
-			"userProfileSection": "section_ba4d80"
+			"userPopoutNote": "note_c90ad7"
 		},
 		"Toast": {
 			"avatar": "avatar_3xmbmC",
@@ -1413,7 +1412,7 @@
 		"GuildSettingsBanned": "c90ddb",
 		"GuildSettingsEmoji": "dc1809",
 		"GuildSettingsInvite": "edb39d",
-		"HotKeyRecorder": "ebcd80",
+		"HotKeyRecorder": "fb7bb2",
 		"HotKeyRecorderBase": "c67e31",
 		"HoverCardRemoveButton": "a467ac",
 		"HoverCardRemoveButton": "a467ac",
@@ -1423,6 +1422,7 @@
 		"SettingsWindow": "c25c6d",
 		"UserProfile": "bc9cc2",
 		"UserProfileInfoSection": "a24910",
+		"UserProfileSection": "ba4d80",
 		"UserProfileUsernameSection": "afed89"
 	},
 	"DiscordClassModules": {
@@ -1669,6 +1669,7 @@
 		"UserProfileInfoSection": {"props": ["userInfoSection", "note"]},
 		"UserProfileList": {"props": ["listAvatar", "listRow"]},
 		"UserProfileListGuild": {"props": ["guildAvatar", "guildAvatarWithoutIcon"]},
+		"UserProfileSection": {"props": ["section", "heading"], "length": 2},
 		"UserProfileUsernameSection": {"props": ["customStatusSoloEmoji", "nameTag", "discriminator"]},
 		"UserSummaryItem": {"props": ["avatarContainerMasked", "container"]},
 		"UserTheme": {"props": ["userPopoutOuter", "userPopoutInner"]},
@@ -2761,6 +2762,7 @@
 		"messagerepliedmessagecontentclickable": ["MessageBody", "clickable"],
 		"messagerepliedmessagepreview": ["MessageBody", "repliedTextPreview"],
 		"messagereply": ["MessageReply", "container"],
+		"messagereplyname": ["MessageReply", "name"],
 		"messagereplytext": ["MessageReply", "text"],
 		"messageroleicon": ["MessageBody", "roleIcon"],
 		"messageselected": ["Message", "selected"],
@@ -3351,7 +3353,8 @@
 		"userprofilemodal": ["UserProfile", "root"],
 		"userprofilenametag": ["UserProfileUsernameSection", "nameTag"],
 		"userprofileouter": ["UserTheme", "userProfileModalOuter"],
-		"userprofilesection": ["NotFound", "userProfileSection"],
+		"userprofilesection": ["UserProfileSection", "section"],
+		"userprofilesectionheading": ["UserProfileSection", "heading"],
 		"userprofileusername": ["UserProfileUsernameSection", "username"],
 		"username": ["NameTag", "username"],
 		"usernotepopout": ["NotFound", "userPopoutNote"],

@@ -13,6 +13,7 @@ alias tsr="$TARGET rename-session"
 alias twl="$TARGET list-windows"
 alias twk="$TARGET kill-window"
 alias twr="$TARGET rename-window"
+alias tws="$TARGET swap-window -t"
 
 # Panes
 alias tpk="$TARGET kill-pane"
