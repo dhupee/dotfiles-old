@@ -114,6 +114,14 @@ img:not([src]), img[src=""], img[src="null"] {
 	opacity: .4;
 }
 
+[REPLACE_CLASS_subtext] {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: var(--header-secondary);
+	line-height: 13px;
+}
+
 [REPLACE_CLASS_marginleft4] {
 	margin-left: 4px;
 }
@@ -1277,6 +1285,12 @@ input[REPLACE_CLASS_input][REPLACE_CLASS_inputerror] {
 	flex-direction: column;
 	padding-right: 100px;
 	padding-bottom: 0;
+}
+[REPLACE_CLASS__repolistheader] [REPLACE_CLASS_flex] {
+	gap: 6px;
+}
+[REPLACE_CLASS__repolistheader] [REPLACE_CLASS_headertitle] {
+	text-wrap: nowrap;
 }
 [REPLACE_CLASS__repolistscroller] {
 	padding-top: 0;

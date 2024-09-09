@@ -79,6 +79,7 @@ cli_aur_programs=(
     betterdiscordctl
     brave-bin
     cloudflare-warp-bin
+    gpsbabel
     kwin-polonium
     nbfc-linux
     ngrok
