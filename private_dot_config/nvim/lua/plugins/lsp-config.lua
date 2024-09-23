@@ -33,9 +33,11 @@ return {
         "markdownlint", -- linter
         "marksman", -- lsp
 
-        -- HTML, JS, CSS, JSON
+        -- HTML, JS, TS, CSS, JSON
         "prettier", -- formatter
         "json-lsp", -- lsp
+        "biome", -- lsp, linter, formatter
+        "typescript-language-server", -- lsp
 
         -- Python
         "ruff", -- linter and formatter
