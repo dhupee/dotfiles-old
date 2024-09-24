@@ -6,6 +6,7 @@ dracula-theme.theme-dracula
 editorconfig.editorconfig
 formulahendry.code-runner
 golang.go
+hediet.vscode-drawio
 jacobdufault.fuzzy-search
 jeanp413.open-remote-ssh
 kahole.magit

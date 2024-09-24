@@ -17,7 +17,7 @@ alias c="clear"
 # Helix
 alias hx="helix"
 hxf() {
-	helix $(fzf)
+    helix $(fzf)
 }
 
 # Copying Tmux.conf to tmate.conf
@@ -65,7 +65,7 @@ alias lla="ll -a"
 alias v="vim"
 alias nv="nvim"
 nvf() {
-	nvim $(fzf)
+    nvim $(fzf)
 }
 
 # Dotfile save
@@ -111,8 +111,11 @@ alias bottles-backup="bash .scripts/bottles-backup.sh"
 alias fan-speed-full="sudo nbfc set --speed=100"
 alias fan-speed-auto="sudo nbfc set --auto"
 
+# NVM
+alias nvm-update="curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep '"tag_name"' | cut -d '"' -f 4)/install.sh" | bash"
+
 # FNM
-alias fnm-update="curl -fsSL https://fnm.vercel.app/install | zsh -s -- --skip-shell"
+# alias fnm-update="curl -fsSL https://fnm.vercel.app/install | zsh -s -- --skip-shell"
 
 # Delete X number of latest shell history
 function delete_latest_history() {
