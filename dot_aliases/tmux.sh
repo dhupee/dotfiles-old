@@ -1,6 +1,9 @@
 # pick either "tmux" or "tmate""
 TARGET="tmux"
 
+# General
+alias td="$TARGET detach"
+
 # Sessions
 alias tsa="$TARGET attach -t"
 alias tsd="$TARGET detach -t"
