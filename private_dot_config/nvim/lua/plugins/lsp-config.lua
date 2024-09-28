@@ -30,7 +30,7 @@ return {
         "stylua", -- formatter
 
         -- Markdown
-        "markdownlint", -- linter
+        "markdownlint", -- linter, formatter
         "marksman", -- lsp
 
         -- HTML, JS, TS, CSS, JSON
@@ -39,6 +39,7 @@ return {
         "biome", -- lsp, linter, formatter
         "typescript-language-server", -- lsp
         "vue-language-server", -- lsp
+        "tailwindcss-language-server", -- lsp
 
         -- Python
         "ruff", -- linter and formatter
@@ -48,9 +49,6 @@ return {
         "bash-language-server", -- lsp
         "shellcheck", -- linter
         "beautysh", -- formatter
-
-        -- TailwindCSS
-        "tailwindcss-language-server", -- lsp
 
         -- YAML
         "yaml-language-server",
