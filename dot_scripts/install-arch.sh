@@ -9,9 +9,7 @@
 
 # LIST OF CLI PROGRAMS TO INSTALL FROM PACMAN
 cli_pacman_programs=(
-    adobe-source-han-sans-jp-fonts
     age
-    ansible
     bat
     btop
     cmatrix
@@ -19,13 +17,12 @@ cli_pacman_programs=(
     dust
     fastfetch
     fzf
-    gamemode
     github-cli
     git-lfs
     go
     htop
+    helix
     lazygit
-    micro
     openssh
     nvtop
     p7zip
@@ -43,14 +40,16 @@ cli_pacman_programs=(
     zoxide
 )
 
-# LIST OF GUI PROGRAMS TO INSTALL FROM PACMAN
+# LIST OF GUI PROGRAMS TO INSTALL FROM PACMAN, OR A PROGRAM THAT ONLY NEEDED WHEN HAS DESKTOP
 gui_pacman_programs=(
+    adobe-source-han-sans-jp-fonts
     discord
     fcitx5-configtool
     fcitx5-im
     fcitx5-mozc
     filelight
     flatpak
+    gamemode
     gparted
     inkscape
     kicad
@@ -76,30 +75,29 @@ gui_pacman_programs=(
 # LIST OF CLI PROGRAMS TO INSTALL FROM AUR USING YAY
 cli_aur_programs=(
     arduino-cli
-    betterdiscordctl
-    brave-bin
     cloudflare-warp-bin
     gpsbabel
-    kwin-polonium
     nbfc-linux
     ngrok
-    podman-desktop-bin
-    spicetify-cli
-    spotify-adblock
     ttyper
-    vscodium
 )
 
 # LIST OF GUI PROGRAMS TO INSTALL FROM AUR USING YAY
 gui_aur_programs=(
     ani-cli
-    betterdiscord-installer
+    betterdiscordctl
     botflix-git
+    brave-bin
     heroic-games-launcher-bin
     konsave
+    kwin-polonium
     lobster-git
     mov-cli-git
     osu-lazer-bin
+    podman-desktop-bin
+    spicetify-cli
+    spotify-adblock
+    vscodium
 )
 
 flatpak_programs=(
@@ -219,14 +217,18 @@ else
 fi
 wait
 
-# INSTALL FNM
-echo "Installing FNM"
-if curl -fsSL https://fnm.vercel.app/install | bash; then
-    echo "FNM installed successfully."
-else
-    echo "Failed to install FNM. Skipping."
-fi
+# INSTALL NVM
+curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep '"tag_name"' | cut -d '"' -f 4)/install.sh" | bash
 wait
+
+# # INSTALL FNM
+# echo "Installing FNM"
+# if curl -fsSL https://fnm.vercel.app/install | bash; then
+#     echo "FNM installed successfully."
+# else
+#     echo "Failed to install FNM. Skipping."
+# fi
+# wait
 
 # INSTALL PYENV
 echo "Installing pyenv..."
@@ -237,14 +239,14 @@ else
 fi
 wait
 
-# INSTALL FLY.IO
-echo "Installing Fly.io..."
-if curl -L https://fly.io/install.sh | sh; then
-    echo "Fly.io installed successfully."
-else
-    echo "Failed to install Fly.io. Skipping."
-fi
-wait
+## INSTALL FLY.IO
+# echo "Installing Fly.io..."
+# if curl -L https://fly.io/install.sh | sh; then
+#     echo "Fly.io installed successfully."
+# else
+#     echo "Failed to install Fly.io. Skipping."
+# fi
+# wait
 
 # INSTALL PLATFORMIO CORE CLI
 curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
