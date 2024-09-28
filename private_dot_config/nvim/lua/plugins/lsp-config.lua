@@ -38,6 +38,7 @@ return {
         "json-lsp", -- lsp
         "biome", -- lsp, linter, formatter
         "typescript-language-server", -- lsp
+        "vue-language-server", -- lsp
 
         -- Python
         "ruff", -- linter and formatter
