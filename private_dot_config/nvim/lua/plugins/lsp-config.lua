@@ -38,7 +38,7 @@ return {
         "json-lsp", -- lsp
         "biome", -- lsp, linter, formatter
         "typescript-language-server", -- lsp
-        "vue-language-server", -- lsp
+        "vetur-vls", -- lsp
         "tailwindcss-language-server", -- lsp
 
         -- Python

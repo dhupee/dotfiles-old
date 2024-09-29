@@ -2,13 +2,18 @@ aaron-bond.better-comments
 bodil.file-browser
 charliermarsh.ruff
 codeium.codeium
+dineug.vuerd-vscode
 dracula-theme.theme-dracula
+dreamcatcher45.podmanager
 editorconfig.editorconfig
+exiasr.hadolint
 formulahendry.code-runner
+foxundermoon.shell-format
 golang.go
 hediet.vscode-drawio
 jacobdufault.fuzzy-search
 jeanp413.open-remote-ssh
+johnsoncodehk.volar
 kahole.magit
 laurenttreguier.vscode-simple-icons
 llvm-vs-code-extensions.vscode-clangd
@@ -28,5 +33,6 @@ rogalmic.bash-debug
 vscodevim.vim
 vspacecode.vspacecode
 vspacecode.whichkey
+vue.volar
 wokwi.wokwi-vscode
 yzhang.markdown-all-in-one
