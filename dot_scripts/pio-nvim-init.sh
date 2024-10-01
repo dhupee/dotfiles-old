@@ -1,7 +1,13 @@
 #!/usr/bin/bash
 
-# This script is not mine, it's from Ratnadeep Bhattacharyya
+# This script is not mine, it's based from Ratnadeep Bhattacharyya with my little twist
 # Based from this blog: https://skylab.hashnode.dev/platformio-with-neovim
+
+# if there's no Platformio.ini, abort
+if [ ! -f ./platformio.ini ]; then
+    echo "No platformio.ini found, possibly not a PlatformIO project"
+    exit 1
+fi
 
 # Compile the project
 pio run -t compiledb
