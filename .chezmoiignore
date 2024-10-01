@@ -4,6 +4,9 @@ README.md
 .gitignore
 img
 
+# For experiment
+dot_fonts
+
 # unused files
 wip_*
 
