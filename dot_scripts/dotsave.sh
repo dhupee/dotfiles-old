@@ -55,6 +55,7 @@ encrypted_dir_array=(
 )
 
 encrypted_file_array=(
+    "$HOME/.github-cli-token"
     "$HOME/.config/ngrok/ngrok.yml"
     "$HOME/.config/rclone/rclone.conf"
 )
