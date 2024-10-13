@@ -12,6 +12,7 @@ dir_array=(
     "$HOME/.config/neofetch/"
     "$HOME/.completion_zsh/"
     "$HOME/.config/nvim/"
+    "$HOME/.config/ohmyposh/"
     "$HOME/.config/PrusaSlicer/"
     "$HOME/.config/obs-studio/basic/"
     "$HOME/.config/containers/"
