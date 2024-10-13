@@ -33,6 +33,10 @@ return {
         "markdownlint", -- linter, formatter
         "marksman", -- lsp
 
+        -- Nix
+        "nil", -- lsp
+        "nixpkgs-fmt", -- formatter
+
         -- HTML, JS, TS, CSS, JSON
         "prettier", -- formatter
         "json-lsp", -- lsp

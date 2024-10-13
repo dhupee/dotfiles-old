@@ -86,5 +86,6 @@
     "hediet.vscode-drawio.theme": "dark",
     "hediet.vscode-drawio.codeLinkActivated": true,
     "explorer.confirmDragAndDrop": false,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "nix.enableLanguageServer": true
 }

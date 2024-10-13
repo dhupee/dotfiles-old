@@ -10,7 +10,6 @@ dir_array=(
     "$HOME/.config/htop/"
     "$HOME/.config/btop/"
     "$HOME/.config/neofetch/"
-    "$HOME/Wallpapers/"
     "$HOME/.completion_zsh/"
     "$HOME/.config/nvim/"
     "$HOME/.config/PrusaSlicer/"
@@ -29,6 +28,7 @@ dir_array=(
 
 # commented dirs and files
 # "$HOME/.fonts/"
+# "$HOME/Wallpapers/"
 
 file_array=(
     "$HOME/.zshrc"

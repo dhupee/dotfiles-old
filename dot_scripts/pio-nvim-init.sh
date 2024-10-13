@@ -38,9 +38,8 @@ sed -i "s:.c\",:.c -include $${PWD}/compiler_defines.h\",:" compile_commands.jso
 
 # Generate makefile
 MKFILE="
-# Uncomment lines below if you have problems with $PATH
-#SHELL := /bin/bash
-#PATH := /usr/local/bin:$(PATH)
+# when running using ENV value, do something like:
+# $(make upload-env ENV=esp32doit-devkit-v1-80)
 
 all:
 	platformio -f  run
@@ -56,6 +55,18 @@ program:
 
 uploadfs:
 	platformio -f  run --target uploadfs
+
+upload-env:
+	platformio -f  run --target upload -e $(ENV)
+
+clean-env:
+	platformio -f  run --target clean -e $(ENV)
+
+program-env:
+	platformio -f  run --target program -e $(ENV)
+
+uploadfs-env:
+	platformio -f  run --target uploadfs -e $(ENV)
 
 update:
 	platformio -f  update
